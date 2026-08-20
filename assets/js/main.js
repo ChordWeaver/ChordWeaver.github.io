@@ -363,6 +363,17 @@
              CHORDS[i] + '</text>';
     }
 
+    // Dónde va el nombre de cada voz, separado del de al lado para que dos
+    // voces que arrancan cerca --- soprano en G4 y alto en E4, tres
+    // semitonos --- no escriban una encima de la otra.
+    var labelY = VOICES.map(function (v) { return y(v.midi[0]); });
+    var order = labelY.map(function (yy, i) { return i; })
+                      .sort(function (a, b) { return labelY[a] - labelY[b]; });
+    for (var k = 1; k < order.length; k++) {
+      var prev = labelY[order[k - 1]], cur = labelY[order[k]];
+      if (cur - prev < 15) { labelY[order[k]] = prev + 15; }
+    }
+
     VOICES.forEach(function (v, vi) {
       var d = v.midi.map(function (m, i) { return (i ? 'L' : 'M') + x(i) + ' ' + y(m); }).join(' ');
       svg += '<path class="voice-line v' + vi + '" d="' + d + '" fill="none" stroke="' + v.colour +
@@ -376,7 +387,7 @@
                noteName(m) + '</text>';
       });
       // El nombre de la voz, a la izquierda y a la altura donde empieza.
-      svg += '<text x="' + (padL - 14) + '" y="' + (y(v.midi[0]) + 4) + '" fill="' + v.colour +
+      svg += '<text x="' + (padL - 14) + '" y="' + (labelY[vi] + 4) + '" fill="' + v.colour +
              '" font-size="12" font-weight="600" ' +
              'font-family="Inter, system-ui, sans-serif" text-anchor="end">' + v[lang] + '</text>';
     });

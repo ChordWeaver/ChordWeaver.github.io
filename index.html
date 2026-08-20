@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChordWeaver — conducción de voces por algoritmo genético</title>
+<meta name="description" content="Vos elegís los acordes. Un algoritmo genético decide qué nota canta cada voz y en qué octava, respetando las reglas de contrapunto del género. Aplicación de escritorio libre para Windows.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ChordWeaver">
+<meta property="og:description" content="Vos elegís los acordes. Un algoritmo genético reparte las voces.">
+<meta property="og:image" content="https://chordweaver.github.io/assets/img/modos.png">
+<meta property="og:url" content="https://chordweaver.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B1D22'/><path d='M7 21V11M13 21V11M19 21V11M25 21V11' stroke='%235B8FD6' stroke-width='2.4' stroke-linecap='round'/><path d='M7 16h18' stroke='%23B07FD6' stroke-width='2.4' stroke-linecap='round'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Chord<em>Weaver</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#modos" data-i18n="nav.modes">Los tres modos</a>
+      <a href="#como" data-i18n="nav.how">Cómo funciona</a>
+      <a href="#potencia" data-i18n="nav.power">Qué más hace</a>
+      <a href="#descargar" data-i18n="nav.download">Descargar</a>
+    </nav>
+    <div class="nav-side">
+      <button class="lang" id="lang-toggle" type="button" aria-label="Cambiar idioma">
+        <span class="lang-opt" data-lang="es">ES</span><span class="lang-opt" data-lang="en">EN</span>
+      </button>
+      <a class="ghost" href="https://github.com/ChordWeaver/chordweaver" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ─────────────────────────────  HERO  ───────────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow reveal">
+      <span class="dot"></span>
+      <span data-i18n="hero.eyebrow">Código abierto · Licencia MIT · Windows</span>
+    </p>
+    <h1 class="reveal">Chord<em>Weaver</em></h1>
+    <p class="lede reveal" data-i18n="hero.lede">
+      Vos elegís los acordes. Un algoritmo genético decide qué nota canta cada
+      voz y en qué octava, para que el movimiento total sea el mínimo posible
+      sin romper las reglas de contrapunto del género.
+    </p>
+    <p class="sub reveal" data-i18n="hero.sub">
+      Nunca cambia tus acordes ni su orden. Sólo reparte.
+    </p>
+    <div class="cta reveal">
+      <a class="btn btn-primary" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.0.1-windows.zip" data-track="download">
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2.5a1 1 0 0 1 1 1v7.09l2.3-2.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V3.5a1 1 0 0 1 1-1ZM3.5 14a1 1 0 0 1 1 1v1h11v-1a1 1 0 1 1 2 0v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2.5 16.5V15a1 1 0 0 1 1-1Z"/></svg>
+        <span data-i18n="hero.download">Descargar para Windows</span>
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/ChordWeaver/chordweaver" target="_blank" rel="noopener" data-i18n="hero.source">Ver el código</a>
+    </div>
+    <p class="meta reveal">
+      <span data-i18n="hero.meta.version">Versión 1.0.1</span>
+      <span class="sep">·</span>
+      <span data-i18n="hero.meta.size">26 MB</span>
+      <span class="sep">·</span>
+      <span data-i18n="hero.meta.install">Sin instalador</span>
+      <span class="sep">·</span>
+      <span data-i18n="hero.meta.python">Sin Python</span>
+    </p>
+
+    <figure class="shot hero-shot reveal">
+      <div class="shot-frame">
+        <img src="assets/img/modos.png" width="1442" height="932"
+             alt="La pantalla inicial de ChordWeaver con los tres modos de trabajo"
+             data-i18n-alt="alt.modos" fetchpriority="high">
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ────────────────────────────  QUÉ HACE  ─────────────────────────── -->
+<section class="band" id="como">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="how.kicker">Cómo funciona</p>
+    <h2 class="reveal" data-i18n="how.title">Un acorde no dice quién canta qué</h2>
+    <p class="prose reveal" data-i18n="how.body">
+      Un <em>Do mayor</em> son tres notas, pero cuatro voces tienen que
+      repartírselas: alguien dobla, alguien salta una octava, alguien se queda
+      quieto. Multiplicá eso por cada acorde de la pieza y por cada octava
+      posible, y las combinaciones se cuentan de a millones. ChordWeaver las
+      recorre con un algoritmo genético y se queda con las tres mejores.
+    </p>
+
+    <div class="demo reveal">
+      <div class="demo-head">
+        <h3 data-i18n="demo.title">Una salida real del programa</h3>
+        <p data-i18n="demo.sub">Ocho acordes, cuatro voces, reglas del barroco. Pasá el mouse por una voz.</p>
+      </div>
+      <div class="demo-chart" id="chart" role="img"
+           aria-label="Gráfico de las cuatro voces moviéndose entre ocho acordes"
+           data-i18n-aria="alt.chart"></div>
+      <ul class="demo-legend" id="chart-legend"></ul>
+      <p class="demo-note">
+        <strong id="chart-total">—</strong>
+        <span data-i18n="demo.note">de movimiento total en ocho acordes: el salto más grande de la pieza es una cuarta, y el bajo entero se mueve cinco semitonos.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────  MODOS  ──────────────────────────── -->
+<section class="band alt" id="modos">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="modes.kicker">Los tres modos</p>
+    <h2 class="reveal" data-i18n="modes.title">Cambia cuánto ponés vos</h2>
+    <p class="prose reveal" data-i18n="modes.body">
+      Los tres terminan en lo mismo: una progresión escrita a varias voces,
+      lista para exportar. Lo único que cambia es de dónde salen los acordes.
+    </p>
+
+    <div class="modes">
+      <article class="mode reveal" style="--tint:#5B8FD6">
+        <header>
+          <span class="mode-icon" aria-hidden="true">◧</span>
+          <div>
+            <h3 data-i18n="mode.1.name">Organizador</h3>
+            <p class="mode-tag" data-i18n="mode.1.tag">Vos ponés los acordes</p>
+          </div>
+        </header>
+        <p data-i18n="mode.1.body">
+          Escribís la progresión en cifrado americano —o la importás de un
+          MusicXML— y el programa reparte las voces. Podés fijar un acorde con
+          el candado si querés esa disposición exacta y ninguna otra.
+        </p>
+        <figure class="shot">
+          <div class="shot-frame">
+            <img src="assets/img/acordes.png" width="1442" height="932" loading="lazy"
+                 alt="La pantalla de acordes, con la progresión escrita compás por compás"
+                 data-i18n-alt="alt.acordes">
+          </div>
+        </figure>
+      </article>
+
+      <article class="mode reveal" style="--tint:#B07FD6">
+        <header>
+          <span class="mode-icon" aria-hidden="true">✧</span>
+          <div>
+            <h3 data-i18n="mode.2.name">Generador</h3>
+            <p class="mode-tag" data-i18n="mode.2.tag">Pone todo el programa</p>
+          </div>
+        </header>
+        <p data-i18n="mode.2.body">
+          Elegís tonalidad, modo, con qué acorde empieza y con cuál termina, y
+          cuántos acordes prestados de fuera de la escala tolerás. El programa
+          arma la progresión entera y después la escribe a varias voces.
+        </p>
+        <figure class="shot">
+          <div class="shot-frame">
+            <img src="assets/img/tonalidad.png" width="1442" height="932" loading="lazy"
+                 alt="La pantalla de tonalidad, con los intercambios modales y las notas de paso"
+                 data-i18n-alt="alt.tonalidad">
+          </div>
+        </figure>
+      </article>
+
+      <article class="mode reveal" style="--tint:#4FAE96">
+        <header>
+          <span class="mode-icon" aria-hidden="true">♪</span>
+          <div>
+            <h3 data-i18n="mode.3.name">Armonizador</h3>
+            <p class="mode-tag" data-i18n="mode.3.tag">Vos ponés la melodía</p>
+          </div>
+        </header>
+        <p data-i18n="mode.3.body">
+          Dibujás una línea en el pentagrama, con el mouse o con el piano de
+          abajo, y el programa le busca los acordes que la sostienen. Las notas
+          doradas te dicen de antemano cuáles van a llevar acorde.
+        </p>
+        <figure class="shot">
+          <div class="shot-frame">
+            <img src="assets/img/melodia.png" width="1442" height="932" loading="lazy"
+                 alt="El pentagrama editable con una melodía dibujada y el piano debajo"
+                 data-i18n-alt="alt.melodia">
+          </div>
+        </figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────  REGLAS / GÉNEROS  ────────────────────── -->
+<section class="band" id="reglas">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="rules.kicker">Las reglas</p>
+    <h2 class="reveal" data-i18n="rules.title">Cuatro tradiciones, y todas se pueden discutir</h2>
+    <p class="prose reveal" data-i18n="rules.body">
+      El género no toca los acordes: decide cómo se conducen las voces de uno
+      al siguiente, qué se prohíbe, qué se premia y con cuánta fuerza. Y todo
+      switch se prende y se apaga por separado — el género sólo define de dónde
+      parte.
+    </p>
+
+    <div class="genres">
+      <div class="genre reveal">
+        <h3 data-i18n="genre.1.name">Barroco</h3>
+        <p data-i18n="genre.1.body">El contrapunto de la práctica común. Sin quintas ni octavas paralelas, premia el movimiento contrario, castiga los saltos de tritono y de séptima. Trae adentro el <strong>modo coral</strong>, que es lo mismo más severo.</p>
+      </div>
+      <div class="genre reveal">
+        <h3 data-i18n="genre.2.name">Gregoriano</h3>
+        <p data-i18n="genre.2.body">Escritura modal, anterior a la tonalidad. Casi todo el movimiento por grado conjunto, ámbito estrecho, tritono prohibido, y tolera las paralelas perfectas porque ahí son el organum y no un error.</p>
+      </div>
+      <div class="genre reveal">
+        <h3 data-i18n="genre.3.name">Jazz</h3>
+        <p data-i18n="genre.3.body">Armonía extendida. Lo que manda no es el bajo sino cómo se encadenan la tercera y la séptima de un acorde al siguiente. Mantiene las notas comunes y esquiva las novenas menores.</p>
+      </div>
+    </div>
+
+    <div class="audit reveal">
+      <h3 data-i18n="audit.title">¿Y de verdad suenan distinto?</h3>
+      <p data-i18n="audit.body">
+        Es la pregunta obvia, y el proyecto trae la herramienta para
+        contestarla: <code>audit.py</code> corre las mismas progresiones con
+        cada género y las mide contra un control con todos los pesos de estilo
+        apagados. Los números están publicados, incluso donde no favorecen.
+      </p>
+      <div class="audit-nums">
+        <div><strong>18,8&nbsp;%</strong><span data-i18n="audit.n1">movimiento contrario en barroco, contra 11,3&nbsp;% del control</span></div>
+        <div><strong>96,4&nbsp;%</strong><span data-i18n="audit.n2">de séptimas que resuelven bajando en modo coral</span></div>
+        <div><strong>0</strong><span data-i18n="audit.n3">quintas y octavas paralelas donde la regla está prendida</span></div>
+      </div>
+      <p class="audit-foot" data-i18n="audit.foot">
+        El gregoriano es el que menos se despega, y está dicho así en el
+        README: su carácter vive en la armonía, y ahí los acordes los elegís vos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────────  QUÉ MÁS HACE  ──────────────────────── -->
+<section class="band alt" id="potencia">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="power.kicker">Qué más hace</p>
+    <h2 class="reveal" data-i18n="power.title">No termina cuando aparece la partitura</h2>
+
+    <div class="grid">
+      <div class="card reveal"><h3 data-i18n="f.1.t">De tres a seis voces</h3><p data-i18n="f.1.b">Soprano, mezzo, alto, tenor, barítono y bajo, con los registros editables voz por voz si tu coro no entra en el catálogo.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.2.t">MusicXML y MIDI</h3><p data-i18n="f.2.b">Exporta a los dos, escritos a mano por el programa. Se abren en MuseScore, Sibelius, Finale o lo que uses.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.3.t">Se escucha ahí mismo</h3><p data-i18n="f.3.b">Un botón por solución. El audio está sintetizado por el programa: no se empaqueta ni un solo archivo de sonido.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.4.t">Tres soluciones, no una</h3><p data-i18n="f.4.b">La que eligió y las dos que quedaron cerca, para que puedas oír qué se negoció en cada una.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.5.t">Te dice qué encontró</h3><p data-i18n="f.5.b">Cuando aparece una cadencia rota, un 6/4 cadencial o una sexta en lugar de quinta, te lo marca en la partitura y te explica en una línea qué es.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.6.t">Notas de paso y adornos</h3><p data-i18n="f.6.b">Rellena los saltos de tercera con movimiento por grado conjunto, y agrega gestos de época sobre el resultado.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.7.t">Intercambios modales</h3><p data-i18n="f.7.b">Napolitanas, bVII, sustitutos tritonales y dominantes aplicadas, con un dial para decir cuánto color querés.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.8.t">Importa partituras</h3><p data-i18n="f.8.b">Lee un MusicXML —también los <code>.mxl</code> comprimidos— y se queda con sus acordes, su ritmo y sus compases.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.9.t">Historial de lo hecho</h3><p data-i18n="f.9.b">Las últimas diez producciones quedan guardadas y se pueden volver a escuchar sin regenerar nada.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.10.t">Línea de comandos</h3><p data-i18n="f.10.b">El mismo motor sin abrir la ventana: <code>cli.py</code> acepta los acordes, el género y todos los switches.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.11.t">Portable de verdad</h3><p data-i18n="f.11.b">No hay instalador y no escribe fuera de su carpeta. Va en un pendrive y se desinstala tirándola a la papelera.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.12.t">El motor no tiene dependencias</h3><p data-i18n="f.12.b">Librería estándar de Python y nada más. Ni <code>music21</code>, ni <code>numpy</code>, ni una librería de audio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────  APRENDER  ─────────────────────────── -->
+<section class="band" id="aprender">
+  <div class="wrap two">
+    <div class="two-text">
+      <p class="kicker reveal" data-i18n="learn.kicker">Y además enseña</p>
+      <h2 class="reveal" data-i18n="learn.title">Un libro que se escribe solo</h2>
+      <p class="prose reveal" data-i18n="learn.body">
+        Adentro del programa hay un libro de teoría escrito para alguien que no
+        estudió música: armonía, conducción de voces, de dónde viene cada
+        estilo y las cadencias que el programa reconoce, con la receta para que
+        aparezcan.
+      </p>
+      <p class="prose reveal" data-i18n="learn.body2">
+        Pero no está escrito entero de entrada. Cada apartado está atado a algo
+        que tenés que encontrar: el día que te salga una cadencia rota, esa
+        noche el libro tiene un capítulo más. Son sesenta apartados y cuarenta y
+        tres logros, y la única forma de llenarlo es componiendo.
+      </p>
+    </div>
+    <figure class="shot reveal">
+      <div class="shot-frame">
+        <img src="assets/img/libro.png" width="1442" height="932" loading="lazy"
+             alt="El libro de teoría abierto en el capítulo sobre conducción de voces"
+             data-i18n-alt="alt.libro">
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ──────────────────────────  LA MÍSTICA  ────────────────────────── -->
+<section class="mystic" id="algo-mas">
+  <div class="wrap mystic-inner">
+    <p class="kicker gold reveal" data-i18n="myth.kicker">Y hay algo más</p>
+    <h2 class="reveal" data-i18n="myth.title">Alguna vez, si te ve trabajar tranquilo,<br>el programa te va a ofrecer algo</h2>
+    <div class="mystic-body">
+      <p class="reveal" data-i18n="myth.p1">
+        No dice qué es. Aparece un botón dorado en la pantalla inicial, y si no
+        lo tocás hoy sigue ahí mañana. Lo que pase después depende de cómo
+        contestes, y no hay una respuesta correcta: hay tres, y cada una lleva
+        a otra parte.
+      </p>
+      <p class="reveal" data-i18n="myth.p2">
+        Lo que se recorre se recorre usando el programa normalmente —
+        escribiendo acordes, generando progresiones, dibujando melodías. Al
+        final de cada camino hay música que no elegiste vos, y un capítulo del
+        libro que hasta entonces estuvo cerrado con el título tapado.
+      </p>
+      <p class="reveal mystic-last" data-i18n="myth.p3">
+        Nada de esto se anuncia en ninguna pantalla. Esta página tampoco lo va
+        a arruinar.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────────────  GALERÍA  ─────────────────────────── -->
+<section class="band alt" id="galeria">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="gal.kicker">Por dentro</p>
+    <h2 class="reveal" data-i18n="gal.title">Siete pantallas, y siempre se puede volver</h2>
+    <div class="gallery">
+      <button class="gal reveal" type="button" data-full="assets/img/generado.png">
+        <img src="assets/img/generado.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
+        <span data-i18n="gal.1">El resultado, con las cifras romanas y lo que el programa reconoció</span>
+      </button>
+      <button class="gal reveal" type="button" data-full="assets/img/genero.png">
+        <img src="assets/img/genero.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
+        <span data-i18n="gal.2">La elección de género, con lo que cada uno prohíbe y premia</span>
+      </button>
+      <button class="gal reveal" type="button" data-full="assets/img/logros.png">
+        <img src="assets/img/logros.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
+        <span data-i18n="gal.3">Cuarenta y tres logros, tres estrellas, y ninguno dice cómo</span>
+      </button>
+      <button class="gal reveal" type="button" data-full="assets/img/resultado.png">
+        <img src="assets/img/resultado.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
+        <span data-i18n="gal.4">Las tres mejores soluciones, cada una con su botón de escuchar</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────  DESCARGAR  ────────────────────────── -->
+<section class="download" id="descargar">
+  <div class="wrap dl-inner">
+    <h2 class="reveal" data-i18n="dl.title">Bajalo y probalo</h2>
+    <p class="reveal" data-i18n="dl.body">
+      Descomprimí el <code>.zip</code> donde quieras y ejecutá
+      <code>ChordWeaver.exe</code>. No hay instalador, no toca el registro y no
+      escribe nada fuera de su propia carpeta.
+    </p>
+    <a class="btn btn-primary btn-big reveal" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.0.1-windows.zip">
+      <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M10 2.5a1 1 0 0 1 1 1v7.09l2.3-2.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V3.5a1 1 0 0 1 1-1ZM3.5 14a1 1 0 0 1 1 1v1h11v-1a1 1 0 1 1 2 0v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2.5 16.5V15a1 1 0 0 1 1-1Z"/></svg>
+      <span data-i18n="dl.btn">ChordWeaver 1.0.1 · Windows · 26 MB</span>
+    </a>
+    <dl class="dl-facts reveal">
+      <div><dt data-i18n="dl.f1">Requisitos</dt><dd data-i18n="dl.f1v">Windows 64 bits. No hace falta Python.</dd></div>
+      <div><dt data-i18n="dl.f2">Licencia</dt><dd>MIT</dd></div>
+      <div><dt data-i18n="dl.f3">SHA-256</dt><dd><code class="hash">cc82c27c726c7b21f6cb92e4ef71d4972416583014d9eb60e15454be7b9fe55f</code></dd></div>
+    </dl>
+    <p class="dl-alt reveal">
+      <span data-i18n="dl.alt">¿Preferís correrlo desde el código?</span>
+      <code>pip install customtkinter &amp;&amp; python app.py</code>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <p class="foot-name">Chord<em>Weaver</em></p>
+        <p class="foot-note" data-i18n="foot.note">Software libre bajo licencia MIT.</p>
+      </div>
+    </div>
+    <nav class="foot-links" aria-label="Enlaces">
+      <a href="https://github.com/ChordWeaver/chordweaver" target="_blank" rel="noopener" data-i18n="foot.repo">Código en GitHub</a>
+      <a href="https://github.com/ChordWeaver/chordweaver/releases" target="_blank" rel="noopener" data-i18n="foot.releases">Todas las versiones</a>
+      <a href="https://github.com/ChordWeaver/chordweaver/issues" target="_blank" rel="noopener" data-i18n="foot.issues">Reportar un problema</a>
+      <a href="https://github.com/ChordWeaver/chordweaver/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-i18n="foot.contrib">Cómo contribuir</a>
+      <a href="mailto:thechordweaverproject@gmail.com">thechordweaverproject@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lb-close" type="button" aria-label="Cerrar">&times;</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

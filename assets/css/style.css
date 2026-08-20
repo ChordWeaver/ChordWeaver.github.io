@@ -450,10 +450,11 @@ h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01
 
 /* ────────────────────────  APARICIONES  ────────────────────────── */
 
-.reveal { opacity: 0; transform: translateY(16px); }
-.reveal.in { opacity: 1; transform: none; transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.js .reveal { opacity: 0; transform: translateY(16px); }
+.reveal { opacity: 1; }
+.js .reveal.in { opacity: 1; transform: none; transition: opacity .6s var(--ease), transform .6s var(--ease); }
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .reveal.in { opacity: 1; transform: none; transition: none; }
+  .reveal, .js .reveal, .js .reveal.in { opacity: 1; transform: none; transition: none; }
   .btn:hover, .card:hover, .mode:hover, .gal:hover img { transform: none; }
 }
 

@@ -476,6 +476,14 @@
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
 
     Array.prototype.forEach.call(items, function (el) { io.observe(el); });
+
+    // Y una red por si el observador no llega a disparar nunca --- pasa en
+    // capturas automaticas y en navegadores con el motor de animacion
+    // congelado. Que la pagina aparezca de golpe es feo; que no aparezca es
+    // que no hay pagina.
+    setTimeout(function () {
+      Array.prototype.forEach.call(items, function (el) { el.classList.add('in'); });
+    }, 2500);
   }
 
   function wireNav() {

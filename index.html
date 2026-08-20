@@ -2,6 +2,11 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!-- Marca el documento antes de que se pinte nada. Las apariciones al
+     scrollear esconden el contenido y lo muestran despues, asi que sin
+     esta marca una pagina sin JavaScript --- o con el observador de
+     interseccion sin disparar --- se veria vacia de la mitad para abajo. -->
+<script>document.documentElement.className += " js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ChordWeaver — conducción de voces por algoritmo genético</title>
 <meta name="description" content="Vos elegís los acordes. Un algoritmo genético decide qué nota canta cada voz y en qué octava, respetando las reglas de contrapunto del género. Aplicación de escritorio libre para Windows.">

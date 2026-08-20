@@ -346,7 +346,9 @@
     if (!host) { return; }
 
     var W = 980, H = 340;
-    var padL = 58, padR = 24, padT = 26, padB = 46;
+    // padL tiene que dar para el nombre de voz mas largo escrito a la
+    // izquierda del eje: con 58 la S de «Soprano» se salia del lienzo.
+    var padL = 78, padR = 26, padT = 26, padB = 46;
     var lo = 41, hi = 76;                       // margen arriba y abajo del rango real
     var stepX = (W - padL - padR) / (CHORDS.length - 1);
     var x = function (i) { return padL + i * stepX; };

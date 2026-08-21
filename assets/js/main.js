@@ -75,8 +75,8 @@
       'mode.3.body': 'Dibujás una línea en el pentagrama, con el mouse o con el piano de abajo, y el programa le busca los acordes que la sostienen. Las notas doradas te dicen de antemano cuáles van a llevar acorde.',
 
       'rules.kicker': 'Las reglas',
-      'rules.title': 'Cuatro tradiciones, y todas se pueden discutir',
-      'rules.body': 'La armonía —qué acordes suenan y en qué orden— la ponés vos o la escribe el Generador. El género no la toca: se ocupa de lo otro, que es el contrapunto —cómo se conducen las voces de un acorde al siguiente, qué se prohíbe, qué se premia y con cuánta fuerza. Y todo switch se prende y se apaga por separado: el género sólo define de dónde parte.',
+      'rules.title': 'Tres tradiciones, y todas se pueden discutir',
+      'rules.body': 'El género manda sobre las dos mitades. Cuando es el programa el que elige los acordes, decide qué cadencias se premian, si una dominante está obligada a caer de quinta, cuánto cuesta un acorde de color y qué préstamos vienen prendidos de fábrica. Y en el reparto de las voces decide qué movimientos se prohíben, cuáles se premian y con cuánta fuerza. Lo que el algoritmo minimiza es la suma de las dos, y un dial decide cuánto pesa cada una.',
 
       'genre.1.name': 'Barroco',
       'genre.1.body': 'El contrapunto de la práctica común. Sin quintas ni octavas paralelas, premia el movimiento contrario, castiga los saltos de tritono y de séptima. Trae adentro el <strong>modo coral</strong>, que es lo mismo más severo.',
@@ -86,8 +86,8 @@
       'genre.3.body': 'Armonía extendida. Lo que manda no es el bajo sino cómo se encadenan la tercera y la séptima de un acorde al siguiente. Mantiene las notas comunes y esquiva las novenas menores.',
 
       'audit.title': '¿Y de verdad suenan distinto?',
-      'audit.body': 'Es la pregunta obvia, y el proyecto trae la herramienta para contestarla: <code>audit.py</code> corre las mismas progresiones con cada género y las mide contra un control con todos los pesos de estilo apagados. Los números están publicados, incluso donde no favorecen.',
-      'audit.n1': 'movimiento contrario en barroco, contra 11,3 % del control',
+      'audit.body': 'Es la pregunta obvia, y el proyecto trae la herramienta para contestarla: <code>audit.py</code> corre las mismas progresiones con cada género y vuelve a correrlas con todas las reglas de estilo apagadas, para ver qué cambia de verdad. Los números están publicados, incluso donde no favorecen.',
+      'audit.n1': 'de los enlaces en barroco tienen las dos voces extremas moviéndose para lados distintos, o una quieta',
       'audit.n2': 'de séptimas que resuelven bajando en modo coral',
       'audit.n3': 'quintas y octavas paralelas donde la regla está prendida',
       'audit.foot': 'El gregoriano es el que menos se despega, y está dicho así en el README: su carácter vive en la armonía, y ahí los acordes los elegís vos.',
@@ -230,8 +230,8 @@
       'mode.3.body': 'Draw a line on the staff, with the mouse or the piano underneath, and the program finds the chords that hold it up. The golden notes tell you in advance which ones will carry a chord.',
 
       'rules.kicker': 'The rules',
-      'rules.title': 'Four traditions, and every one of them is up for argument',
-      'rules.body': 'The harmony — which chords sound and in what order — is either yours or the Generator\'s. The genre never touches it: it deals with the other half, the counterpoint — how the voices move from one chord to the next, what is forbidden, what is rewarded and how strongly. And every switch turns on and off on its own: the genre only sets the starting point.',
+      'rules.title': 'Three traditions, and every one of them is up for argument',
+      'rules.body': 'The genre rules over both halves. When the program is the one choosing the chords, it decides which cadences are rewarded, whether a dominant is obliged to fall by a fifth, what a colour chord costs, and which borrowed chords arrive switched on. And in sharing out the voices it decides which motions are forbidden, which are rewarded, and how strongly. What the algorithm minimises is the sum of the two, and a dial decides how much each one weighs.',
 
       'genre.1.name': 'Baroque',
       'genre.1.body': 'The counterpoint of common practice. No parallel fifths or octaves, contrary motion rewarded, tritone and seventh leaps penalised. It carries <strong>chorale mode</strong> inside it, which is the same thing, stricter.',
@@ -241,8 +241,8 @@
       'genre.3.body': 'Extended harmony. What rules here is not the bass but how the third and the seventh of one chord connect to the next. Common tones are kept and minor ninths avoided.',
 
       'audit.title': 'But do they actually sound different?',
-      'audit.body': 'It is the obvious question, and the project ships the tool that answers it: <code>audit.py</code> runs the same progressions through every genre and measures them against a control with all style weights switched off. The numbers are published, including where they are unflattering.',
-      'audit.n1': 'contrary motion in baroque, against 11.3 % in the control',
+      'audit.body': 'It is the obvious question, and the project ships the tool that answers it: <code>audit.py</code> runs the same progressions through every genre and then runs them again with every style rule switched off, to see what actually changes. The numbers are published, including where they are unflattering.',
+      'audit.n1': 'of the links in baroque have the two outer voices moving in different directions, or one of them standing still',
       'audit.n2': 'of sevenths resolving downwards in chorale mode',
       'audit.n3': 'parallel fifths and octaves wherever the rule is switched on',
       'audit.foot': 'Gregorian is the one that separates itself least, and the README says so plainly: its character lives in the harmony, and there the chords are yours to choose.',
@@ -536,7 +536,10 @@
     var close = document.getElementById('lb-close');
     if (!box || !img) { return; }
 
+    var opener = null;
+
     function open(src, alt) {
+      opener = document.activeElement;
       img.src = src;
       img.alt = alt || '';
       box.hidden = false;
@@ -547,6 +550,10 @@
       box.hidden = true;
       img.src = '';
       document.body.style.overflow = '';
+      // Devolver el foco a donde estaba: sin esto el teclado vuelve al
+      // principio del documento y hay que tabular la página entera.
+      if (opener && opener.focus) { opener.focus(); }
+      opener = null;
     }
 
     Array.prototype.forEach.call(document.querySelectorAll('.gal'), function (btn) {
@@ -555,6 +562,27 @@
         open(btn.getAttribute('data-full'), caption ? caption.textContent : '');
       });
     });
+
+    // Todas las demás capturas también se amplían: las de las tarjetas de
+    // modo, la del libro y la del modo historia. Son del mismo tamaño que
+    // las de la galería y al lado del texto se ven demasiado chicas para
+    // leer lo que muestran. La galería usa un <button> de verdad; acá el
+    // marcado es una imagen suelta, así que se le da el papel y el teclado
+    // a mano en vez de reescribir el HTML de cada una.
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.shot img, .mystic-shot img'),
+      function (img) {
+        img.classList.add('zoomable');
+        img.setAttribute('role', 'button');
+        img.setAttribute('tabindex', '0');
+        img.addEventListener('click', function () { open(img.src, img.alt); });
+        img.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            open(img.src, img.alt);
+          }
+        });
+      });
     close.addEventListener('click', shut);
     box.addEventListener('click', function (e) { if (e.target === box) { shut(); } });
     document.addEventListener('keydown', function (e) {

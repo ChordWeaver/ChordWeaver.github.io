@@ -255,13 +255,15 @@
 <section class="band" id="reglas">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="rules.kicker">Las reglas</p>
-    <h2 class="reveal" data-i18n="rules.title">Cuatro tradiciones, y todas se pueden discutir</h2>
+    <h2 class="reveal" data-i18n="rules.title">Tres tradiciones, y todas se pueden discutir</h2>
     <p class="prose reveal" data-i18n="rules.body">
-      La armonía —qué acordes suenan y en qué orden— la ponés vos o la escribe
-      el Generador. El género no la toca: se ocupa de lo otro, que es el
-      contrapunto —cómo se conducen las voces de un acorde al siguiente, qué se
-      prohíbe, qué se premia y con cuánta fuerza. Y todo switch se prende y se
-      apaga por separado: el género sólo define de dónde parte.
+      El género manda sobre las dos mitades. Cuando es el programa el que elige
+      los acordes, decide qué cadencias se premian, si una dominante está
+      obligada a caer de quinta, cuánto cuesta un acorde de color y qué
+      préstamos vienen prendidos de fábrica. Y en el reparto de las voces
+      decide qué movimientos se prohíben, cuáles se premian y con cuánta
+      fuerza. Lo que el algoritmo minimiza es la suma de las dos, y un dial
+      decide cuánto pesa cada una.
     </p>
 
     <div class="genres">
@@ -284,11 +286,12 @@
       <p data-i18n="audit.body">
         Es la pregunta obvia, y el proyecto trae la herramienta para
         contestarla: <code>audit.py</code> corre las mismas progresiones con
-        cada género y las mide contra un control con todos los pesos de estilo
-        apagados. Los números están publicados, incluso donde no favorecen.
+        cada género y vuelve a correrlas con todas las reglas de estilo
+        apagadas, para ver qué cambia de verdad. Los números están publicados,
+        incluso donde no favorecen.
       </p>
       <div class="audit-nums">
-        <div><strong>18,8&nbsp;%</strong><span data-i18n="audit.n1">movimiento contrario en barroco, contra 11,3&nbsp;% del control</span></div>
+        <div><strong>87,5&nbsp;%</strong><span data-i18n="audit.n1">de los enlaces en barroco tienen las dos voces extremas moviéndose para lados distintos, o una quieta</span></div>
         <div><strong>96,4&nbsp;%</strong><span data-i18n="audit.n2">de séptimas que resuelven bajando en modo coral</span></div>
         <div><strong>0</strong><span data-i18n="audit.n3">quintas y octavas paralelas donde la regla está prendida</span></div>
       </div>

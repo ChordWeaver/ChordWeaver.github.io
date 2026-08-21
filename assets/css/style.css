@@ -574,3 +574,13 @@ h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01
   .notes { padding: 44px 0 68px; }
   .notes-group { margin-bottom: 40px; }
 }
+
+
+/* Las capturas que se amplían al tocarlas. La clase se la pone el
+   JavaScript, no el HTML: sin JavaScript no hay lupa, y entonces tampoco
+   tiene que haber un cursor prometiéndola. */
+.zoomable { cursor: zoom-in; }
+.zoomable:focus-visible {
+  outline: 2px solid var(--brand, var(--blue));
+  outline-offset: 3px;
+}

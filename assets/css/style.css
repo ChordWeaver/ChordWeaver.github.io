@@ -82,12 +82,17 @@ code {
   font-weight: 700; font-size: 1.06rem; letter-spacing: -.01em;
   color: var(--text); text-decoration: none; white-space: nowrap;
 }
-.brand em { font-style: normal; color: var(--blue); }
+/* `--brand` la reescribe el scroll, recorriendo los tres colores de los
+   tres modos. El valor de reserva es el azul: sin JavaScript el logotipo
+   se queda quieto en el color del primer modo y no en ninguno. */
+.brand em { font-style: normal; color: var(--brand, var(--blue)); transition: color .18s linear; }
 .brand-mark {
   width: 26px; height: 26px; border-radius: 8px; flex: none;
   background:
     linear-gradient(140deg, var(--blue), var(--purple) 55%, var(--green));
-  box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset,
+              0 0 0 3px color-mix(in srgb, var(--brand, var(--blue)) 22%, transparent);
+  transition: box-shadow .18s linear;
 }
 
 .nav-links { display: flex; gap: 26px; margin-left: auto; }
@@ -483,4 +488,89 @@ h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01
   .hero-shot .shot-frame { transform: none; }
   .demo { padding: 22px 16px 18px; }
   .foot-inner { flex-direction: column; align-items: flex-start; }
+}
+
+
+/* ─────────────────────  LO QUE SE AGREGO DESPUES  ───────────────── */
+
+/* Un párrafo que comenta el gráfico de arriba en vez de introducir lo de
+   abajo: va más chico y con un filete al costado para que se lea como una
+   nota al pie y no como el arranque de otra idea. */
+.aside {
+  margin-top: 26px; padding-left: 18px;
+  border-left: 2px solid var(--border-soft);
+  font-size: .93rem; color: var(--text-faint);
+}
+
+/* La foto del modo historia se desvanece contra el fondo por los cuatro
+   lados: un rectángulo con borde neto ahí se leería como una captura de
+   pantalla, y lo que tiene que parecer es una ventana a otra parte. */
+.mystic-shot { margin: 54px auto 0; max-width: 900px; }
+.mystic-shot img {
+  width: 100%; border-radius: 16px;
+  -webkit-mask-image: radial-gradient(112% 96% at 50% 46%, #000 52%, transparent 88%);
+          mask-image: radial-gradient(112% 96% at 50% 46%, #000 52%, transparent 88%);
+  opacity: .92;
+}
+
+.dl-notes { margin: 26px 0 0; }
+.dl-notes a {
+  color: var(--blue); text-decoration: none; font-size: .93rem; font-weight: 500;
+}
+.dl-notes a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+
+/* ──────────────────────  PAGINA DE NOVEDADES  ───────────────────── */
+
+.notes { padding: 72px 0 96px; }
+.notes-head { max-width: 62ch; margin-bottom: 56px; }
+.notes-title {
+  font-family: var(--serif);
+  font-size: clamp(2.3rem, 5.5vw, 3.5rem);
+  font-weight: 600; line-height: 1.08; letter-spacing: -.025em;
+  margin: 0 0 20px;
+}
+.notes-title em { font-style: normal; color: var(--brand, var(--blue)); transition: color .18s linear; }
+.notes-lede { color: var(--text-dim); font-size: 1.06rem; margin: 0 0 28px; }
+.notes-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: 0; }
+.btn-small { padding: 10px 20px; font-size: .9rem; border-radius: 10px; }
+
+.notes-group { margin-bottom: 52px; }
+.notes-group h2 {
+  font-size: 1.02rem; font-family: var(--sans); font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint);
+  max-width: none; margin: 0 0 20px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.notes-list { list-style: none; padding: 0; margin: 0; }
+.notes-list li {
+  position: relative; padding: 11px 0 11px 26px;
+  color: var(--text-dim); font-size: .97rem; line-height: 1.6;
+  border-bottom: 1px solid rgba(255, 255, 255, .035);
+}
+.notes-list li:last-child { border-bottom: 0; }
+/* La viñeta es un cuadradito del color del modo por el que va el scroll:
+   la misma idea del logotipo, para que la lista no se lea como un volcado
+   de texto sin forma. */
+.notes-list li::before {
+  content: ''; position: absolute; left: 2px; top: 20px;
+  width: 7px; height: 7px; border-radius: 2px;
+  background: var(--brand, var(--blue)); opacity: .55;
+  transition: background .18s linear;
+}
+.notes-list strong { color: var(--text); font-weight: 600; }
+.notes-list em { color: var(--gold-dim); font-style: italic; }
+.notes-list.plain li { font-size: .93rem; }
+.notes-list.plain li::before { opacity: .28; }
+
+.notes-foot { margin-top: 8px; }
+.notes-foot a {
+  color: var(--blue); text-decoration: none; font-size: .95rem; font-weight: 500;
+}
+.notes-foot a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 700px) {
+  .notes { padding: 44px 0 68px; }
+  .notes-group { margin-bottom: 40px; }
 }

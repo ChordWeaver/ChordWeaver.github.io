@@ -40,6 +40,7 @@
       <a href="#como" data-i18n="nav.how">Cómo funciona</a>
       <a href="#potencia" data-i18n="nav.power">Qué más hace</a>
       <a href="#descargar" data-i18n="nav.download">Descargar</a>
+      <a href="notas.html" data-i18n="nav.notes">Novedades</a>
     </nav>
     <div class="nav-side">
       <button class="lang" id="lang-toggle" type="button" aria-label="Cambiar idioma">
@@ -176,7 +177,9 @@
         <p data-i18n="mode.2.body">
           Elegís tonalidad, modo, con qué acorde empieza y con cuál termina, y
           cuántos acordes prestados de fuera de la escala tolerás. El programa
-          arma la progresión entera y después la escribe a varias voces.
+          escribe la armonía entera —qué grado sigue a cuál, dónde cae cada
+          cadencia, qué se toma prestado— y recién después la reparte entre las
+          voces.
         </p>
         <figure class="shot">
           <div class="shot-frame">
@@ -212,16 +215,53 @@
   </div>
 </section>
 
+<!-- ───────────────────────  SEIS VOCES / ARMONÍA  ─────────────────── -->
+<section class="band" id="seis">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="six.kicker">Armonía</p>
+    <h2 class="reveal" data-i18n="six.title">A seis voces sobra gente para tres notas</h2>
+    <p class="prose reveal" data-i18n="six.body">
+      Un acorde de tres notas repartido entre seis voces obliga a doblar tres.
+      Cuál se dobla y cuál queda sola no es un detalle de reparto: es armonía, y
+      cambia el color del acorde. ChordWeaver lo decide uno por uno, y cuando el
+      acorde ya está completo usa las voces que sobran para colorearlo —una
+      sexta, una novena— en vez de repetir la séptima de punta a punta.
+    </p>
+
+    <div class="demo reveal">
+      <div class="demo-head">
+        <h3 data-i18n="demo6.title">Nueve acordes a seis voces</h3>
+        <p data-i18n="demo6.sub">Soprano, mezzo, alto, tenor, barítono y bajo. Pasá el mouse por una voz.</p>
+      </div>
+      <div class="demo-chart" id="chart6" role="img"
+           aria-label="Gráfico de las seis voces moviéndose entre nueve acordes"
+           data-i18n-aria="alt.chart6"></div>
+      <ul class="demo-legend" id="chart6-legend"></ul>
+      <p class="demo-note">
+        <strong id="chart6-total">—</strong>
+        <span data-i18n="demo6.note">de movimiento total. Ninguna voz cruza a la de al lado, no hay un solo unísono en los nueve acordes, y el salto más grande de toda la pieza es una quinta.</span>
+      </p>
+    </div>
+
+    <p class="prose reveal aside" data-i18n="six.body2">
+      Y en el G7 de ahí arriba la sensible aparece una sola vez. Duplicarla es
+      de las pocas cosas que la armonía de práctica común directamente no
+      perdona, y es una regla que se puede apagar como todas las demás.
+    </p>
+  </div>
+</section>
+
 <!-- ─────────────────────────  REGLAS / GÉNEROS  ────────────────────── -->
 <section class="band" id="reglas">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="rules.kicker">Las reglas</p>
     <h2 class="reveal" data-i18n="rules.title">Cuatro tradiciones, y todas se pueden discutir</h2>
     <p class="prose reveal" data-i18n="rules.body">
-      El género no toca los acordes: decide cómo se conducen las voces de uno
-      al siguiente, qué se prohíbe, qué se premia y con cuánta fuerza. Y todo
-      switch se prende y se apaga por separado — el género sólo define de dónde
-      parte.
+      La armonía —qué acordes suenan y en qué orden— la ponés vos o la escribe
+      el Generador. El género no la toca: se ocupa de lo otro, que es el
+      contrapunto —cómo se conducen las voces de un acorde al siguiente, qué se
+      prohíbe, qué se premia y con cuánta fuerza. Y todo switch se prende y se
+      apaga por separado: el género sólo define de dónde parte.
     </p>
 
     <div class="genres">
@@ -335,6 +375,11 @@
         a arruinar.
       </p>
     </div>
+    <figure class="mystic-shot reveal">
+      <img src="assets/img/misterio.png" width="1436" height="1010" loading="lazy"
+           alt="Un valle de noche, con la luna y una figura a lo lejos"
+           data-i18n-alt="alt.misterio">
+    </figure>
   </div>
 </section>
 
@@ -382,6 +427,9 @@
       <div><dt data-i18n="dl.f2">Licencia</dt><dd>MIT</dd></div>
       <div><dt data-i18n="dl.f3">SHA-256</dt><dd><code class="hash">cc82c27c726c7b21f6cb92e4ef71d4972416583014d9eb60e15454be7b9fe55f</code></dd></div>
     </dl>
+    <p class="dl-notes reveal">
+      <a href="notas.html" data-i18n="dl.notes">Ver todo lo que cambió en esta versión →</a>
+    </p>
     <p class="dl-alt reveal">
       <span data-i18n="dl.alt">¿Preferís correrlo desde el código?</span>
       <code>pip install customtkinter &amp;&amp; python app.py</code>
@@ -402,6 +450,7 @@
     </div>
     <nav class="foot-links" aria-label="Enlaces">
       <a href="https://github.com/ChordWeaver/chordweaver" target="_blank" rel="noopener" data-i18n="foot.repo">Código en GitHub</a>
+      <a href="notas.html" data-i18n="foot.notes">Notas del parche</a>
       <a href="https://github.com/ChordWeaver/chordweaver/releases" target="_blank" rel="noopener" data-i18n="foot.releases">Todas las versiones</a>
       <a href="https://github.com/ChordWeaver/chordweaver/issues" target="_blank" rel="noopener" data-i18n="foot.issues">Reportar un problema</a>
       <a href="https://github.com/ChordWeaver/chordweaver/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-i18n="foot.contrib">Cómo contribuir</a>

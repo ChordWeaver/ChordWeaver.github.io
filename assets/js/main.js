@@ -11,12 +11,35 @@
   var STRINGS = {
     es: {
       'doc.title': 'ChordWeaver — conducción de voces por algoritmo genético',
+      'notes.title': 'ChordWeaver 1.0.1 — Notas del parche',
+      'notes.kicker': 'Notas del parche',
+      'notes.lede': 'La versión con la que el programa se publicó como código abierto. Es también la más grande que tuvo: entraron tres cosas que antes no existían —el armonizador, el libro de teoría y todo lo que pasa cuando el programa deja de ser sólo una herramienta— y se reescribió la interfaz entera.',
+      'notes.download': 'Descargar 1.0.1',
+      'notes.back': '← Volver al inicio',
+      'notes.releases': 'Releases',
+      'notes.all': 'Todas las versiones en GitHub →',
+      'notes.g1': 'Nuevas funciones',
+      'notes.g2': 'Cambios importantes',
+      'notes.g3': 'Cambios relevantes',
+      'notes.g4': 'Cambios menores',
       'skip': 'Saltar al contenido',
 
       'nav.modes': 'Los tres modos',
       'nav.how': 'Cómo funciona',
       'nav.power': 'Qué más hace',
       'nav.download': 'Descargar',
+      'nav.notes': 'Novedades',
+      'six.kicker': 'Armonía',
+      'six.title': 'A seis voces sobra gente para tres notas',
+      'six.body': 'Un acorde de tres notas repartido entre seis voces obliga a doblar tres. Cuál se dobla y cuál queda sola no es un detalle de reparto: es armonía, y cambia el color del acorde. ChordWeaver lo decide uno por uno, y cuando el acorde ya está completo usa las voces que sobran para colorearlo —una sexta, una novena— en vez de repetir la séptima de punta a punta.',
+      'six.body2': 'Y en el G7 de ahí arriba la sensible aparece una sola vez. Duplicarla es de las pocas cosas que la armonía de práctica común directamente no perdona, y es una regla que se puede apagar como todas las demás.',
+      'demo6.title': 'Nueve acordes a seis voces',
+      'demo6.sub': 'Soprano, mezzo, alto, tenor, barítono y bajo. Pasá el mouse por una voz.',
+      'demo6.note': 'de movimiento total. Ninguna voz cruza a la de al lado, no hay un solo unísono en los nueve acordes, y el salto más grande de toda la pieza es una quinta.',
+      'alt.chart6': 'Gráfico de las seis voces moviéndose entre nueve acordes',
+      'alt.misterio': 'Un valle de noche, con la luna y una figura a lo lejos',
+      'dl.notes': 'Ver todo lo que cambió en esta versión →',
+      'foot.notes': 'Notas del parche',
 
       'hero.eyebrow': 'Código abierto · Licencia MIT · Windows',
       'hero.hook': 'Tus acordes, tu melodía, o una hoja en blanco.',
@@ -46,14 +69,14 @@
       'mode.1.body': 'Escribís la progresión en cifrado americano —o la importás de un MusicXML— y el programa reparte las voces. Podés fijar un acorde con el candado si querés esa disposición exacta y ninguna otra.',
       'mode.2.name': 'Generador',
       'mode.2.tag': 'Pone todo el programa',
-      'mode.2.body': 'Elegís tonalidad, modo, con qué acorde empieza y con cuál termina, y cuántos acordes prestados de fuera de la escala tolerás. El programa arma la progresión entera y después la escribe a varias voces.',
+      'mode.2.body': 'Elegís tonalidad, modo, con qué acorde empieza y con cuál termina, y cuántos acordes prestados de fuera de la escala tolerás. El programa escribe la armonía entera —qué grado sigue a cuál, dónde cae cada cadencia, qué se toma prestado— y recién después la reparte entre las voces.',
       'mode.3.name': 'Armonizador',
       'mode.3.tag': 'Vos ponés la melodía',
       'mode.3.body': 'Dibujás una línea en el pentagrama, con el mouse o con el piano de abajo, y el programa le busca los acordes que la sostienen. Las notas doradas te dicen de antemano cuáles van a llevar acorde.',
 
       'rules.kicker': 'Las reglas',
       'rules.title': 'Cuatro tradiciones, y todas se pueden discutir',
-      'rules.body': 'El género no toca los acordes: decide cómo se conducen las voces de uno al siguiente, qué se prohíbe, qué se premia y con cuánta fuerza. Y todo switch se prende y se apaga por separado — el género sólo define de dónde parte.',
+      'rules.body': 'La armonía —qué acordes suenan y en qué orden— la ponés vos o la escribe el Generador. El género no la toca: se ocupa de lo otro, que es el contrapunto —cómo se conducen las voces de un acorde al siguiente, qué se prohíbe, qué se premia y con cuánta fuerza. Y todo switch se prende y se apaga por separado: el género sólo define de dónde parte.',
 
       'genre.1.name': 'Barroco',
       'genre.1.body': 'El contrapunto de la práctica común. Sin quintas ni octavas paralelas, premia el movimiento contrario, castiga los saltos de tritono y de séptima. Trae adentro el <strong>modo coral</strong>, que es lo mismo más severo.',
@@ -143,12 +166,35 @@
 
     en: {
       'doc.title': 'ChordWeaver — voice leading by genetic algorithm',
+      'notes.title': 'ChordWeaver 1.0.1 — Patch notes',
+      'notes.kicker': 'Patch notes',
+      'notes.lede': 'The version the program was open-sourced with. It is also the largest it ever had: three things that did not exist before went in — the harmoniser, the theory book, and everything that happens once the program stops being only a tool — and the entire interface was rewritten.',
+      'notes.download': 'Download 1.0.1',
+      'notes.back': '← Back to the start',
+      'notes.releases': 'Releases',
+      'notes.all': 'Every release on GitHub →',
+      'notes.g1': 'New features',
+      'notes.g2': 'Major changes',
+      'notes.g3': 'Notable changes',
+      'notes.g4': 'Minor changes',
       'skip': 'Skip to content',
 
       'nav.modes': 'The three modes',
       'nav.how': 'How it works',
       'nav.power': 'What else it does',
       'nav.download': 'Download',
+      'nav.notes': 'What’s new',
+      'six.kicker': 'Harmony',
+      'six.title': 'Six voices are too many for three notes',
+      'six.body': 'A three-note chord shared between six voices forces three of them to double. Which note gets doubled and which one stands alone is not a detail of the sharing out: it is harmony, and it changes the colour of the chord. ChordWeaver decides one by one, and when the chord is already complete it uses the spare voices to colour it — a sixth, a ninth — instead of repeating the seventh from end to end.',
+      'six.body2': 'And in the G7 above, the leading tone appears exactly once. Doubling it is one of the few things common-practice harmony simply does not forgive — and it is a rule you can switch off like every other one.',
+      'demo6.title': 'Nine chords in six voices',
+      'demo6.sub': 'Soprano, mezzo, alto, tenor, baritone and bass. Hover over a voice.',
+      'demo6.note': 'of total movement. No voice crosses its neighbour, there is not one unison across the nine chords, and the largest leap in the whole piece is a fifth.',
+      'alt.chart6': 'A chart of six voices moving across nine chords',
+      'alt.misterio': 'A valley at night, with the moon and a figure in the distance',
+      'dl.notes': 'See everything that changed in this version →',
+      'foot.notes': 'Patch notes',
 
       'hero.eyebrow': 'Open source · MIT licence · Windows',
       'hero.hook': 'Your chords, your melody, or a blank page.',
@@ -178,14 +224,14 @@
       'mode.1.body': 'Write the progression in chord symbols — or import it from a MusicXML file — and the program distributes the voices. You can pin a chord with the padlock if you want that exact spacing and no other.',
       'mode.2.name': 'Generator',
       'mode.2.tag': 'The program brings everything',
-      'mode.2.body': 'Choose the key, the mode, which chord it starts and ends on, and how many borrowed chords from outside the scale you will tolerate. The program builds the whole progression and then writes it for several voices.',
+      'mode.2.body': 'Choose the key, the mode, which chord it starts and ends on, and how many borrowed chords from outside the scale you will tolerate. The program writes the whole harmony — which degree follows which, where each cadence lands, what gets borrowed — and only then shares it out between the voices.',
       'mode.3.name': 'Harmoniser',
       'mode.3.tag': 'You bring the melody',
       'mode.3.body': 'Draw a line on the staff, with the mouse or the piano underneath, and the program finds the chords that hold it up. The golden notes tell you in advance which ones will carry a chord.',
 
       'rules.kicker': 'The rules',
       'rules.title': 'Four traditions, and every one of them is up for argument',
-      'rules.body': 'The genre never touches the chords: it decides how the voices move from one to the next, what is forbidden, what is rewarded and how strongly. And every switch turns on and off on its own — the genre only sets the starting point.',
+      'rules.body': 'The harmony — which chords sound and in what order — is either yours or the Generator\'s. The genre never touches it: it deals with the other half, the counterpoint — how the voices move from one chord to the next, what is forbidden, what is rewarded and how strongly. And every switch turns on and off on its own: the genre only sets the starting point.',
 
       'genre.1.name': 'Baroque',
       'genre.1.body': 'The counterpoint of common practice. No parallel fifths or octaves, contrary motion rewarded, tritone and seventh leaps penalised. It carries <strong>chorale mode</strong> inside it, which is the same thing, stricter.',
@@ -289,7 +335,10 @@
     var dict = STRINGS[next];
 
     document.documentElement.lang = next;
-    document.title = dict['doc.title'];
+    // Cada página declara con qué clave se titula. Sin esto, la página de
+    // novedades se quedaba con el título del índice apenas corría el JS.
+    document.title = dict[document.body.getAttribute('data-title') || 'doc.title']
+                     || dict['doc.title'];
 
     // innerHTML y no textContent: varias frases llevan <em>, <code> o un <br>
     // que es parte de cómo está cortado el título. Todo esto lo escribimos
@@ -307,6 +356,13 @@
       if (v != null) { el.setAttribute('aria-label', v); }
     });
 
+    // Bloques enteros escritos en el HTML, uno por idioma. Las notas del
+    // parche son cientos de líneas: como claves de diccionario serían
+    // ilegibles y cualquier corrección habría que hacerla escapando comillas.
+    Array.prototype.forEach.call(document.querySelectorAll('[data-lang-block]'), function (el) {
+      el.hidden = el.getAttribute('data-lang-block') !== next;
+    });
+
     Array.prototype.forEach.call(document.querySelectorAll('.lang-opt'), function (el) {
       el.classList.toggle('on', el.getAttribute('data-lang') === next);
     });
@@ -314,63 +370,87 @@
     var close = document.getElementById('lb-close');
     if (close) { close.setAttribute('aria-label', dict['chart.close']); }
 
-    drawChart();
+    drawCharts();
     try { localStorage.setItem('cw-lang', next); } catch (e) { /* modo privado */ }
   }
 
-  /* ═════════════════════  GRÁFICO DE VOCES  ═══════════════════════ */
+  /* ════════════════════  GRÁFICOS DE VOCES  ═══════════════════════ */
 
-  // Salida real: ocho acordes en barroco a cuatro voces, tal como los
-  // devolvió el programa. Las alturas son MIDI (do central = 60).
-  var CHORDS = ['C', 'Am', 'Dm7', 'G7', 'Em', 'Am', 'F', 'G'];
-  var VOICES = [
-    { key: 'S', es: 'Soprano', en: 'Soprano', colour: '#5b8fd6', midi: [67, 69, 69, 74, 71, 72, 72, 71] },
-    { key: 'A', es: 'Alto',    en: 'Alto',    colour: '#b07fd6', midi: [64, 64, 62, 65, 64, 64, 65, 67] },
-    { key: 'T', es: 'Tenor',   en: 'Tenor',   colour: '#4fae96', midi: [55, 52, 53, 55, 55, 57, 60, 62] },
-    { key: 'B', es: 'Bajo',    en: 'Bass',    colour: '#e8c97a', midi: [48, 48, 48, 47, 47, 45, 45, 43] }
-  ];
+  // Los dos son salidas reales del programa, con la búsqueda de fábrica
+  // (200x300) y las reglas del barroco. Las alturas son MIDI (do central =
+  // 60). El movimiento total se calcula abajo a partir de estas mismas
+  // notas, así que si alguien las cambia el número se corrige solo y no
+  // puede quedar mintiendo.
+  var CHARTS = {
+    four: {
+      host: 'chart', legend: 'chart-legend', total: 'chart-total',
+      lo: 41, hi: 76,
+      chords: ['C', 'Am', 'Dm7', 'G7', 'Em', 'Am', 'F', 'G'],
+      voices: [
+        { es: 'Soprano', en: 'Soprano', colour: '#5b8fd6', midi: [67, 69, 69, 74, 71, 72, 72, 71] },
+        { es: 'Alto',    en: 'Alto',    colour: '#b07fd6', midi: [64, 64, 62, 65, 64, 64, 65, 67] },
+        { es: 'Tenor',   en: 'Tenor',   colour: '#4fae96', midi: [55, 52, 53, 55, 55, 57, 60, 62] },
+        { es: 'Bajo',    en: 'Bass',    colour: '#e8c97a', midi: [48, 48, 48, 47, 47, 45, 45, 43] }
+      ]
+    },
+    six: {
+      host: 'chart6', legend: 'chart6-legend', total: 'chart6-total',
+      lo: 38, hi: 84,
+      chords: ['C', 'Am', 'F', 'G', 'Em', 'Am', 'Dm7', 'G7', 'C'],
+      voices: [
+        { es: 'Soprano',  en: 'Soprano',  colour: '#6fa0e2', midi: [76, 76, 81, 79, 76, 76, 69, 74, 72] },
+        { es: 'Mezzo',    en: 'Mezzo',    colour: '#8f8ade', midi: [72, 72, 72, 71, 64, 64, 65, 67, 67] },
+        { es: 'Alto',     en: 'Alto',     colour: '#b07fd6', midi: [60, 60, 65, 62, 59, 60, 60, 59, 60] },
+        { es: 'Tenor',    en: 'Tenor',    colour: '#4fae96', midi: [55, 57, 60, 55, 55, 57, 57, 53, 55] },
+        { es: 'Barítono', en: 'Baritone', colour: '#9ac088', midi: [52, 52, 53, 47, 52, 52, 50, 50, 52] },
+        { es: 'Bajo',     en: 'Bass',     colour: '#e8c97a', midi: [48, 45, 41, 43, 47, 45, 45, 43, 48] }
+      ]
+    }
+  };
+
   var NAMES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
   function noteName(midi) {
     return NAMES[((midi % 12) + 12) % 12] + (Math.floor(midi / 12) - 1);
   }
 
-  function totalMovement() {
+  function totalMovement(data) {
     var sum = 0;
-    VOICES.forEach(function (v) {
+    data.voices.forEach(function (v) {
       for (var i = 1; i < v.midi.length; i++) { sum += Math.abs(v.midi[i] - v.midi[i - 1]); }
     });
     return sum;
   }
 
-  function drawChart() {
-    var host = document.getElementById('chart');
+  function drawChart(data) {
+    var host = document.getElementById(data.host);
     if (!host) { return; }
 
-    var W = 980, H = 340;
-    // padL tiene que dar para el nombre de voz mas largo escrito a la
-    // izquierda del eje: con 58 la S de «Soprano» se salia del lienzo.
-    var padL = 78, padR = 26, padT = 26, padB = 46;
-    var lo = 41, hi = 76;                       // margen arriba y abajo del rango real
-    var stepX = (W - padL - padR) / (CHORDS.length - 1);
+    var many = data.voices.length > 4;
+    var W = 980, H = many ? 440 : 340;
+    // padL tiene que dar para el nombre de voz más largo escrito a la
+    // izquierda del eje: con 58 la S de «Soprano» se salía del lienzo.
+    var padL = many ? 92 : 78, padR = 26, padT = 26, padB = 46;
+    var stepX = (W - padL - padR) / (data.chords.length - 1);
     var x = function (i) { return padL + i * stepX; };
-    var y = function (m) { return padT + (hi - m) / (hi - lo) * (H - padT - padB); };
+    var y = function (m) {
+      return padT + (data.hi - m) / (data.hi - data.lo) * (H - padT - padB);
+    };
 
     var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
 
-    // Las verticales de cada acorde, que hacen de compás.
-    for (var i = 0; i < CHORDS.length; i++) {
+    for (var i = 0; i < data.chords.length; i++) {
       svg += '<line x1="' + x(i) + '" y1="' + padT + '" x2="' + x(i) + '" y2="' + (H - padB) +
              '" stroke="#2c3038" stroke-width="1"/>';
       svg += '<text x="' + x(i) + '" y="' + (H - padB + 26) + '" fill="#a8b0bc" font-size="14" ' +
              'font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">' +
-             CHORDS[i] + '</text>';
+             data.chords[i] + '</text>';
     }
 
     // Dónde va el nombre de cada voz, separado del de al lado para que dos
-    // voces que arrancan cerca --- soprano en G4 y alto en E4, tres
-    // semitonos --- no escriban una encima de la otra.
-    var labelY = VOICES.map(function (v) { return y(v.midi[0]); });
+    // que arrancan cerca --- soprano en G4 y alto en E4, tres semitonos ---
+    // no escriban una encima de la otra.
+    var labelY = data.voices.map(function (v) { return y(v.midi[0]); });
     var order = labelY.map(function (yy, i) { return i; })
                       .sort(function (a, b) { return labelY[a] - labelY[b]; });
     for (var k = 1; k < order.length; k++) {
@@ -378,19 +458,22 @@
       if (cur - prev < 15) { labelY[order[k]] = prev + 15; }
     }
 
-    VOICES.forEach(function (v, vi) {
+    data.voices.forEach(function (v, vi) {
       var d = v.midi.map(function (m, i) { return (i ? 'L' : 'M') + x(i) + ' ' + y(m); }).join(' ');
       svg += '<path class="voice-line v' + vi + '" d="' + d + '" fill="none" stroke="' + v.colour +
              '" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>';
       v.midi.forEach(function (m, i) {
         svg += '<circle class="voice-dot v' + vi + '" cx="' + x(i) + '" cy="' + y(m) +
                '" r="4" fill="#16181c" stroke="' + v.colour + '" stroke-width="2.2"/>';
-        svg += '<text class="note-text v' + vi + '" x="' + x(i) + '" y="' + (y(m) - 11) +
-               '" fill="' + v.colour + '" font-size="11" opacity=".82" ' +
-               'font-family="Inter, system-ui, sans-serif" text-anchor="middle">' +
-               noteName(m) + '</text>';
+        // A seis voces las notas se aprietan y los nombres se pisan entre
+        // líneas vecinas: ahí el nombre queda sólo en los dos extremos.
+        if (!many || i === 0 || i === v.midi.length - 1) {
+          svg += '<text class="note-text v' + vi + '" x="' + x(i) + '" y="' + (y(m) - 11) +
+                 '" fill="' + v.colour + '" font-size="11" opacity=".82" ' +
+                 'font-family="Inter, system-ui, sans-serif" text-anchor="middle">' +
+                 noteName(m) + '</text>';
+        }
       });
-      // El nombre de la voz, a la izquierda y a la altura donde empieza.
       svg += '<text x="' + (padL - 14) + '" y="' + (labelY[vi] + 4) + '" fill="' + v.colour +
              '" font-size="12" font-weight="600" ' +
              'font-family="Inter, system-ui, sans-serif" text-anchor="end">' + v[lang] + '</text>';
@@ -399,30 +482,40 @@
     svg += '</svg>';
     host.innerHTML = svg;
 
-    var legend = document.getElementById('chart-legend');
+    var legend = document.getElementById(data.legend);
     if (legend) {
-      legend.innerHTML = VOICES.map(function (v, vi) {
+      legend.innerHTML = data.voices.map(function (v, vi) {
         return '<li data-voice="' + vi + '"><span class="swatch" style="background:' + v.colour +
                '"></span>' + v[lang] + '</li>';
       }).join('');
     }
 
-    var total = document.getElementById('chart-total');
+    var total = document.getElementById(data.total);
     if (total) {
-      total.textContent = STRINGS[lang]['chart.total'].replace('{n}', totalMovement());
+      total.textContent = STRINGS[lang]['chart.total'].replace('{n}', totalMovement(data));
     }
 
-    wireChart();
+    wireChart(host, legend);
   }
 
-  function wireChart() {
-    var demo = document.querySelector('.demo');
-    var legend = document.getElementById('chart-legend');
-    if (!demo || !legend) { return; }
+  function drawCharts() {
+    drawChart(CHARTS.four);
+    drawChart(CHARTS.six);
+  }
+
+  function wireChart(host, legend) {
+    // El bloque que contiene a este gráfico y no al otro: con dos en la
+    // página, buscar `.demo` a secas apagaba las voces de los dos.
+    var demo = host.parentNode;
+    while (demo && demo.classList && !demo.classList.contains('demo')) {
+      demo = demo.parentNode;
+    }
+    if (!demo || !demo.classList || !legend) { return; }
 
     function focus(vi) {
       demo.classList.toggle('focus', vi !== null);
-      Array.prototype.forEach.call(demo.querySelectorAll('.v0,.v1,.v2,.v3'), function (el) {
+      var marks = demo.querySelectorAll('.voice-line, .voice-dot, .note-text');
+      Array.prototype.forEach.call(marks, function (el) {
         el.classList.toggle('on', vi !== null && el.classList.contains('v' + vi));
       });
     }
@@ -501,6 +594,53 @@
     }, 2500);
   }
 
+  /* ═══════════════════  EL LOGO, SEGUN DONDE ESTES  ═══════════════ */
+
+  function hex(value) {
+    var n = parseInt(value.slice(1), 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+
+  function mix(a, b, amount) {
+    var ca = hex(a), cb = hex(b), out = '#';
+    for (var i = 0; i < 3; i++) {
+      var v = Math.round(ca[i] + (cb[i] - ca[i]) * amount);
+      out += ('0' + v.toString(16)).slice(-2);
+    }
+    return out;
+  }
+
+  // Los tres colores de los tres modos, en el orden en que la aplicación
+  // los presenta: Organizador, Generador, Armonizador. Bajando por la
+  // página el logotipo los recorre, que es la misma idea que adentro del
+  // programa --- ahí el color del modo tiñe el riel de progreso entero.
+  var BRAND_STOPS = ['#5b8fd6', '#b07fd6', '#4fae96'];
+
+  function wireBrand() {
+    var root = document.documentElement;
+    var pending = false;
+
+    function paint() {
+      pending = false;
+      var doc = document.documentElement;
+      var max = (document.body.scrollHeight || doc.scrollHeight) - window.innerHeight;
+      var p = max > 8 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      var span = p * (BRAND_STOPS.length - 1);
+      var i = Math.min(BRAND_STOPS.length - 2, Math.floor(span));
+      root.style.setProperty('--brand', mix(BRAND_STOPS[i], BRAND_STOPS[i + 1], span - i));
+    }
+
+    function onScroll() {
+      // Un solo repintado por cuadro: `scroll` dispara muchísimo más
+      // seguido que lo que la pantalla puede mostrar.
+      if (!pending) { pending = true; window.requestAnimationFrame(paint); }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    paint();
+  }
+
   function wireNav() {
     var nav = document.getElementById('nav');
     if (!nav) { return; }
@@ -522,5 +662,6 @@
     wireLightbox();
     wireReveal();
     wireNav();
+    wireBrand();
   });
 })();

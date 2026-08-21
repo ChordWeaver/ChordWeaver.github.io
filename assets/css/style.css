@@ -508,9 +508,9 @@ h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01
 .mystic-shot { margin: 54px auto 0; max-width: 900px; }
 .mystic-shot img {
   width: 100%; border-radius: 16px;
-  -webkit-mask-image: radial-gradient(112% 96% at 50% 46%, #000 52%, transparent 88%);
-          mask-image: radial-gradient(112% 96% at 50% 46%, #000 52%, transparent 88%);
-  opacity: .92;
+  -webkit-mask-image: radial-gradient(98% 92% at 50% 48%, #000 38%, transparent 76%);
+          mask-image: radial-gradient(98% 92% at 50% 48%, #000 38%, transparent 76%);
+  opacity: .88;
 }
 
 .dl-notes { margin: 26px 0 0; }

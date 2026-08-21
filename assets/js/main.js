@@ -90,7 +90,7 @@
       'audit.n1': 'de los enlaces en barroco tienen las dos voces extremas moviéndose para lados distintos, o una quieta',
       'audit.n2': 'de séptimas que resuelven bajando en modo coral',
       'audit.n3': 'quintas y octavas paralelas donde la regla está prendida',
-      'audit.foot': 'El gregoriano es el que menos se despega, y está dicho así en el README: su carácter vive en la armonía, y ahí los acordes los elegís vos.',
+      'audit.foot': 'Y el gregoriano no se mide con la misma vara: ahí las quintas y octavas paralelas no son un error que se perdona, son la forma misma. El estilo premia que la vox organalis siga a la vox principalis a la cuarta, a la quinta o a la octava, que es como se escribía el organum.',
 
       'power.kicker': 'Qué más hace',
       'power.title': 'No termina cuando aparece la partitura',
@@ -245,7 +245,7 @@
       'audit.n1': 'of the links in baroque have the two outer voices moving in different directions, or one of them standing still',
       'audit.n2': 'of sevenths resolving downwards in chorale mode',
       'audit.n3': 'parallel fifths and octaves wherever the rule is switched on',
-      'audit.foot': 'Gregorian is the one that separates itself least, and the README says so plainly: its character lives in the harmony, and there the chords are yours to choose.',
+      'audit.foot': 'And gregorian is not measured with the same yardstick: there, parallel fifths and octaves are not an error being forgiven, they are the form itself. The style rewards the vox organalis shadowing the vox principalis a fourth, a fifth or an octave below — which is how organum was written.',
 
       'power.kicker': 'What else it does',
       'power.title': 'It does not end when the score appears',

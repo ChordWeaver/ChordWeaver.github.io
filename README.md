@@ -29,6 +29,25 @@ acordes en barroco a cuatro voces— y el total de movimiento se calcula en el
 navegador a partir de esas mismas notas. Si se cambian las notas, el número
 cambia solo y no puede quedar mintiendo.
 
+## El caché
+
+GitHub Pages sirve todo con `Cache-Control: max-age=600`. Como los textos de la
+página los escribe `main.js`, un navegador que se quedó con la copia vieja de
+ese archivo **le pisa al HTML nuevo el texto corregido**: el servidor devuelve
+la corrección y el visitante sigue leyendo la frase anterior. Pasó de verdad.
+
+Por eso los enlaces a la hoja de estilos y al JavaScript llevan un `?v=` con el
+hash de su propio contenido, y hay un script que lo sella:
+
+```bash
+python stamp.py
+```
+
+**Correrlo antes de cada commit que toque `assets/css/style.css` o
+`assets/js/main.js`.** Es idempotente: si nada cambió, no toca nada. Mismo
+contenido, misma URL y el caché sigue sirviendo; un byte distinto, URL distinta
+y el navegador lo vuelve a pedir.
+
 ## Al sacar una versión nueva
 
 Hay que tocar tres cosas: el número y el peso en `hero.meta.*` y `dl.btn` de los

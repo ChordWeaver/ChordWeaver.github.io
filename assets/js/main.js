@@ -149,6 +149,7 @@
 
       'foot.note': 'Software libre bajo licencia MIT.',
       'foot.repo': 'Código en GitHub',
+      'foot.discord': 'Discord oficial',
       'foot.releases': 'Todas las versiones',
       'foot.issues': 'Reportar un problema',
       'foot.contrib': 'Cómo contribuir',
@@ -304,6 +305,7 @@
 
       'foot.note': 'Free software under the MIT licence.',
       'foot.repo': 'Source on GitHub',
+      'foot.discord': 'Official Discord',
       'foot.releases': 'All releases',
       'foot.issues': 'Report a problem',
       'foot.contrib': 'How to contribute',

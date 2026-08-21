@@ -584,3 +584,16 @@ h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01
   outline: 2px solid var(--brand, var(--blue));
   outline-offset: 3px;
 }
+
+/* Con el Discord al lado del de GitHub, la barra pasó a tener dos botones, y
+   en un teléfono el segundo le come el lugar al logotipo. Abajo de 700px se
+   quedan sólo los dos íconos; el nombre no se borra, se esconde, así el lector
+   de pantalla lo sigue leyendo —y lo lee en el idioma en el que está la
+   página, cosa que un `aria-label` escrito a mano no haría. */
+@media (max-width: 700px) {
+  .nav-side .ghost { position: relative; padding: 7px 9px; gap: 0; }
+  .nav-side .ghost span {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  }
+}

@@ -19,7 +19,8 @@
       'nav.download': 'Descargar',
 
       'hero.eyebrow': 'Código abierto · Licencia MIT · Windows',
-      'hero.lede': 'Los acordes los ponés vos, o los pone él. Un algoritmo genético decide qué nota canta cada voz y en qué octava, para que el movimiento total sea el mínimo posible sin romper las reglas de contrapunto del género.',
+      'hero.hook': 'Tus acordes, tu melodía, o una hoja en blanco.',
+      'hero.lede': 'Un algoritmo genético convierte cualquiera de las tres en una progresión escrita a varias voces: qué nota canta cada una y en qué octava, con el mínimo movimiento que las reglas del género permitan.',
       'hero.sub': 'El acorde no se toca. Lo único que se reparte son las voces.',
       'hero.download': 'Descargar para Windows',
       'hero.source': 'Ver el código',
@@ -150,7 +151,8 @@
       'nav.download': 'Download',
 
       'hero.eyebrow': 'Open source · MIT licence · Windows',
-      'hero.lede': 'The chords are yours to bring, or the program brings them. A genetic algorithm decides which note each voice sings and in which octave, so that total movement is as small as possible without breaking the counterpoint rules of the genre.',
+      'hero.hook': 'Your chords, your melody, or a blank page.',
+      'hero.lede': 'A genetic algorithm turns any of the three into a progression written for several voices: which note each one sings and in which octave, with the least movement the rules of the genre allow.',
       'hero.sub': 'The chord itself is never touched. All that gets shared out are the voices.',
       'hero.download': 'Download for Windows',
       'hero.source': 'View the source',

@@ -164,10 +164,19 @@ h1 em {
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 
+/* El gancho es la frase que hace de titular; la bajada explica. Por eso
+   la primera va en la serifa del programa y a color pleno, y la segunda
+   en la sans y apagada: si las dos pesaran igual, competirian. */
+.hook {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3.2vw, 2.15rem);
+  line-height: 1.28; letter-spacing: -.018em;
+  color: var(--text); max-width: 22ch; margin: 0 auto 20px;
+}
 .lede {
-  font-size: clamp(1.12rem, 2.2vw, 1.42rem);
-  line-height: 1.55; color: var(--text-dim);
-  max-width: 41ch; margin: 0 auto 14px;
+  font-size: clamp(1.02rem, 1.75vw, 1.16rem);
+  line-height: 1.6; color: var(--text-dim);
+  max-width: 56ch; margin: 0 auto 14px;
 }
 .sub {
   font-family: var(--serif); font-style: italic;

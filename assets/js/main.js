@@ -19,8 +19,8 @@
       'nav.download': 'Descargar',
 
       'hero.eyebrow': 'Código abierto · Licencia MIT · Windows',
-      'hero.lede': 'Vos elegís los acordes. Un algoritmo genético decide qué nota canta cada voz y en qué octava, para que el movimiento total sea el mínimo posible sin romper las reglas de contrapunto del género.',
-      'hero.sub': 'Nunca cambia tus acordes ni su orden. Sólo reparte.',
+      'hero.lede': 'Los acordes los ponés vos, o los pone él. Un algoritmo genético decide qué nota canta cada voz y en qué octava, para que el movimiento total sea el mínimo posible sin romper las reglas de contrapunto del género.',
+      'hero.sub': 'El acorde no se toca. Lo único que se reparte son las voces.',
       'hero.download': 'Descargar para Windows',
       'hero.source': 'Ver el código',
       'hero.meta.version': 'Versión 1.0.1',
@@ -150,8 +150,8 @@
       'nav.download': 'Download',
 
       'hero.eyebrow': 'Open source · MIT licence · Windows',
-      'hero.lede': 'You choose the chords. A genetic algorithm decides which note each voice sings and in which octave, so that total movement is as small as possible without breaking the counterpoint rules of the genre.',
-      'hero.sub': 'It never changes your chords or their order. It only distributes them.',
+      'hero.lede': 'The chords are yours to bring, or the program brings them. A genetic algorithm decides which note each voice sings and in which octave, so that total movement is as small as possible without breaking the counterpoint rules of the genre.',
+      'hero.sub': 'The chord itself is never touched. All that gets shared out are the voices.',
       'hero.download': 'Download for Windows',
       'hero.source': 'View the source',
       'hero.meta.version': 'Version 1.0.1',

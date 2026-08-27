@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className += " js";</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Actualizar ChordWeaver sin perder el progreso</title>
+<meta name="description" content="Cómo pasar de una versión de ChordWeaver a la siguiente conservando los logros, el libro, el sendero y el historial: qué archivo guarda cada cosa y qué hay que copiar.">
+<meta name="robots" content="index,follow">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B1D22'/><path d='M7 21V11M13 21V11M19 21V11M25 21V11' stroke='%235B8FD6' stroke-width='2.4' stroke-linecap='round'/><path d='M7 16h18' stroke='%23B07FD6' stroke-width='2.4' stroke-linecap='round'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=6666e3af">
+</head>
+<body data-title="upd.doc.title">
+
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Chord<em>Weaver</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="index.html#modos" data-i18n="nav.modes">Los tres modos</a>
+      <a href="index.html#herramientas" data-i18n="nav.tools">Las herramientas</a>
+      <a href="index.html#potencia" data-i18n="nav.power">Qué más hace</a>
+      <a href="index.html#descargar" data-i18n="nav.download">Descargar</a>
+      <a href="notas.html" data-i18n="nav.notes">Novedades</a>
+    </nav>
+    <div class="nav-side">
+      <button class="lang" id="lang-toggle" type="button" aria-label="Cambiar idioma">
+        <span class="lang-opt" data-lang="es">ES</span><span class="lang-opt" data-lang="en">EN</span>
+      </button>
+      <a class="ghost" href="https://discord.gg/kBSyqPqNaU" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286ZM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189Zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+        <span>Discord</span>
+      </a>
+      <a class="ghost" href="https://github.com/ChordWeaver/chordweaver/releases" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span data-i18n="notes.releases">Releases</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="notes">
+  <div class="wrap">
+
+    <header class="notes-head">
+      <p class="kicker" data-i18n="upd.kicker">Actualizar</p>
+      <h1 class="notes-title" data-i18n="upd.title">La versión nueva <em>no te borra nada</em></h1>
+      <p class="notes-lede" data-i18n="upd.body">
+        ChordWeaver no se instala: es una carpeta. Eso, que en el día a día se
+        nota poco, es exactamente lo que hace que actualizar sea copiar seis
+        archivos y una carpeta de la vieja a la nueva. El progreso es tuyo y
+        está a la vista —no en el registro de Windows, no escondido en un
+        <code>AppData</code>.
+      </p>
+      <p class="notes-meta">
+        <a class="btn btn-primary btn-small" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1-windows.zip">
+          <span data-i18n="notes.download">Descargar 1.1</span>
+        </a>
+        <a class="ghost" href="index.html" data-i18n="notes.back">← Volver al inicio</a>
+      </p>
+    </header>
+
+    <section class="upd-block">
+      <h2 class="upd-title" data-i18n="upd.steps.title">Los cinco pasos</h2>
+      <ol class="steps">
+        <li data-i18n="upd.s1">Bajá el <code>.zip</code> nuevo y descomprimilo <strong>al lado</strong> de la carpeta que ya tenías, no encima.</li>
+        <li data-i18n="upd.s2">Cerrá ChordWeaver si está abierto: los archivos de progreso se escriben al salir.</li>
+        <li data-i18n="upd.s3">Copiá de la carpeta vieja a la nueva los seis <code>.json</code> y la carpeta <code>output/</code>, y aceptá reemplazar.</li>
+        <li data-i18n="upd.s4">Abrí <code>ChordWeaver.exe</code> en la carpeta nueva. Están los logros, el libro por donde ibas, el sendero y las últimas diez producciones.</li>
+        <li data-i18n="upd.s5">Recién cuando compruebes que está todo, borrá la carpeta vieja.</li>
+      </ol>
+    </section>
+
+    <section class="upd-block">
+      <h2 class="upd-title" data-i18n="upd.files.title">Qué guarda cada archivo</h2>
+      <p class="prose" data-i18n="upd.files.lede">
+        Los siete están sueltos al lado de <code>ChordWeaver.exe</code>, y se
+        pueden abrir con cualquier editor de texto. Ninguno viene adentro del
+        <code>.zip</code>: los escribe el programa la primera vez que lo abrís.
+      </p>
+      <div class="files">
+        <dl class="files-list">
+          <div><dt><code>achievements.json</code></dt><dd data-i18n="upd.f.ach">Los logros, las estrellas y los títulos ganados.</dd></div>
+          <div><dt><code>history.json</code></dt><dd data-i18n="upd.f.history">Las últimas diez producciones, con su audio reproducible.</dd></div>
+          <div><dt><code>story.json</code></dt><dd data-i18n="upd.f.story">Por dónde va el sendero, y lo que ya contestaste.</dd></div>
+          <div><dt><code>visitors.json</code></dt><dd data-i18n="upd.f.visitors">Quién te visitó y qué encuentros ya viste.</dd></div>
+          <div><dt><code>eggs.json</code></dt><dd data-i18n="upd.f.eggs">Lo que encontraste sin que nadie te lo dijera.</dd></div>
+          <div><dt><code>settings.json</code></dt><dd data-i18n="upd.f.settings">Género, voces, pesos, idioma, tamaño de letra y todo lo demás.</dd></div>
+          <div><dt><code>output/</code></dt><dd data-i18n="upd.f.output">Los MusicXML, los MIDI y los WAV que exportaste.</dd></div>
+        </dl>
+        <p class="files-foot" data-i18n="upd.files.foot">
+          Copiar los seis juntos siempre funciona: una preferencia que la
+          versión nueva todavía no conocía se ignora, y una que se agregó
+          arranca en su valor de fábrica. Ningún archivo de la vieja le hace
+          falta a la nueva para arrancar, así que si te olvidás uno lo podés
+          copiar después.
+        </p>
+      </div>
+    </section>
+
+    <section class="upd-block">
+      <h2 class="upd-title" data-i18n="upd.notice.title">Y desde la 1.1 no hace falta que estés mirando</h2>
+      <div class="notice">
+        <p data-i18n="upd.notice.body">
+          Al abrirse, el programa pregunta si salió una versión más nueva. Si
+          la hay, te lo dice <strong>antes</strong> de entrar, con un cartel de
+          dos botones: <em>Actualizar</em> abre esta página y cierra el
+          programa, y <em>Ahora no</em> te deja seguir donde estabas. Se
+          pregunta una sola vez por arranque, no se descarga nada solo, y si no
+          hay internet no pasa nada: el programa se abre igual, sin avisos y
+          sin esperas.
+        </p>
+      </div>
+    </section>
+
+    <section class="upd-block">
+      <h2 class="upd-title" data-i18n="upd.faq.title">Si algo salió distinto</h2>
+      <dl class="faq">
+        <div>
+          <dt data-i18n="upd.q1">Lo descomprimí encima de la carpeta vieja.</dt>
+          <dd data-i18n="upd.a1">No pasó nada. El <code>.zip</code> no trae ningún <code>.json</code> adentro, así que no hay con qué pisar tu progreso: lo único que se reemplazó fue el programa. Abrilo y fijate que estén los logros.</dd>
+        </div>
+        <div>
+          <dt data-i18n="upd.q2">Cambié de computadora.</dt>
+          <dd data-i18n="upd.a2">Copiá la carpeta entera y listo. No hay nada instalado del otro lado: ni registro, ni servicios, ni licencia atada a la máquina.</dd>
+        </div>
+        <div>
+          <dt data-i18n="upd.q3">Abrí la versión nueva y no está mi progreso.</dt>
+          <dd data-i18n="upd.a3">Cerrala sin tocar nada, comprobá que los <code>.json</code> hayan quedado <strong>al lado</strong> del <code>.exe</code> y no dentro de una subcarpeta, y volvé a abrirla. El programa no borra un archivo que no puede leer: lo deja donde está y arranca de cero, así que todavía está todo.</dd>
+        </div>
+        <div>
+          <dt data-i18n="upd.q4">El programa no me avisó de la versión nueva.</dt>
+          <dd data-i18n="upd.a4">El aviso necesita internet, y sólo lo trae la 1.1 en adelante: de la 1.0.1 hay que enterarse acá. Si tenés dudas, la lista de versiones está en <a href="notas.html">las notas del parche</a>.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <p class="notes-foot">
+      <a href="notas.html" data-i18n="upd.foot">Ver qué trae cada versión →</a>
+    </p>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <p class="foot-name">Chord<em>Weaver</em></p>
+        <p class="foot-note" data-i18n="foot.note">Software libre bajo licencia MIT.</p>
+      </div>
+    </div>
+    <nav class="foot-links" aria-label="Enlaces">
+      <a href="index.html" data-i18n="notes.back">← Volver al inicio</a>
+      <a href="notas.html" data-i18n="foot.notes">Notas del parche</a>
+      <a href="https://github.com/ChordWeaver/chordweaver" target="_blank" rel="noopener" data-i18n="foot.repo">Código en GitHub</a>
+      <a href="https://discord.gg/kBSyqPqNaU" target="_blank" rel="noopener" data-i18n="foot.discord">Discord oficial</a>
+      <a href="https://github.com/ChordWeaver/chordweaver/issues" target="_blank" rel="noopener" data-i18n="foot.issues">Reportar un problema</a>
+      <a href="mailto:thechordweaverproject@gmail.com">thechordweaverproject@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=b3bdae98"></script>
+</body>
+</html>

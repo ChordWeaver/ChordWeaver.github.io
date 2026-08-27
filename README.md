@@ -8,7 +8,10 @@ estilos y un archivo de JavaScript. Se abre haciendo doble click en `index.html`
 y se ve exactamente igual que publicada.
 
 ```
-index.html            la página entera
+index.html            la portada
+notas.html            el registro de versiones, una abajo de la otra
+actualizar.html       cómo pasar de una versión a la siguiente sin perder nada
+version.json          qué versión es la última; lo lee el programa al abrirse
 assets/css/style.css  los estilos; la paleta es la del programa
 assets/js/main.js     idioma, gráfico de voces, lupa y apariciones
 assets/img/           capturas del programa, sacadas del programa real
@@ -50,10 +53,26 @@ y el navegador lo vuelve a pedir.
 
 ## Al sacar una versión nueva
 
-Hay que tocar tres cosas: el número y el peso en `hero.meta.*` y `dl.btn` de los
-dos diccionarios, el `SHA-256` en `index.html`, y los dos `href` que apuntan al
-`.zip`. El enlace usa `/releases/latest/download/`, así que apunta siempre a la
-última release, pero el nombre del archivo lleva la versión adentro.
+El enlace usa `/releases/latest/download/`, así que apunta siempre a la última
+release, pero el nombre del archivo lleva la versión adentro. La lista completa,
+en orden:
+
+1. El número y el peso en `hero.meta.*` y `dl.btn` de **los dos** diccionarios.
+2. `notes.download` de los dos diccionarios: dice qué versión baja el botón.
+3. El `SHA-256` en `index.html`.
+4. Todos los `href` que apuntan al `.zip` —hay dos en `index.html`, uno en
+   `notas.html` y uno en `actualizar.html`—.
+5. **`version.json`**: `version`, `released`, `download` y las dos `headline`.
+   De este archivo sale el aviso de versión nueva que el programa muestra al
+   abrirse, así que hasta que no se toque acá nadie se entera de nada. Y al
+   revés: tocarlo antes de que la release exista manda a todo el mundo a un
+   enlace roto. Va **último**, cuando el `.zip` ya está publicado.
+6. En `notas.html`, mover el `<span class="release-tag now">` a la versión que
+   pasó a ser la descargable, en los dos idiomas. Es el cartelito que dice cuál
+   de las versiones del registro es la que se baja hoy.
+
+Las notas de la versión nueva van arriba de todo en `notas.html`, en un
+`<article class="release">` propio y **en los dos bloques de idioma**.
 
 ## Licencia
 

@@ -28,7 +28,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent
-PAGES = ["index.html", "notas.html"]
+PAGES = ["index.html", "notas.html", "actualizar.html"]
 ASSETS = ["assets/css/style.css", "assets/js/main.js"]
 
 

@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <script>document.documentElement.className += " js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ChordWeaver 1.0.1 — Notas del parche</title>
-<meta name="description" content="Todo lo que cambió en ChordWeaver 1.0.1: el armonizador, el modo historia, los logros, el libro de teoría, el rediseño de la interfaz y la lista completa de correcciones.">
+<title>ChordWeaver — Notas del parche</title>
+<meta name="description" content="El registro de versiones de ChordWeaver, de la más nueva a la más vieja: qué función entró en cada una, qué se mejoró y qué se corrigió.">
 <meta name="robots" content="index,follow">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B1D22'/><path d='M7 21V11M13 21V11M19 21V11M25 21V11' stroke='%235B8FD6' stroke-width='2.4' stroke-linecap='round'/><path d='M7 16h18' stroke='%23B07FD6' stroke-width='2.4' stroke-linecap='round'/></svg>">
@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=920e211c">
+<link rel="stylesheet" href="assets/css/style.css?v=6666e3af">
 </head>
 <body data-title="notes.title">
 
@@ -27,6 +27,7 @@
     </a>
     <nav class="nav-links" aria-label="Secciones">
       <a href="index.html#modos" data-i18n="nav.modes">Los tres modos</a>
+      <a href="index.html#herramientas" data-i18n="nav.tools">Las herramientas</a>
       <a href="index.html#como" data-i18n="nav.how">Cómo funciona</a>
       <a href="index.html#potencia" data-i18n="nav.power">Qué más hace</a>
       <a href="index.html#descargar" data-i18n="nav.download">Descargar</a>
@@ -52,17 +53,15 @@
 
     <header class="notes-head">
       <p class="kicker" data-i18n="notes.kicker">Notas del parche</p>
-      <h1 class="notes-title">ChordWeaver <em>1.0.1</em></h1>
+      <h1 class="notes-title" data-i18n="notes.h1">Todo lo que <em>cambió</em></h1>
       <p class="notes-lede" data-i18n="notes.lede">
-        La versión con la que el programa se publicó como código abierto. Es
-        también la más grande que tuvo: entraron tres cosas que antes no
-        existían —el armonizador, el libro de teoría y todo lo que pasa cuando
-        el programa deja de ser sólo una herramienta— y se reescribió la
-        interfaz entera.
+        Una versión abajo de la otra, de la más nueva a la más vieja. Lo que
+        está en la de arriba es lo que vas a encontrar si bajás el programa
+        hoy.
       </p>
       <p class="notes-meta">
-        <a class="btn btn-primary btn-small" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.0.1-windows.zip">
-          <span data-i18n="notes.download">Descargar 1.0.1</span>
+        <a class="btn btn-primary btn-small" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1-windows.zip">
+          <span data-i18n="notes.download">Descargar 1.1</span>
         </a>
         <a class="ghost" href="index.html" data-i18n="notes.back">← Volver al inicio</a>
       </p>
@@ -70,6 +69,67 @@
 
     <!-- ══════════════════════════  ESPAÑOL  ═══════════════════════════ -->
     <div data-lang-block="es">
+
+      <article class="release">
+        <header class="release-head">
+          <h2 class="release-title">ChordWeaver <em>1.1</em><span class="release-tag now">la que se baja hoy</span></h2>
+          <p class="release-sub">
+            Dos herramientas que no componen nada —el experimentador de
+            armónicos y el analizador—, dieciocho apartados más en el libro, y
+            una entidad que parece tener algo para decir.
+          </p>
+        </header>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g1">Nuevas funciones</h2>
+        <ul class="notes-list">
+          <li><strong>Experimentador de armónicos:</strong> laboratorio que permite crear un timbre personalizado al alterar la serie armónica de una nota, con presets pre-configurados y exportador formato wav.</li>
+          <li><strong>Analizador (beta):</strong> permite importar o componer una partitura y que el sistema analice armónica y contrapuntísticamente la pieza, detectando desde 5tas paralelas hasta cadencias y tonalidades.</li>
+          <li><strong>Nuevos capítulos del libro:</strong> contenido sobre leyendas, física, armonización y más.</li>
+          <li><strong>Nuevos logros:</strong> logros para fomentar encuentros con ciertos personajes.</li>
+          <li><strong>La historia se alarga:</strong> <em>la entidad misteriosa parece querer contarnos algo.</em></li>
+          <li><strong>Un nuevo encuentro:</strong> <em>un personaje ha roto la cuarta pared…</em></li>
+          <li><strong>Detección de updates:</strong> ahora la app detectará si una nueva actualización se encuentra disponible.</li>
+        </ul>
+      </section>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g5">Mejoras importantes</h2>
+        <ul class="notes-list">
+          <li><strong>Armonizador mejorado:</strong> ahora permite desmarcar notas marcadas por el programa. Se puede hacer con click derecho.</li>
+          <li><strong>Mejor modulación:</strong> se mejoró fuertemente la calidad y consistencia de la modulación del generador.</li>
+          <li><strong>Mejores notas de paso:</strong> las notas de paso ahora respetan tonalidad y tienen estilos melódicos fuertemente mejorados.</li>
+          <li><strong>Calidad de vida:</strong> múltiples cambios con respecto a la disponibilidad de botones para evitar saltearse por error cinemáticas o eventos.</li>
+          <li><strong>Libro mejorado:</strong> al anotar nuevo conocimiento, abajo al medio aparecerá un cartel indicándolo. Los capítulos con conocimiento nuevo sin leer ahora aparecerán en azul. También se añadió un libro arriba a la derecha para fomentar usarlo durante una actividad en lugar de tener que regresar al menú.</li>
+          <li><strong>Tutorial en los 3 modos principales:</strong> ahora los tres modos principales cuentan con un tutorial que explica cómo usarlos.</li>
+          <li><strong>Botón de reset:</strong> ahora el generador permitirá reestablecer la configuración original del género.</li>
+        </ul>
+      </section>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g6">Mejoras menores</h2>
+        <ul class="notes-list plain">
+          <li>Se corrigió un error donde el modo barroco no podía modular a un modo paralelo.</li>
+          <li>Se corrigió un error donde el armonizador no permitía marcar ciertas notas.</li>
+          <li>Se corrigió un error donde el organizador no te advertía de notas adicionales excedentes si se habían colocado con el piano.</li>
+          <li>Se corrigió un error donde la barra de notas de paso actuaba literalmente al revés.</li>
+          <li>Se mejoró el cartel de donaciones.</li>
+        </ul>
+      </section>
+
+      </article>
+
+      <article class="release">
+        <header class="release-head">
+          <h2 class="release-title">ChordWeaver <em>1.0.1</em></h2>
+          <p class="release-sub">
+            La versión con la que el programa se publicó como código abierto. Es
+            también la más grande que tuvo: entraron tres cosas que antes no
+            existían —el armonizador, el libro de teoría y todo lo que pasa
+            cuando el programa deja de ser sólo una herramienta— y se reescribió
+            la interfaz entera.
+          </p>
+        </header>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g1">Nuevas funciones</h2>
@@ -157,10 +217,73 @@
         </ul>
       </section>
 
+      </article>
+
     </div>
 
     <!-- ══════════════════════════  ENGLISH  ═══════════════════════════ -->
     <div data-lang-block="en" hidden>
+
+      <article class="release">
+        <header class="release-head">
+          <h2 class="release-title">ChordWeaver <em>1.1</em><span class="release-tag now">current download</span></h2>
+          <p class="release-sub">
+            Two tools that compose nothing — the harmonics lab and the analyser
+            —, eighteen more sections in the book, and an entity that seems to
+            have something to say.
+          </p>
+        </header>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g1">New features</h2>
+        <ul class="notes-list">
+          <li><strong>Harmonics lab:</strong> a laboratory for building a timbre of your own by altering the harmonic series of a note, with ready-made presets and a WAV exporter.</li>
+          <li><strong>Analyser (beta):</strong> import or write a score and have the program analyse the piece harmonically and contrapuntally, finding everything from parallel fifths to cadences and keys.</li>
+          <li><strong>New chapters in the book:</strong> material on legends, physics, harmonising and more.</li>
+          <li><strong>New achievements:</strong> achievements that encourage encounters with certain characters.</li>
+          <li><strong>The story goes on:</strong> <em>the mysterious entity seems to want to tell us something.</em></li>
+          <li><strong>A new encounter:</strong> <em>a character has broken the fourth wall…</em></li>
+          <li><strong>Update detection:</strong> the app now detects whether a new update is available.</li>
+        </ul>
+      </section>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g5">Major improvements</h2>
+        <ul class="notes-list">
+          <li><strong>Better harmoniser:</strong> you can now unmark notes the program marked, with a right click.</li>
+          <li><strong>Better modulation:</strong> the quality and the consistency of the generator's modulation were strongly improved.</li>
+          <li><strong>Better passing notes:</strong> passing notes now respect the key, and their melodic shapes were strongly improved.</li>
+          <li><strong>Quality of life:</strong> several changes to when buttons are available, so a cutscene or an event cannot be skipped by mistake.</li>
+          <li><strong>Better book:</strong> when new knowledge gets written down, a notice appears at the bottom centre. Chapters holding unread knowledge now show in blue. A book was also added at the top right, to encourage reading it during an activity instead of going back to the menu.</li>
+          <li><strong>A tutorial in the three main modes:</strong> all three main modes now have a tutorial explaining how to use them.</li>
+          <li><strong>Reset button:</strong> the generator can now restore the genre's original settings.</li>
+        </ul>
+      </section>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g6">Minor improvements</h2>
+        <ul class="notes-list plain">
+          <li>Fixed baroque mode being unable to modulate to a parallel mode.</li>
+          <li>Fixed the harmoniser refusing to mark certain notes.</li>
+          <li>Fixed the organiser not warning about surplus extra notes when they had been entered with the piano.</li>
+          <li>Fixed the passing-notes slider working literally backwards.</li>
+          <li>Improved the donations notice.</li>
+        </ul>
+      </section>
+
+      </article>
+
+      <article class="release">
+        <header class="release-head">
+          <h2 class="release-title">ChordWeaver <em>1.0.1</em></h2>
+          <p class="release-sub">
+            The version the program was open-sourced with. It is also the
+            largest it ever had: three things that did not exist before went in
+            — the harmoniser, the theory book, and everything that happens once
+            the program stops being only a tool — and the entire interface was
+            rewritten.
+          </p>
+        </header>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g1">New features</h2>
@@ -248,6 +371,8 @@
         </ul>
       </section>
 
+      </article>
+
     </div>
 
     <p class="notes-foot">
@@ -269,6 +394,7 @@
     <nav class="foot-links" aria-label="Enlaces">
       <a href="index.html" data-i18n="notes.back">← Volver al inicio</a>
       <a href="https://github.com/ChordWeaver/chordweaver" target="_blank" rel="noopener" data-i18n="foot.repo">Código en GitHub</a>
+      <a href="actualizar.html" data-i18n="foot.update">Cómo actualizar</a>
       <a href="https://discord.gg/kBSyqPqNaU" target="_blank" rel="noopener" data-i18n="foot.discord">Discord oficial</a>
       <a href="https://github.com/ChordWeaver/chordweaver/issues" target="_blank" rel="noopener" data-i18n="foot.issues">Reportar un problema</a>
       <a href="mailto:thechordweaverproject@gmail.com">thechordweaverproject@gmail.com</a>
@@ -276,6 +402,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=41479885"></script>
+<script src="assets/js/main.js?v=b3bdae98"></script>
 </body>
 </html>

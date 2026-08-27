@@ -597,3 +597,170 @@ h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01
     clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
   }
 }
+
+
+/* ────────────────────  LAS DOS HERRAMIENTAS  ─────────────────────── */
+
+/* Los tres modos van de a tres; las herramientas son dos y usan la misma
+   tarjeta. Sin esto la segunda quedaba con un hueco al lado del ancho de
+   una tercera que no existe. */
+.modes.two-up { grid-template-columns: repeat(2, 1fr); }
+
+/* El párrafo que aclara cómo está hecha la herramienta, no qué hace: va
+   más chico y con el filete al costado, igual que `.aside`, para que no
+   compita con la descripción de arriba. */
+.mode-note {
+  margin: 0 0 20px; padding-left: 16px;
+  border-left: 2px solid color-mix(in srgb, var(--tint) 40%, transparent);
+  font-size: .88rem; color: var(--text-faint);
+}
+
+.tag-beta {
+  display: inline-block; vertical-align: 2px; margin-left: 7px;
+  padding: 1px 8px; border-radius: 999px;
+  background: color-mix(in srgb, var(--tint) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tint) 38%, transparent);
+  color: var(--tint);
+  font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+}
+
+
+/* ───────────────────────────  ACTUALIZAR  ────────────────────────── */
+
+/* Los pasos llevan el número puesto a mano en un círculo: el marcador de
+   un `ol` no se puede alinear con la primera línea del texto cuando el
+   paso ocupa dos renglones, y acá casi todos ocupan dos. */
+.steps { list-style: none; counter-reset: paso; padding: 0; margin: 40px 0 0; max-width: 74ch; }
+.steps li {
+  counter-increment: paso;
+  position: relative; padding: 0 0 22px 52px;
+  color: var(--text-dim); font-size: .96rem; line-height: 1.6;
+}
+.steps li::before {
+  content: counter(paso);
+  position: absolute; left: 0; top: -1px;
+  width: 32px; height: 32px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--surface-2); border: 1px solid var(--border-soft);
+  color: var(--brand, var(--blue)); font-size: .88rem; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  transition: color .18s linear;
+}
+/* Sin filete entre un paso y el siguiente: los pasos son de uno y de dos
+   renglones, así que el tramo de línea salía de distinto largo en cada uno
+   --- en los de un renglón, un guioncito de cuatro píxeles --- y se leía
+   como un desperfecto y no como una guía. */
+.steps li:last-child { padding-bottom: 0; }
+.steps strong { color: var(--text); font-weight: 600; }
+
+.files {
+  margin-top: 40px; padding: 26px 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border); background: var(--surface-1);
+}
+.band.alt .files { background: var(--surface); }
+.files h3 { font-family: var(--serif); font-size: 1.24rem; margin-bottom: 18px; }
+.files-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 34px; margin: 0; }
+.files-list > div { display: grid; grid-template-columns: 15.5ch 1fr; gap: 14px; align-items: baseline; }
+.files-list dt code { font-size: .78rem; white-space: nowrap; }
+.files-list dd { margin: 0; font-size: .88rem; color: var(--text-faint); }
+.files-foot {
+  margin: 22px 0 0; padding-top: 18px; border-top: 1px solid var(--border);
+  font-size: .88rem; color: var(--text-faint); max-width: 74ch;
+}
+
+/* El cartel de la detección de versiones. Va en el oro de los logros y no
+   en el azul: es el programa el que habla, no la página. */
+.notice {
+  margin-top: 34px; padding: 24px 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--gold) 24%, var(--border));
+  background: linear-gradient(180deg, rgba(232,201,122,.055), transparent 70%), var(--surface-1);
+}
+.band.alt .notice { background: linear-gradient(180deg, rgba(232,201,122,.055), transparent 70%), var(--surface); }
+.notice h3 { font-family: var(--serif); font-size: 1.24rem; color: #ddd6c4; }
+.notice p { margin: 0; color: var(--text-dim); font-size: .94rem; max-width: 74ch; }
+.notice strong { color: var(--text); font-weight: 600; }
+.notice em { color: var(--gold-dim); font-style: normal; font-weight: 600; }
+
+@media (max-width: 700px) {
+  .files { padding: 20px 18px; }
+  .files-list { grid-template-columns: 1fr; }
+  .files-list > div { grid-template-columns: 1fr; gap: 2px; }
+  .notice { padding: 20px 18px; }
+}
+
+
+/* ─────────────────  NOVEDADES: UNA VERSION POR BLOQUE  ───────────── */
+
+/* La página pasó de ser las notas de una versión a ser el registro de
+   todas. Cada versión abre con su número y su bajada, y las cuatro listas
+   de siempre cuelgan de ahí. */
+.release { margin-bottom: 76px; }
+.release:last-of-type { margin-bottom: 40px; }
+.release-head {
+  margin-bottom: 34px; padding-bottom: 22px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.release-title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600; line-height: 1.1; letter-spacing: -.022em;
+  margin: 0 0 12px; max-width: none;
+}
+.release-title em { font-style: normal; color: var(--brand, var(--blue)); transition: color .18s linear; }
+.release-sub { color: var(--text-dim); font-size: 1rem; margin: 0; max-width: 68ch; }
+.release-tag {
+  display: inline-block; vertical-align: 6px; margin-left: 12px;
+  padding: 3px 12px; border-radius: 999px;
+  background: var(--surface-2); border: 1px solid var(--border-soft);
+  color: var(--text-faint);
+  font-family: var(--sans); font-size: .66rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+}
+.release-tag.now { color: var(--green); border-color: color-mix(in srgb, var(--green) 40%, transparent); }
+
+
+/* ────────────────  PAGINA DE COMO ACTUALIZAR  ───────────────────── */
+
+/* Comparte la caja de las novedades (`main.notes`), así que hereda el
+   ancho y el aire de arriba. Lo único suyo son los bloques y el título de
+   cada uno, que no puede ser el `h2` en versalitas de las listas de
+   cambios: acá cada bloque es una idea, no una categoría. */
+.upd-block { margin-bottom: 64px; }
+.upd-block:last-of-type { margin-bottom: 40px; }
+.upd-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  font-weight: 600; letter-spacing: -.02em; line-height: 1.2;
+  color: var(--text); max-width: 24ch;
+  margin: 0 0 8px; padding: 0; border: 0; text-transform: none;
+}
+.upd-block .steps { margin-top: 26px; }
+.upd-block .files,
+.upd-block .notice { margin-top: 22px; }
+.upd-block .prose { margin-top: 14px; }
+
+/* Las preguntas: la pregunta en el cuerpo del texto y la respuesta abajo,
+   apagada. Nada se pliega — son cuatro, y un acordeón de cuatro filas
+   esconde justo lo que alguien vino a leer. */
+.faq { margin: 26px 0 0; display: grid; gap: 4px; }
+.faq > div {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .045);
+}
+.faq > div:last-child { border-bottom: 0; }
+.faq dt {
+  color: var(--text); font-weight: 600; font-size: .98rem;
+  margin-bottom: 6px;
+}
+.faq dd {
+  margin: 0; color: var(--text-dim); font-size: .93rem; max-width: 74ch;
+}
+.faq dd a { color: var(--brand, var(--blue)); text-decoration: none; }
+.faq dd a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.faq strong { color: var(--text); font-weight: 600; }
+
+/* Al pie de la descarga ahora hay dos enlaces y no uno: uno abajo del
+   otro, o en un teléfono el segundo se parte por la mitad. */
+.dl-notes { display: grid; gap: 8px; justify-items: center; }

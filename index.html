@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=920e211c">
+<link rel="stylesheet" href="assets/css/style.css?v=6666e3af">
 </head>
 <body>
 
@@ -37,6 +37,7 @@
     </a>
     <nav class="nav-links" aria-label="Secciones">
       <a href="#modos" data-i18n="nav.modes">Los tres modos</a>
+      <a href="#herramientas" data-i18n="nav.tools">Las herramientas</a>
       <a href="#como" data-i18n="nav.how">Cómo funciona</a>
       <a href="#potencia" data-i18n="nav.power">Qué más hace</a>
       <a href="#descargar" data-i18n="nav.download">Descargar</a>
@@ -81,16 +82,16 @@
       El acorde no se toca. Lo único que se reparte son las voces.
     </p>
     <div class="cta reveal">
-      <a class="btn btn-primary" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.0.1-windows.zip" data-track="download">
+      <a class="btn btn-primary" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1-windows.zip" data-track="download">
         <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2.5a1 1 0 0 1 1 1v7.09l2.3-2.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V3.5a1 1 0 0 1 1-1ZM3.5 14a1 1 0 0 1 1 1v1h11v-1a1 1 0 1 1 2 0v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2.5 16.5V15a1 1 0 0 1 1-1Z"/></svg>
         <span data-i18n="hero.download">Descargar para Windows</span>
       </a>
       <a class="btn btn-ghost" href="https://github.com/ChordWeaver/chordweaver" target="_blank" rel="noopener" data-i18n="hero.source">Ver el código</a>
     </div>
     <p class="meta reveal">
-      <span data-i18n="hero.meta.version">Versión 1.0.1</span>
+      <span data-i18n="hero.meta.version">Versión 1.1</span>
       <span class="sep">·</span>
-      <span data-i18n="hero.meta.size">26 MB</span>
+      <span data-i18n="hero.meta.size">28 MB</span>
       <span class="sep">·</span>
       <span data-i18n="hero.meta.install">Sin instalador</span>
       <span class="sep">·</span>
@@ -99,8 +100,8 @@
 
     <figure class="shot hero-shot reveal">
       <div class="shot-frame">
-        <img src="assets/img/modos.png" width="1442" height="932"
-             alt="La pantalla inicial de ChordWeaver con los tres modos de trabajo"
+        <img src="assets/img/modos.png" width="1500" height="980"
+             alt="La pantalla inicial de ChordWeaver: los tres modos arriba y las dos herramientas debajo"
              data-i18n-alt="alt.modos" fetchpriority="high">
       </div>
     </figure>
@@ -219,6 +220,91 @@
   </div>
 </section>
 
+<!-- ───────────────────────  LAS DOS HERRAMIENTAS  ─────────────────── -->
+<section class="band" id="herramientas">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="tools.kicker">Las herramientas</p>
+    <h2 class="reveal" data-i18n="tools.title">Y dos que no componen nada</h2>
+    <p class="prose reveal" data-i18n="tools.body">
+      Los tres modos de arriba escriben música. Estas dos no escriben una
+      nota: una desarma el sonido de una nota sola hasta que no queda nada
+      que desarmar, y la otra va en la dirección contraria a todo el resto
+      del programa —recibe música que ya está escrita y le pone los nombres.
+      En la pantalla inicial van justo abajo de los tres modos.
+    </p>
+
+    <div class="modes two-up">
+      <article class="mode reveal" style="--tint:#C9954F">
+        <header>
+          <span class="mode-icon" aria-hidden="true">≈</span>
+          <div>
+            <h3 data-i18n="tool.1.name">Experimentador de armónicos</h3>
+            <p class="mode-tag" data-i18n="tool.1.tag">De qué está hecha una nota</p>
+          </div>
+        </header>
+        <p data-i18n="tool.1.body">
+          Una nota no es una frecuencia sola: es la suya y además múltiplos
+          enteros de la suya, y ese apilado es lo único que separa a un violín
+          de una flauta tocando lo mismo. Acá están las doce barras, y se
+          apagan de a una, se amplifican y se corren de su lugar exacto. Las
+          recetas clásicas vienen puestas para desarmarlas —seno, diente de
+          sierra, cuadrada, triangular, cuerda pulsada, clarinete, órgano y
+          voz cantada—, porque una onda cuadrada no es otra forma de onda:
+          es la misma serie con otras alturas de barra. Y el timbre que te
+          quede se exporta a <code>.wav</code>.
+        </p>
+        <p class="mode-note" data-i18n="tool.1.note">
+          El dibujo y el sintetizador leen la misma lista, así que el gráfico
+          no puede mentir sobre lo que se escucha. Y el <code>.wav</code> no
+          sale como un sonido cualquiera: sale afinado y con el bucle marcado
+          adentro, o sea como muestra de sampler, listo para cargarlo en un
+          instrumento.
+        </p>
+        <figure class="shot">
+          <div class="shot-frame">
+            <img src="assets/img/laboratorio.png" width="1500" height="980" loading="lazy"
+                 alt="El experimentador de armónicos, con las doce barras de la serie y los controles de vibrato"
+                 data-i18n-alt="alt.laboratorio">
+          </div>
+        </figure>
+      </article>
+
+      <article class="mode reveal" style="--tint:#B5705F">
+        <header>
+          <span class="mode-icon" aria-hidden="true">𝄞</span>
+          <div>
+            <h3><span data-i18n="tool.2.name">Analizador</span> <span class="tag-beta" data-i18n="tool.2.beta">beta</span></h3>
+            <p class="mode-tag" data-i18n="tool.2.tag">Vos traés la partitura</p>
+          </div>
+        </header>
+        <p data-i18n="tool.2.body">
+          Escribís la música en un sistema de dos pentagramas —o la traés de
+          un MusicXML— y el programa te dice qué es cada acorde: en qué
+          inversión está, con qué cifrado, qué grado de qué tonalidad y qué
+          función cumple. Y lo que pasa entre las voces: quintas y octavas
+          paralelas, quintas ocultas, cruces, saltos difíciles, y qué nota es
+          de adorno y cuál es del acorde. Las cadencias las reconoce y te las
+          marca en el compás donde caen.
+        </p>
+        <p class="mode-note" data-i18n="tool.2.note">
+          Las reglas de paralelas no están escritas dos veces: el analizador
+          le pide las suyas al mismo evaluador que usa el generador, así que
+          no puede aprobar lo que el otro prohíbe. Y trae adentro los primeros
+          ocho compases del Preludio BWV 846, para que haya algo que abrir el
+          primer día.
+        </p>
+        <figure class="shot">
+          <div class="shot-frame">
+            <img src="assets/img/analizador.png" width="1500" height="980" loading="lazy"
+                 alt="El analizador, con la partitura arriba y los acordes, el contrapunto y los adornos abajo"
+                 data-i18n-alt="alt.analizador">
+          </div>
+        </figure>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ───────────────────────  SEIS VOCES / ARMONÍA  ─────────────────── -->
 <section class="band" id="seis">
   <div class="wrap">
@@ -328,6 +414,9 @@
       <div class="card reveal"><h3 data-i18n="f.10.t">Línea de comandos</h3><p data-i18n="f.10.b">El mismo motor sin abrir la ventana: <code>cli.py</code> acepta los acordes, el género y todos los switches.</p></div>
       <div class="card reveal"><h3 data-i18n="f.11.t">Portable de verdad</h3><p data-i18n="f.11.b">No hay instalador y no escribe fuera de su carpeta. Va en un pendrive y se desinstala tirándola a la papelera.</p></div>
       <div class="card reveal"><h3 data-i18n="f.12.t">El motor no tiene dependencias</h3><p data-i18n="f.12.b">Librería estándar de Python y nada más. Ni <code>music21</code>, ni <code>numpy</code>, ni una librería de audio.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.13.t">Avisa cuando hay versión nueva</h3><p data-i18n="f.13.b">Al abrirse pregunta si salió algo más nuevo y te lo dice antes de entrar. Sin internet no pasa nada: se abre igual.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.14.t">Un timbre, un instrumento</h3><p data-i18n="f.14.b">Lo que armes en el experimentador se exporta como <code>.wav</code> afinado y con bucle: una muestra de sampler, no un sonido suelto.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.15.t">El progreso está a la vista</h3><p data-i18n="f.15.b">Logros, libro, sendero e historial viven en archivos de texto al lado del programa. Se copian a la carpeta nueva y siguen donde estaban.</p></div>
     </div>
   </div>
 </section>
@@ -347,8 +436,8 @@
       <p class="prose reveal" data-i18n="learn.body2">
         Pero no está escrito entero de entrada. Cada apartado está atado a algo
         que tenés que encontrar: el día que te salga una cadencia rota, esa
-        noche el libro tiene un capítulo más. Son sesenta apartados y cuarenta y
-        tres logros, y la única forma de llenarlo es componiendo.
+        noche el libro tiene un capítulo más. Son setenta y ocho apartados y
+        cuarenta y nueve logros, y la única forma de llenarlo es componiendo.
       </p>
     </div>
     <figure class="shot reveal">
@@ -408,7 +497,7 @@
       </button>
       <button class="gal reveal" type="button" data-full="assets/img/logros.png">
         <img src="assets/img/logros.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
-        <span data-i18n="gal.3">Cuarenta y tres logros, tres estrellas, y ninguno dice cómo</span>
+        <span data-i18n="gal.3">Cuarenta y nueve logros, tres estrellas, y ninguno dice cómo</span>
       </button>
       <button class="gal reveal" type="button" data-full="assets/img/resultado.png">
         <img src="assets/img/resultado.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
@@ -427,17 +516,18 @@
       <code>ChordWeaver.exe</code>. No hay instalador, no toca el registro y no
       escribe nada fuera de su propia carpeta.
     </p>
-    <a class="btn btn-primary btn-big reveal" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.0.1-windows.zip">
+    <a class="btn btn-primary btn-big reveal" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1-windows.zip">
       <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M10 2.5a1 1 0 0 1 1 1v7.09l2.3-2.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V3.5a1 1 0 0 1 1-1ZM3.5 14a1 1 0 0 1 1 1v1h11v-1a1 1 0 1 1 2 0v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2.5 16.5V15a1 1 0 0 1 1-1Z"/></svg>
-      <span data-i18n="dl.btn">ChordWeaver 1.0.1 · Windows · 26 MB</span>
+      <span data-i18n="dl.btn">ChordWeaver 1.1 · Windows · 28 MB</span>
     </a>
     <dl class="dl-facts reveal">
       <div><dt data-i18n="dl.f1">Requisitos</dt><dd data-i18n="dl.f1v">Windows 64 bits. No hace falta Python.</dd></div>
       <div><dt data-i18n="dl.f2">Licencia</dt><dd>MIT</dd></div>
-      <div><dt data-i18n="dl.f3">SHA-256</dt><dd><code class="hash">cc82c27c726c7b21f6cb92e4ef71d4972416583014d9eb60e15454be7b9fe55f</code></dd></div>
+      <div><dt data-i18n="dl.f3">SHA-256</dt><dd><code class="hash">3a132dcf455956712056b286d5a05d2516450cc24eb9a15a1c5c544132969f42</code></dd></div>
     </dl>
     <p class="dl-notes reveal">
       <a href="notas.html" data-i18n="dl.notes">Ver todo lo que cambió en esta versión →</a>
+      <a href="actualizar.html" data-i18n="dl.update">¿Ya la tenías? Cómo actualizar sin perder el progreso →</a>
     </p>
     <p class="dl-alt reveal">
       <span data-i18n="dl.alt">¿Preferís correrlo desde el código?</span>
@@ -461,6 +551,7 @@
       <a href="https://github.com/ChordWeaver/chordweaver" target="_blank" rel="noopener" data-i18n="foot.repo">Código en GitHub</a>
       <a href="https://discord.gg/kBSyqPqNaU" target="_blank" rel="noopener" data-i18n="foot.discord">Discord oficial</a>
       <a href="notas.html" data-i18n="foot.notes">Notas del parche</a>
+      <a href="actualizar.html" data-i18n="foot.update">Cómo actualizar</a>
       <a href="https://github.com/ChordWeaver/chordweaver/releases" target="_blank" rel="noopener" data-i18n="foot.releases">Todas las versiones</a>
       <a href="https://github.com/ChordWeaver/chordweaver/issues" target="_blank" rel="noopener" data-i18n="foot.issues">Reportar un problema</a>
       <a href="https://github.com/ChordWeaver/chordweaver/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-i18n="foot.contrib">Cómo contribuir</a>
@@ -474,6 +565,6 @@
   <img id="lb-img" src="" alt="">
 </div>
 
-<script src="assets/js/main.js?v=41479885"></script>
+<script src="assets/js/main.js?v=b3bdae98"></script>
 </body>
 </html>

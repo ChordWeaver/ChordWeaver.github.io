@@ -1,11 +1,11 @@
 {
-  "version": "1.1",
-  "released": "2026-08-26",
+  "version": "1.1.1 ALPHA",
+  "released": "2026-08-30",
   "page": "https://chordweaver.github.io/",
   "notes": "https://chordweaver.github.io/notas.html",
-  "download": "https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1-windows.zip",
+  "download": "https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1.1-ALPHA-windows.zip",
   "headline": {
-    "es": "El experimentador de armónicos, el analizador, capítulos nuevos del libro y una entidad que parece tener algo para decir.",
-    "en": "The harmonics lab, the analyser, new chapters in the book, and an entity that seems to have something to say."
+    "es": "",
+    "en": ""
   }
 }

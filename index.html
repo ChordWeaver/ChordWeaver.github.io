@@ -9,11 +9,11 @@
 <script>document.documentElement.className += " js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ChordWeaver — conducción de voces por algoritmo genético</title>
-<meta name="description" content="Tus acordes, tu melodía, o una hoja en blanco: un algoritmo genético convierte cualquiera de las tres en una progresión escrita a varias voces, respetando las reglas de contrapunto del género. Aplicación de escritorio libre para Windows.">
+<meta name="description" content="Tus acordes, tu melodía o una hoja en blanco. ChordWeaver escribe cualquiera de las tres a varias voces con un algoritmo genético que respeta las reglas de contrapunto del género. También analiza partituras y enseña armonía con ejercicios. Programa libre para Windows.">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="ChordWeaver">
-<meta property="og:description" content="Tus acordes, tu melodía, o una hoja en blanco. Un algoritmo genético reparte las voces.">
+<meta property="og:description" content="Tus acordes, tu melodía o una hoja en blanco. Un algoritmo genético reparte las voces.">
 <meta property="og:image" content="https://chordweaver.github.io/assets/img/modos.png">
 <meta property="og:url" content="https://chordweaver.github.io/">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=6666e3af">
+<link rel="stylesheet" href="assets/css/style.css?v=90bc4f6d">
 </head>
 <body>
 
@@ -71,27 +71,28 @@
     </p>
     <h1 class="reveal">Chord<em>Weaver</em></h1>
     <p class="hook reveal" data-i18n="hero.hook">
-      Tus acordes, tu melodía, o una hoja en blanco.
+      Tus acordes, tu melodía o una hoja en blanco.
     </p>
     <p class="lede reveal" data-i18n="hero.lede">
-      Un algoritmo genético convierte cualquiera de las tres en una progresión
-      escrita a varias voces: qué nota canta cada una y en qué octava, con el
-      mínimo movimiento que las reglas del género permitan.
+      ChordWeaver escribe cualquiera de las tres a varias voces. Un algoritmo
+      genético decide qué nota canta cada voz y en qué octava, con el menor
+      movimiento que permitan las reglas del género que elijas.
     </p>
     <p class="sub reveal" data-i18n="hero.sub">
-      El acorde no se toca. Lo único que se reparte son las voces.
+      Una vez elegidos los acordes, el algoritmo no los cambia ni los
+      reordena. Sólo decide cómo se reparten entre las voces.
     </p>
     <div class="cta reveal">
-      <a class="btn btn-primary" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1.1-ALPHA-windows.zip" data-track="download">
+      <a class="btn btn-primary" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.2-ALPHA-windows.zip" data-track="download">
         <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2.5a1 1 0 0 1 1 1v7.09l2.3-2.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V3.5a1 1 0 0 1 1-1ZM3.5 14a1 1 0 0 1 1 1v1h11v-1a1 1 0 1 1 2 0v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2.5 16.5V15a1 1 0 0 1 1-1Z"/></svg>
-        <span data-i18n="hero.download">Descargar para Windows</span>
+        <span data-i18n="hero.download">Descargar 1.2 ALPHA</span>
       </a>
       <a class="btn btn-ghost" href="https://github.com/ChordWeaver/chordweaver" target="_blank" rel="noopener" data-i18n="hero.source">Ver el código</a>
     </div>
     <p class="meta reveal">
-      <span data-i18n="hero.meta.version">Versión 1.1.1 ALPHA</span>
+      <span data-i18n="hero.meta.version">Versión 1.2 ALPHA</span>
       <span class="sep">·</span>
-      <span data-i18n="hero.meta.size">28 MB</span>
+      <span data-i18n="hero.meta.size">29 MB</span>
       <span class="sep">·</span>
       <span data-i18n="hero.meta.install">Sin instalador</span>
       <span class="sep">·</span>
@@ -100,8 +101,8 @@
 
     <figure class="shot hero-shot reveal">
       <div class="shot-frame">
-        <img src="assets/img/modos.png" width="1500" height="980"
-             alt="La pantalla inicial de ChordWeaver: los tres modos arriba y las dos herramientas debajo"
+        <img src="assets/img/modos.png" width="1440" height="1010"
+             alt="La pantalla inicial de ChordWeaver. Arriba, los tres modos, cada uno con lo que ponés vos y lo que escribe el programa. Debajo, las tres herramientas, y al pie los logros y el libro"
              data-i18n-alt="alt.modos" fetchpriority="high">
       </div>
     </figure>
@@ -112,19 +113,19 @@
 <section class="band" id="como">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="how.kicker">Cómo funciona</p>
-    <h2 class="reveal" data-i18n="how.title">Un acorde no dice quién canta qué</h2>
+    <h2 class="reveal" data-i18n="how.title">Qué decide el programa</h2>
     <p class="prose reveal" data-i18n="how.body">
-      Un <em>Do mayor</em> son tres notas, pero cuatro voces tienen que
-      repartírselas: alguien dobla, alguien salta una octava, alguien se queda
-      quieto. Multiplicá eso por cada acorde de la pieza y por cada octava
-      posible, y las combinaciones se cuentan de a millones. ChordWeaver las
-      recorre con un algoritmo genético y se queda con las tres mejores.
+      Un acorde de <em>Do mayor</em> tiene tres notas. A cuatro voces una de
+      ellas se dobla, y cada voz puede cantar su nota en más de una octava. En
+      una progresión entera las combinaciones son demasiadas para probarlas de
+      a una. ChordWeaver las explora con un algoritmo genético y te muestra
+      las tres mejores.
     </p>
 
     <div class="demo reveal">
       <div class="demo-head">
         <h3 data-i18n="demo.title">Una salida real del programa</h3>
-        <p data-i18n="demo.sub">Ocho acordes, cuatro voces, reglas del barroco. Pasá el mouse por una voz.</p>
+        <p data-i18n="demo.sub">Ocho acordes a cuatro voces, con las reglas del barroco. Señalá o tocá un nombre de la leyenda para resaltar esa voz.</p>
       </div>
       <div class="demo-chart" id="chart" role="img"
            aria-label="Gráfico de las cuatro voces moviéndose entre ocho acordes"
@@ -132,7 +133,7 @@
       <ul class="demo-legend" id="chart-legend"></ul>
       <p class="demo-note">
         <strong id="chart-total">—</strong>
-        <span data-i18n="demo.note">de movimiento total en ocho acordes: el salto más grande de la pieza es una cuarta, y el bajo entero se mueve cinco semitonos.</span>
+        <span data-i18n="demo.note">de movimiento en total, sumando las cuatro voces. El salto más grande es una cuarta, y el bajo se mueve cinco semitonos en toda la pieza.</span>
       </p>
     </div>
   </div>
@@ -142,10 +143,11 @@
 <section class="band alt" id="modos">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="modes.kicker">Los tres modos</p>
-    <h2 class="reveal" data-i18n="modes.title">Cambia cuánto ponés vos</h2>
+    <h2 class="reveal" data-i18n="modes.title">Tres maneras de empezar</h2>
     <p class="prose reveal" data-i18n="modes.body">
-      Los tres terminan en lo mismo: una progresión escrita a varias voces,
-      lista para exportar. Lo único que cambia es de dónde salen los acordes.
+      Los tres modos terminan en una progresión escrita a varias voces, lista
+      para exportar. Lo que cambia es quién pone los acordes. En la pantalla
+      inicial, cada tarjeta muestra qué ponés vos y qué escribe el programa.
     </p>
 
     <div class="modes">
@@ -158,14 +160,15 @@
           </div>
         </header>
         <p data-i18n="mode.1.body">
-          Escribís la progresión en cifrado americano —o la importás de un
-          MusicXML— y el programa reparte las voces. Podés fijar un acorde con
-          el candado si querés esa disposición exacta y ninguna otra.
+          Escribís la progresión en cifrado americano, o la importás de un
+          archivo MusicXML, y el programa reparte las voces. Con el candado
+          podés fijar el reparto de un acorde, y los de alrededor se acomodan
+          a ese.
         </p>
         <figure class="shot">
           <div class="shot-frame">
-            <img src="assets/img/acordes.png" width="1442" height="932" loading="lazy"
-                 alt="La pantalla de acordes, con la progresión escrita compás por compás"
+            <img src="assets/img/acordes.png" width="1440" height="1010" loading="lazy"
+                 alt="La pantalla de acordes, con ocho acordes repartidos en cuatro compases y la progresión entera resumida arriba"
                  data-i18n-alt="alt.acordes">
           </div>
         </figure>
@@ -176,20 +179,19 @@
           <span class="mode-icon" aria-hidden="true">✧</span>
           <div>
             <h3 data-i18n="mode.2.name">Generador</h3>
-            <p class="mode-tag" data-i18n="mode.2.tag">Pone todo el programa</p>
+            <p class="mode-tag" data-i18n="mode.2.tag">El programa pone los acordes</p>
           </div>
         </header>
         <p data-i18n="mode.2.body">
-          Elegís tonalidad, modo, con qué acorde empieza y con cuál termina, y
-          cuántos acordes prestados de fuera de la escala tolerás. El programa
-          escribe la armonía entera —qué grado sigue a cuál, dónde cae cada
-          cadencia, qué se toma prestado— y recién después la reparte entre las
-          voces.
+          Elegís la tonalidad, el modo, el acorde inicial y el final, y qué
+          acordes prestados permitís. El programa escribe la progresión (qué
+          grado sigue a cuál, dónde caen las cadencias, cuándo usa un
+          préstamo) y después la reparte entre las voces.
         </p>
         <figure class="shot">
           <div class="shot-frame">
-            <img src="assets/img/tonalidad.png" width="1442" height="932" loading="lazy"
-                 alt="La pantalla de tonalidad, con los intercambios modales y las notas de paso"
+            <img src="assets/img/tonalidad.png" width="1440" height="1010" loading="lazy"
+                 alt="La pantalla de tonalidad del Generador, con el acorde inicial y el final, las notas de paso y los intercambios modales"
                  data-i18n-alt="alt.tonalidad">
           </div>
         </figure>
@@ -204,36 +206,74 @@
           </div>
         </header>
         <p data-i18n="mode.3.body">
-          Dibujás una línea en el pentagrama, con el mouse o con el piano de
-          abajo, y el programa le busca los acordes que la sostienen. Las notas
-          doradas te dicen de antemano cuáles van a llevar acorde.
+          Escribís una melodía en el pentagrama, con el mouse o con el piano
+          de abajo, y el programa busca acordes que la acompañen. Las notas
+          doradas muestran de antemano cuáles van a llevar acorde. Las que
+          salen de la escala se pintan de naranja.
         </p>
         <figure class="shot">
           <div class="shot-frame">
-            <img src="assets/img/melodia.png" width="1442" height="932" loading="lazy"
-                 alt="El pentagrama editable con una melodía dibujada y el piano debajo"
+            <img src="assets/img/melodia.png" width="1440" height="1010" loading="lazy"
+                 alt="El pentagrama del Armonizador con una melodía en Do mayor. Las tres notas con sostenido salen de la escala y están en naranja. Las que van a llevar acorde tienen un halo dorado"
                  data-i18n-alt="alt.melodia">
           </div>
         </figure>
       </article>
     </div>
+
+    <p class="prose reveal aside" data-i18n="mode.3.note">
+      En el Armonizador, una nota fuera de la escala que sube un semitono
+      lleva la dominante de la nota siguiente (V/x). En barroco y en jazz a
+      veces lleva, en cambio, el séptimo grado de esa nota (vii°/x). En jazz,
+      la que baja un semitono lleva la sustitución tritonal. Si la melodía
+      termina en la relativa menor, el programa armoniza en menor.
+    </p>
   </div>
 </section>
 
-<!-- ───────────────────────  LAS DOS HERRAMIENTAS  ─────────────────── -->
-<section class="band" id="herramientas">
+<!-- ───────────────────────────  EL RESULTADO  ─────────────────────── -->
+<section class="band" id="resultado">
+  <div class="wrap two">
+    <div class="two-text">
+      <p class="kicker reveal" data-i18n="score.kicker">El resultado</p>
+      <h2 class="reveal" data-i18n="score.title">Escrito en partitura</h2>
+      <p class="prose reveal" data-i18n="score.body">
+        Las tres mejores soluciones se ven escritas en un sistema de dos
+        pentagramas, con el cifrado arriba de cada acorde y un color por voz.
+        La tabla con el nombre de cada nota queda a un click.
+      </p>
+      <p class="prose reveal" data-i18n="score.body2">
+        Todos los pentagramas del programa, del Armonizador al analizador, se
+        dibujan con Bravura, la fuente de referencia del estándar musical
+        SMuFL. Las figuras, las claves y los accidentes tienen la forma que
+        tienen en una partitura impresa.
+      </p>
+    </div>
+    <figure class="shot reveal">
+      <div class="shot-frame">
+        <img src="assets/img/partitura.png" width="1440" height="1010" loading="lazy"
+             alt="Un resultado del Armonizador en partitura. La melodía va arriba, el cifrado encima de cada acorde y los grados debajo, entre ellos V/V, vii°/vi y V/ii"
+             data-i18n-alt="alt.partitura">
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────────────────  LAS TRES HERRAMIENTAS  ────────────────── -->
+<section class="band alt" id="herramientas">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="tools.kicker">Las herramientas</p>
-    <h2 class="reveal" data-i18n="tools.title">Y dos que no componen nada</h2>
+    <h2 class="reveal" data-i18n="tools.title">Tres herramientas que no componen</h2>
     <p class="prose reveal" data-i18n="tools.body">
-      Los tres modos de arriba escriben música. Estas dos no escriben una
-      nota: una desarma el sonido de una nota sola hasta que no queda nada
-      que desarmar, y la otra va en la dirección contraria a todo el resto
-      del programa —recibe música que ya está escrita y le pone los nombres.
-      En la pantalla inicial van justo abajo de los tres modos.
+      Además de los tres modos hay tres herramientas que no escriben música.
+      El experimentador descompone el sonido de una nota en sus armónicos. El
+      analizador hace el camino inverso al resto del programa, porque recibe
+      una partitura ya escrita y la analiza. La escuelita enseña armonía con
+      ejercicios que corrige el analizador. En la pantalla inicial están
+      debajo de los modos y tienen el mismo tamaño.
     </p>
 
-    <div class="modes two-up">
+    <div class="modes">
       <article class="mode reveal" style="--tint:#C9954F">
         <header>
           <span class="mode-icon" aria-hidden="true">≈</span>
@@ -243,26 +283,24 @@
           </div>
         </header>
         <p data-i18n="tool.1.body">
-          Una nota no es una frecuencia sola: es la suya y además múltiplos
-          enteros de la suya, y ese apilado es lo único que separa a un violín
-          de una flauta tocando lo mismo. Acá están las doce barras, y se
-          apagan de a una, se amplifican y se corren de su lugar exacto. Las
-          recetas clásicas vienen puestas para desarmarlas —seno, diente de
-          sierra, cuadrada, triangular, cuerda pulsada, clarinete, órgano y
-          voz cantada—, porque una onda cuadrada no es otra forma de onda:
-          es la misma serie con otras alturas de barra. Y el timbre que te
-          quede se exporta a <code>.wav</code>.
+          Una nota afinada no suena en una sola frecuencia. Suena en la suya y
+          en sus múltiplos enteros, los armónicos, y el peso de cada uno
+          explica buena parte de la diferencia entre un violín y una flauta.
+          El experimentador muestra los doce primeros como barras que podés
+          apagar, subir, bajar o correr de su lugar exacto. Trae ocho recetas
+          para empezar (seno, diente de sierra, cuadrada, triangular, cuerda
+          pulsada, clarinete, órgano y voz cantada), y todas son la misma
+          serie con barras de distinta altura.
         </p>
         <p class="mode-note" data-i18n="tool.1.note">
-          El dibujo y el sintetizador leen la misma lista, así que el gráfico
-          no puede mentir sobre lo que se escucha. Y el <code>.wav</code> no
-          sale como un sonido cualquiera: sale afinado y con el bucle marcado
-          adentro, o sea como muestra de sampler, listo para cargarlo en un
-          instrumento.
+          El gráfico y el sintetizador leen los mismos datos, así que el
+          dibujo coincide con lo que se escucha. El timbre se guarda como
+          <code>.wav</code> afinado y con el bucle marcado. Sirve para cargarlo
+          en un sampler o como timbre de reproducción del propio programa.
         </p>
         <figure class="shot">
           <div class="shot-frame">
-            <img src="assets/img/laboratorio.png" width="1500" height="980" loading="lazy"
+            <img src="assets/img/laboratorio.png" width="1440" height="1010" loading="lazy"
                  alt="El experimentador de armónicos, con las doce barras de la serie y los controles de vibrato"
                  data-i18n-alt="alt.laboratorio">
           </div>
@@ -278,29 +316,81 @@
           </div>
         </header>
         <p data-i18n="tool.2.body">
-          Escribís la música en un sistema de dos pentagramas —o la traés de
-          un MusicXML— y el programa te dice qué es cada acorde: en qué
-          inversión está, con qué cifrado, qué grado de qué tonalidad y qué
-          función cumple. Y lo que pasa entre las voces: quintas y octavas
-          paralelas, quintas ocultas, cruces, saltos difíciles, y qué nota es
-          de adorno y cuál es del acorde. Las cadencias las reconoce y te las
-          marca en el compás donde caen.
+          Escribís la música en un sistema de dos pentagramas, o la importás
+          de un MusicXML, y el programa nombra cada acorde con su inversión,
+          su cifrado, su grado y su función en la tonalidad. También señala lo
+          que pasa entre las voces (quintas y octavas paralelas, quintas
+          ocultas, cruces, saltos de tritono) y separa las notas del acorde de
+          las de adorno. Las cadencias quedan marcadas en el compás donde
+          caen.
         </p>
         <p class="mode-note" data-i18n="tool.2.note">
-          Las reglas de paralelas no están escritas dos veces: el analizador
-          le pide las suyas al mismo evaluador que usa el generador, así que
-          no puede aprobar lo que el otro prohíbe. Y trae adentro los primeros
-          ocho compases del Preludio BWV 846, para que haya algo que abrir el
-          primer día.
+          Para las paralelas y las quintas ocultas usa el mismo código con el
+          que el algoritmo genético evalúa sus soluciones, y las juzga según el
+          estilo que elijas. En jazz y en gregoriano no son falta. Trae los
+          primeros ocho compases del Preludio BWV 846 de Bach para probarlo
+          sin buscar un archivo.
         </p>
         <figure class="shot">
           <div class="shot-frame">
-            <img src="assets/img/analizador.png" width="1500" height="980" loading="lazy"
-                 alt="El analizador, con la partitura arriba y los acordes, el contrapunto y los adornos abajo"
+            <img src="assets/img/analizador.png" width="1440" height="1010" loading="lazy"
+                 alt="El analizador con el coral BWV 281 de Bach importado. Arriba la partitura con el cifrado, en el medio la tonalidad y dos cadencias auténticas, y abajo los acordes, el contrapunto y los adornos"
                  data-i18n-alt="alt.analizador">
           </div>
         </figure>
       </article>
+
+      <article class="mode reveal" style="--tint:#D3809F">
+        <header>
+          <span class="mode-icon" aria-hidden="true">✎</span>
+          <div>
+            <h3 data-i18n="tool.3.name">Escuelita</h3>
+            <p class="mode-tag" data-i18n="tool.3.tag">Aprender escribiendo</p>
+          </div>
+        </header>
+        <p data-i18n="tool.3.body">
+          Son cinco unidades (movimientos de las voces, armonías, cadencias,
+          estilos y serie armónica) con treinta y tres ejercicios en total. En
+          unos mirás o escuchás y elegís una respuesta. En otros
+          escribís o corregís un fragmento en el pentagrama, y lo que entregás
+          lo corrige el analizador. Si algo está mal, te dice en qué compás.
+        </p>
+        <p class="mode-note" data-i18n="tool.3.note">
+          Cada lección cita el apartado del libro que la explica, y se abre
+          cuando aprobaste la anterior. Si elegís mal, la corrección te dice
+          qué tiene de malo tu respuesta y dónde mirar, sin revelar la buena.
+          Al aprobar las
+          cinco unidades hay una graduación con su propia escena y el logro
+          «Nace una leyenda».
+        </p>
+        <figure class="shot">
+          <div class="shot-frame">
+            <img src="assets/img/escuelita.png" width="1440" height="1010" loading="lazy"
+                 alt="La escuelita en la lección de la cadencia rota. Arriba, el avance por las cinco unidades. El ejercicio entregado termina en una cadencia auténtica y la corrección lo señala en los compases 3 y 4"
+                 data-i18n-alt="alt.escuelita">
+          </div>
+        </figure>
+      </article>
+    </div>
+
+    <div class="audit reveal">
+      <h3 data-i18n="an.title">La precisión del analizador</h3>
+      <p data-i18n="an.body">
+        Para medirla, sus lecturas se compararon acorde por acorde con
+        análisis de referencia. Estos números salen de esa comparación.
+      </p>
+      <div class="audit-nums">
+        <div><strong>87&nbsp;%</strong><span data-i18n="an.n1">de los acordes de ocho corales de Bach, leídos igual que en el análisis de referencia</span></div>
+        <div><strong>53&nbsp;%</strong><span data-i18n="an.n2">era lo que acertaba en los mismos corales antes de la versión 1.2</span></div>
+        <div><strong>11/11</strong><span data-i18n="an.n3">piezas comparables con la tonalidad bien leída</span></div>
+      </div>
+      <p class="audit-foot" data-i18n="an.foot">
+        Lee anacrusas y compases partidos por una repetición. Con más de
+        cuatro voces se queda en cada momento con el bajo, la voz más aguda y
+        las dos del medio que más aportan al acorde, así que una partitura de
+        piano también se analiza bien. Y dos voces que se mueven en tiempos
+        distintos no cuentan como paralelas.
+      </p>
     </div>
   </div>
 </section>
@@ -309,19 +399,19 @@
 <section class="band" id="seis">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="six.kicker">Armonía</p>
-    <h2 class="reveal" data-i18n="six.title">A seis voces sobra gente para tres notas</h2>
+    <h2 class="reveal" data-i18n="six.title">Hasta seis voces</h2>
     <p class="prose reveal" data-i18n="six.body">
-      Un acorde de tres notas repartido entre seis voces obliga a doblar tres.
-      Cuál se dobla y cuál queda sola no es un detalle de reparto: es armonía, y
-      cambia el color del acorde. ChordWeaver lo decide uno por uno, y cuando el
-      acorde ya está completo usa las voces que sobran para colorearlo —una
-      sexta, una novena— en vez de repetir la séptima de punta a punta.
+      Si seis voces cantan un acorde de tres notas, tres de ellas repiten una
+      nota que ya canta otra. Qué nota se dobla cambia cómo suena el acorde, y
+      el programa lo decide acorde por acorde. Los tres modos tienen una
+      opción para que las voces que sobran agreguen una sexta o una novena en
+      lugar de doblar.
     </p>
 
     <div class="demo reveal">
       <div class="demo-head">
         <h3 data-i18n="demo6.title">Nueve acordes a seis voces</h3>
-        <p data-i18n="demo6.sub">Soprano, mezzo, alto, tenor, barítono y bajo. Pasá el mouse por una voz.</p>
+        <p data-i18n="demo6.sub">Soprano, mezzo, alto, tenor, barítono y bajo. Señalá o tocá un nombre de la leyenda para resaltar esa voz.</p>
       </div>
       <div class="demo-chart" id="chart6" role="img"
            aria-label="Gráfico de las seis voces moviéndose entre nueve acordes"
@@ -329,14 +419,13 @@
       <ul class="demo-legend" id="chart6-legend"></ul>
       <p class="demo-note">
         <strong id="chart6-total">—</strong>
-        <span data-i18n="demo6.note">de movimiento total. Ninguna voz cruza a la de al lado, no hay un solo unísono en los nueve acordes, y el salto más grande de toda la pieza es una quinta.</span>
+        <span data-i18n="demo6.note">de movimiento en total. Ninguna voz cruza a otra, no hay unísonos y el salto más grande es una quinta.</span>
       </p>
     </div>
 
     <p class="prose reveal aside" data-i18n="six.body2">
-      Y en el G7 de ahí arriba la sensible aparece una sola vez. Duplicarla es
-      de las pocas cosas que la armonía de práctica común directamente no
-      perdona, y es una regla que se puede apagar como todas las demás.
+      En el G7 del gráfico, la sensible (Si) aparece una sola vez. El barroco
+      castiga duplicarla, y el modo coral la castiga más todavía.
     </p>
   </div>
 </section>
@@ -345,51 +434,51 @@
 <section class="band" id="reglas">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="rules.kicker">Las reglas</p>
-    <h2 class="reveal" data-i18n="rules.title">Tres tradiciones, y todas se pueden discutir</h2>
+    <h2 class="reveal" data-i18n="rules.title">Las reglas de cada género</h2>
     <p class="prose reveal" data-i18n="rules.body">
-      El género manda sobre las dos mitades. Cuando es el programa el que elige
-      los acordes, decide qué cadencias se premian, si una dominante está
-      obligada a caer de quinta, cuánto cuesta un acorde de color y qué
-      préstamos vienen prendidos de fábrica. Y en el reparto de las voces
-      decide qué movimientos se prohíben, cuáles se premian y con cuánta
-      fuerza. Lo que el algoritmo minimiza es la suma de las dos, y un dial
-      decide cuánto pesa cada una.
+      El género influye en dos partes del trabajo. Cuando el programa elige
+      los acordes, define qué cadencias se premian, cuánto se premia que la
+      dominante resuelva por quinta, cuánto cuesta un acorde de color y qué
+      préstamos vienen activados. Cuando reparte las voces, define qué
+      movimientos se prohíben, cuáles se premian y con qué peso. El algoritmo
+      minimiza la suma de los dos costos, y un dial regula cuánto pesa cada
+      uno.
     </p>
 
     <div class="genres">
       <div class="genre reveal">
         <h3 data-i18n="genre.1.name">Barroco</h3>
-        <p data-i18n="genre.1.body">El contrapunto de la práctica común. Sin quintas ni octavas paralelas, premia el movimiento contrario, castiga los saltos de tritono y de séptima. Trae adentro el <strong>modo coral</strong>, que es lo mismo más severo.</p>
+        <p data-i18n="genre.1.body">Contrapunto de la práctica común. Prohíbe las quintas y octavas paralelas, premia el movimiento contrario y castiga los saltos de tritono y de séptima. Incluye el <strong>modo coral</strong>, que aplica las mismas reglas con más fuerza.</p>
       </div>
       <div class="genre reveal">
         <h3 data-i18n="genre.2.name">Gregoriano</h3>
-        <p data-i18n="genre.2.body">Escritura modal, anterior a la tonalidad. Casi todo el movimiento por grado conjunto, ámbito estrecho, tritono prohibido, y tolera las paralelas perfectas porque ahí son el organum y no un error.</p>
+        <p data-i18n="genre.2.body">Escritura modal, anterior a la tonalidad. Casi todo el movimiento es por grado conjunto, el ámbito es estrecho y el tritono está prohibido. Permite las quintas y octavas paralelas, que en el organum eran la norma.</p>
       </div>
       <div class="genre reveal">
         <h3 data-i18n="genre.3.name">Jazz</h3>
-        <p data-i18n="genre.3.body">Armonía extendida. Lo que manda no es el bajo sino cómo se encadenan la tercera y la séptima de un acorde al siguiente. Mantiene las notas comunes y esquiva las novenas menores.</p>
+        <p data-i18n="genre.3.body">Armonía extendida. Premia que la tercera y la séptima de cada acorde pasen por grado conjunto al acorde siguiente, mantiene las notas comunes y evita las novenas menores.</p>
       </div>
     </div>
 
     <div class="audit reveal">
-      <h3 data-i18n="audit.title">¿Y de verdad suenan distinto?</h3>
+      <h3 data-i18n="audit.title">Lo que cambia cada género, medido</h3>
       <p data-i18n="audit.body">
-        Es la pregunta obvia, y el proyecto trae la herramienta para
-        contestarla: <code>audit.py</code> corre las mismas progresiones con
-        cada género y vuelve a correrlas con todas las reglas de estilo
-        apagadas, para ver qué cambia de verdad. Los números están publicados,
-        incluso donde no favorecen.
+        El código incluye <code>audit.py</code>, que corre las mismas
+        progresiones con cada género y otra vez con las reglas de estilo
+        apagadas, para comparar. Estos números salen de esas corridas (cuatro
+        progresiones, dos semillas). La tabla completa está en el README del
+        programa, también con los casos en que un género se diferencia poco.
       </p>
       <div class="audit-nums">
-        <div><strong>87,5&nbsp;%</strong><span data-i18n="audit.n1">de los enlaces en barroco tienen las dos voces extremas moviéndose para lados distintos, o una quieta</span></div>
-        <div><strong>96,4&nbsp;%</strong><span data-i18n="audit.n2">de séptimas que resuelven bajando en modo coral</span></div>
-        <div><strong>0</strong><span data-i18n="audit.n3">quintas y octavas paralelas donde la regla está prendida</span></div>
+        <div><strong>87,5&nbsp;%</strong><span data-i18n="audit.n1">de los enlaces en barroco tienen las voces extremas en movimiento contrario u oblicuo</span></div>
+        <div><strong>96,4&nbsp;%</strong><span data-i18n="audit.n2">de las séptimas resuelven bajando en modo coral</span></div>
+        <div><strong>0</strong><span data-i18n="audit.n3">quintas y octavas paralelas con la regla activada</span></div>
       </div>
       <p class="audit-foot" data-i18n="audit.foot">
-        Y el gregoriano no se mide con la misma vara: ahí las quintas y octavas
-        paralelas no son un error que se perdona, son la forma misma. El estilo
-        premia que la vox organalis siga a la vox principalis a la cuarta, a la
-        quinta o a la octava, que es como se escribía el organum.
+        En el gregoriano las quintas y octavas paralelas no cuentan como
+        error. El estilo premia que la vox organalis acompañe a la vox
+        principalis una cuarta, una quinta o una octava por debajo, como en el
+        organum.
       </p>
     </div>
   </div>
@@ -399,24 +488,27 @@
 <section class="band alt" id="potencia">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="power.kicker">Qué más hace</p>
-    <h2 class="reveal" data-i18n="power.title">No termina cuando aparece la partitura</h2>
+    <h2 class="reveal" data-i18n="power.title">Otras funciones</h2>
 
     <div class="grid">
-      <div class="card reveal"><h3 data-i18n="f.1.t">De tres a seis voces</h3><p data-i18n="f.1.b">Soprano, mezzo, alto, tenor, barítono y bajo, con los registros editables voz por voz si tu coro no entra en el catálogo.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.2.t">MusicXML y MIDI</h3><p data-i18n="f.2.b">Exporta a los dos, escritos a mano por el programa. Se abren en MuseScore, Sibelius, Finale o lo que uses.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.3.t">Se escucha ahí mismo</h3><p data-i18n="f.3.b">Un botón por solución. El audio está sintetizado por el programa: no se empaqueta ni un solo archivo de sonido.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.4.t">Tres soluciones, no una</h3><p data-i18n="f.4.b">La que eligió y las dos que quedaron cerca, para que puedas oír qué se negoció en cada una.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.5.t">Te dice qué encontró</h3><p data-i18n="f.5.b">Cuando aparece una cadencia rota, un 6/4 cadencial o una sexta en lugar de quinta, te lo marca en la partitura y te explica en una línea qué es.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.6.t">Notas de paso y adornos</h3><p data-i18n="f.6.b">Rellena los saltos de tercera con movimiento por grado conjunto, y agrega gestos de época sobre el resultado.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.7.t">Préstamos y dominantes aplicadas</h3><p data-i18n="f.7.b">Napolitanas, bVII, sustitutos tritonales y dominantes aplicadas, con un dial para decir cuánto color querés.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.8.t">Importa partituras</h3><p data-i18n="f.8.b">Lee un MusicXML —también los <code>.mxl</code> comprimidos— y se queda con sus acordes, su ritmo y sus compases.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.9.t">Historial de lo hecho</h3><p data-i18n="f.9.b">Las últimas diez producciones quedan guardadas y se pueden volver a escuchar sin regenerar nada.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.10.t">Línea de comandos</h3><p data-i18n="f.10.b">El mismo motor sin abrir la ventana: <code>cli.py</code> acepta los acordes, el género y todos los switches.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.11.t">Portable de verdad</h3><p data-i18n="f.11.b">No hay instalador y no escribe fuera de su carpeta. Va en un pendrive y se desinstala tirándola a la papelera.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.12.t">El motor no tiene dependencias</h3><p data-i18n="f.12.b">Librería estándar de Python y nada más. Ni <code>music21</code>, ni <code>numpy</code>, ni una librería de audio.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.13.t">Avisa cuando hay versión nueva</h3><p data-i18n="f.13.b">Al abrirse pregunta si salió algo más nuevo y te lo dice antes de entrar. Sin internet no pasa nada: se abre igual.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.14.t">Un timbre, un instrumento</h3><p data-i18n="f.14.b">Lo que armes en el experimentador se exporta como <code>.wav</code> afinado y con bucle: una muestra de sampler, no un sonido suelto.</p></div>
-      <div class="card reveal"><h3 data-i18n="f.15.t">El progreso está a la vista</h3><p data-i18n="f.15.b">Logros, libro, sendero e historial viven en archivos de texto al lado del programa. Se copian a la carpeta nueva y siguen donde estaban.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.1.t">De tres a seis voces</h3><p data-i18n="f.1.b">Soprano, mezzo, alto, tenor, barítono y bajo. El registro de cada voz se puede editar si tu coro no entra en los valores de fábrica.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.16.t">Atajos de voces</h3><p data-i18n="f.16.b">Canto (SATB), piano y cuarteto de cuerdas. Cada atajo marca las cuatro voces y les pone el registro de una vez.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.2.t">MusicXML y MIDI</h3><p data-i18n="f.2.b">Exporta en los dos formatos. Los archivos se abren en MuseScore, Sibelius, Finale o cualquier otro editor de partituras.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.3.t">Timbres de reproducción</h3><p data-i18n="f.3.b">Cada solución tiene su botón para escucharla. En la configuración se elige el timbre entre cuerda pulsada, órgano, cuerdas frotadas, clave y coro, más una flauta dulce de la escuela que está de chiste. También puede sonar con un archivo WAV.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.4.t">Tres soluciones</h3><p data-i18n="f.4.b">La mejor y las dos que le siguen, en partitura o en tabla, para comparar en qué se diferencian.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.5.t">Te dice qué encontró</h3><p data-i18n="f.5.b">Si en una solución aparece una cadencia rota, un 6/4 cadencial o una sexta en lugar de quinta, el resultado lo señala y lo explica en una línea.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.6.t">Notas de paso y adornos</h3><p data-i18n="f.6.b">Rellena saltos con notas de paso por grado conjunto y puede agregar adornos de época sobre el resultado.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.7.t">Préstamos y dominantes aplicadas</h3><p data-i18n="f.7.b">Napolitana, bVII, sustituto tritonal y dominantes aplicadas, con un control para decidir cuánto se usan.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.8.t">Importa partituras</h3><p data-i18n="f.8.b">Lee archivos MusicXML, también los <code>.mxl</code> comprimidos, y toma sus acordes, su ritmo y sus compases.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.9.t">Historial</h3><p data-i18n="f.9.b">Las últimas diez producciones quedan guardadas y se pueden volver a escuchar sin generarlas de nuevo.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.10.t">Línea de comandos</h3><p data-i18n="f.10.b">Desde el código fuente, <code>cli.py</code> usa el mismo motor sin abrir la ventana. Acepta los acordes, el género, las voces y los mismos interruptores de reglas.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.11.t">Portable</h3><p data-i18n="f.11.b">No tiene instalador y guarda todo en su propia carpeta. Funciona desde un pendrive, y para desinstalarlo alcanza con borrar la carpeta.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.12.t">Motor sin dependencias</h3><p data-i18n="f.12.b">El motor usa sólo la librería estándar de Python. No necesita <code>music21</code>, <code>numpy</code> ni librerías de audio.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.13.t">Avisa cuando hay versión nueva</h3><p data-i18n="f.13.b">Al abrirse consulta si salió una versión nueva y te avisa antes de entrar. Sin conexión abre igual.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.14.t">Timbres propios</h3><p data-i18n="f.14.b">Lo que armes en el experimentador se guarda como <code>.wav</code> afinado y con bucle. Sirve como instrumento en un sampler y como timbre de reproducción del programa.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.15.t">El progreso, en archivos a la vista</h3><p data-i18n="f.15.b">Logros, libro, sendero, escuelita e historial se guardan en archivos de texto al lado del programa. Para actualizar, se copian a la carpeta nueva.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.17.t">En castellano y en inglés</h3><p data-i18n="f.17.b">La primera vez que lo abrís te pregunta el idioma. Después se cambia desde la configuración, sin cerrar el programa.</p></div>
+      <div class="card reveal"><h3 data-i18n="f.18.t">Tutorial y guías</h3><p data-i18n="f.18.b">La primera vez hay un recorrido guiado. Las pantallas de acordes, melodía, tonalidad y reglas tienen además su propia guía. Las dos cosas se repiten desde la configuración.</p></div>
     </div>
   </div>
 </section>
@@ -425,25 +517,29 @@
 <section class="band" id="aprender">
   <div class="wrap two">
     <div class="two-text">
-      <p class="kicker reveal" data-i18n="learn.kicker">Y además enseña</p>
-      <h2 class="reveal" data-i18n="learn.title">Un libro que se escribe solo</h2>
+      <p class="kicker reveal" data-i18n="learn.kicker">Aprender</p>
+      <h2 class="reveal" data-i18n="learn.title">Un libro de teoría adentro</h2>
       <p class="prose reveal" data-i18n="learn.body">
-        Adentro del programa hay un libro de teoría escrito para alguien que no
-        estudió música: armonía, conducción de voces, de dónde viene cada
-        estilo y las cadencias que el programa reconoce, con la receta para que
-        aparezcan.
+        El programa trae un libro de teoría escrito para quien no estudió
+        música. Cubre armonía, conducción de voces, el origen de cada estilo y
+        las cadencias que el programa reconoce, con instrucciones para que
+        aparezcan en tus resultados.
       </p>
       <p class="prose reveal" data-i18n="learn.body2">
-        Pero no está escrito entero de entrada. Cada apartado está atado a algo
-        que tenés que encontrar: el día que te salga una cadencia rota, esa
-        noche el libro tiene un capítulo más. Son setenta y ocho apartados y
-        cuarenta y nueve logros, y la única forma de llenarlo es componiendo.
+        La mayoría de los apartados empiezan cerrados y se escriben cuando
+        hacés algo en el programa. Por ejemplo, la primera vez que te sale un
+        6/4 cadencial se abre el apartado que lo explica. Son ochenta
+        apartados y cincuenta y un logros.
+      </p>
+      <p class="prose reveal" data-i18n="learn.body3">
+        Las lecciones de la escuelita citan el apartado que les corresponde, y
+        desde ahí se abre el libro en esa página.
       </p>
     </div>
     <figure class="shot reveal">
       <div class="shot-frame">
-        <img src="assets/img/libro.png" width="1442" height="932" loading="lazy"
-             alt="El libro de teoría abierto en el capítulo sobre conducción de voces"
+        <img src="assets/img/libro.png" width="1440" height="1010" loading="lazy"
+             alt="El libro de teoría abierto en «Los cuatro movimientos», del capítulo sobre cómo se mueven las voces, con ejemplos en pentagrama"
              data-i18n-alt="alt.libro">
       </div>
     </figure>
@@ -453,24 +549,23 @@
 <!-- ──────────────────────────  LA MÍSTICA  ────────────────────────── -->
 <section class="mystic" id="algo-mas">
   <div class="wrap mystic-inner">
-    <p class="kicker gold reveal" data-i18n="myth.kicker">Y hay algo más</p>
-    <h2 class="reveal" data-i18n="myth.title">Alguna vez, si te ve trabajar tranquilo,<br>el programa te va a ofrecer algo</h2>
+    <p class="kicker gold reveal" data-i18n="myth.kicker">Algo más</p>
+    <h2 class="reveal" data-i18n="myth.title">Si lo usás un rato,<br>el programa te va a ofrecer algo</h2>
     <div class="mystic-body">
       <p class="reveal" data-i18n="myth.p1">
-        No dice qué es. Aparece un botón dorado en la pantalla inicial, y si no
-        lo tocás hoy sigue ahí mañana. Lo que pase después depende de cómo
-        contestes, y no hay una respuesta correcta: hay tres, y cada una lleva
-        a otra parte.
+        No dice qué. Se enciende un botón dorado en la pantalla inicial, y si
+        no lo tocás vuelve a aparecer otro día. Lo que pase después depende de
+        lo que contestes. Hay tres respuestas posibles y cada una lleva a un
+        camino distinto.
       </p>
       <p class="reveal" data-i18n="myth.p2">
-        Lo que se recorre se recorre usando el programa normalmente —
-        escribiendo acordes, generando progresiones, dibujando melodías. Al
-        final de cada camino hay música que no elegiste vos, y un capítulo del
-        libro que hasta entonces estuvo cerrado con el título tapado.
+        Cada camino se recorre usando el programa como siempre, escribiendo
+        acordes, generando progresiones y armonizando melodías. Algunos tramos
+        tocan piezas que el programa ya trae escritas, y cada tramo escribe en
+        el libro un apartado que hasta entonces tenía el título tapado.
       </p>
       <p class="reveal mystic-last" data-i18n="myth.p3">
-        Nada de esto se anuncia en ninguna pantalla. Esta página tampoco lo va
-        a arruinar.
+        El programa no lo anuncia, y esta página no va a contar más.
       </p>
     </div>
     <figure class="mystic-shot reveal">
@@ -485,23 +580,31 @@
 <section class="band alt" id="galeria">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="gal.kicker">Por dentro</p>
-    <h2 class="reveal" data-i18n="gal.title">Siete pantallas, y siempre se puede volver</h2>
+    <h2 class="reveal" data-i18n="gal.title">Siete pantallas, y siempre podés volver atrás</h2>
     <div class="gallery">
+      <button class="gal reveal" type="button" data-full="assets/img/resultado.png">
+        <img src="assets/img/resultado.png" width="1440" height="1010" loading="lazy" alt="" aria-hidden="true">
+        <span data-i18n="gal.4">Las tres mejores soluciones en partitura, cada una con su botón para escucharla</span>
+      </button>
       <button class="gal reveal" type="button" data-full="assets/img/generado.png">
-        <img src="assets/img/generado.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
-        <span data-i18n="gal.1">El resultado, con las cifras romanas y lo que el programa reconoció</span>
+        <img src="assets/img/generado.png" width="1440" height="1010" loading="lazy" alt="" aria-hidden="true">
+        <span data-i18n="gal.1">Las mismas soluciones en tabla, con el nombre de cada nota y lo que el programa reconoció</span>
+      </button>
+      <button class="gal reveal" type="button" data-full="assets/img/voces.png">
+        <img src="assets/img/voces.png" width="1440" height="1010" loading="lazy" alt="" aria-hidden="true">
+        <span data-i18n="gal.5">Las voces y sus registros, con los atajos para canto, piano y cuarteto de cuerdas</span>
       </button>
       <button class="gal reveal" type="button" data-full="assets/img/genero.png">
-        <img src="assets/img/genero.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
+        <img src="assets/img/genero.png" width="1440" height="1010" loading="lazy" alt="" aria-hidden="true">
         <span data-i18n="gal.2">La elección de género, con lo que cada uno prohíbe y premia</span>
       </button>
-      <button class="gal reveal" type="button" data-full="assets/img/logros.png">
-        <img src="assets/img/logros.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
-        <span data-i18n="gal.3">Cuarenta y nueve logros, tres estrellas, y ninguno dice cómo</span>
+      <button class="gal reveal" type="button" data-full="assets/img/configuracion.png">
+        <img src="assets/img/configuracion.png" width="1440" height="1010" loading="lazy" alt="" aria-hidden="true">
+        <span data-i18n="gal.6">La configuración, con el idioma, los parámetros de la búsqueda y el timbre</span>
       </button>
-      <button class="gal reveal" type="button" data-full="assets/img/resultado.png">
-        <img src="assets/img/resultado.png" width="1442" height="932" loading="lazy" alt="" aria-hidden="true">
-        <span data-i18n="gal.4">Las tres mejores soluciones, cada una con su botón de escuchar</span>
+      <button class="gal reveal" type="button" data-full="assets/img/logros.png">
+        <img src="assets/img/logros.png" width="1440" height="1010" loading="lazy" alt="" aria-hidden="true">
+        <span data-i18n="gal.3">Los logros, agrupados por estrella</span>
       </button>
     </div>
   </div>
@@ -512,22 +615,23 @@
   <div class="wrap dl-inner">
     <h2 class="reveal" data-i18n="dl.title">Bajalo y probalo</h2>
     <p class="reveal" data-i18n="dl.body">
-      Descomprimí el <code>.zip</code> donde quieras y ejecutá
-      <code>ChordWeaver.exe</code>. No hay instalador, no toca el registro y no
-      escribe nada fuera de su propia carpeta.
+      Descomprimí el <code>.zip</code> donde quieras y abrí
+      <code>ChordWeaver.exe</code>. No hay instalador, no toca el registro de
+      Windows y guarda tus datos en su propia carpeta.
     </p>
-    <a class="btn btn-primary btn-big reveal" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1.1-ALPHA-windows.zip">
+    <a class="btn btn-primary btn-big reveal" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.2-ALPHA-windows.zip">
       <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M10 2.5a1 1 0 0 1 1 1v7.09l2.3-2.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V3.5a1 1 0 0 1 1-1ZM3.5 14a1 1 0 0 1 1 1v1h11v-1a1 1 0 1 1 2 0v1.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 2.5 16.5V15a1 1 0 0 1 1-1Z"/></svg>
-      <span data-i18n="dl.btn">ChordWeaver 1.1.1 ALPHA · Windows · 28 MB</span>
+      <span data-i18n="dl.btn">Descargar 1.2 ALPHA</span>
     </a>
     <dl class="dl-facts reveal">
-      <div><dt data-i18n="dl.f1">Requisitos</dt><dd data-i18n="dl.f1v">Windows 64 bits. No hace falta Python.</dd></div>
+      <div><dt data-i18n="dl.f1">Requisitos</dt><dd data-i18n="dl.f1v">Windows de 64 bits. No hace falta Python.</dd></div>
+      <div><dt data-i18n="dl.f4">Tamaño</dt><dd data-i18n="dl.f4v">29 MB, en un <code>.zip</code></dd></div>
       <div><dt data-i18n="dl.f2">Licencia</dt><dd>MIT</dd></div>
-      <div><dt data-i18n="dl.f3">SHA-256</dt><dd><code class="hash">3a132dcf455956712056b286d5a05d2516450cc24eb9a15a1c5c544132969f42</code></dd></div>
+      <div><dt data-i18n="dl.f3">SHA-256</dt><dd><code class="hash">36d0d47463ae3d33287b4b3834a738c4a36026ab5f74135c7ef315dcd92e12a7</code></dd></div>
     </dl>
     <p class="dl-notes reveal">
-      <a href="notas.html" data-i18n="dl.notes">Ver todo lo que cambió en esta versión →</a>
-      <a href="actualizar.html" data-i18n="dl.update">¿Ya la tenías? Cómo actualizar sin perder el progreso →</a>
+      <a href="notas.html" data-i18n="dl.notes">Qué cambió en esta versión →</a>
+      <a href="actualizar.html" data-i18n="dl.update">¿Tenés una versión anterior? Cómo actualizar sin perder el progreso →</a>
     </p>
     <p class="dl-alt reveal">
       <span data-i18n="dl.alt">¿Preferís correrlo desde el código?</span>
@@ -565,6 +669,6 @@
   <img id="lb-img" src="" alt="">
 </div>
 
-<script src="assets/js/main.js?v=95b227cd"></script>
+<script src="assets/js/main.js?v=3ce06784"></script>
 </body>
 </html>

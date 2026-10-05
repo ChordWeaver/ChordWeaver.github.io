@@ -5,7 +5,7 @@
 <script>document.documentElement.className += " js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Actualizar ChordWeaver sin perder el progreso</title>
-<meta name="description" content="Cómo pasar de una versión de ChordWeaver a la siguiente conservando los logros, el libro, el sendero y el historial: qué archivo guarda cada cosa y qué hay que copiar.">
+<meta name="description" content="Cómo pasar a una versión nueva de ChordWeaver sin perder los logros, el libro, el sendero, la escuelita ni el historial, y qué guarda cada archivo.">
 <meta name="robots" content="index,follow">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B1D22'/><path d='M7 21V11M13 21V11M19 21V11M25 21V11' stroke='%235B8FD6' stroke-width='2.4' stroke-linecap='round'/><path d='M7 16h18' stroke='%23B07FD6' stroke-width='2.4' stroke-linecap='round'/></svg>">
@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=6666e3af">
+<link rel="stylesheet" href="assets/css/style.css?v=90bc4f6d">
 </head>
 <body data-title="upd.doc.title">
 
@@ -53,17 +53,17 @@
 
     <header class="notes-head">
       <p class="kicker" data-i18n="upd.kicker">Actualizar</p>
-      <h1 class="notes-title" data-i18n="upd.title">La versión nueva <em>no te borra nada</em></h1>
+      <h1 class="notes-title" data-i18n="upd.title">Actualizar <em>sin perder nada</em></h1>
       <p class="notes-lede" data-i18n="upd.body">
-        ChordWeaver no se instala: es una carpeta. Eso, que en el día a día se
-        nota poco, es exactamente lo que hace que actualizar sea copiar seis
-        archivos y una carpeta de la vieja a la nueva. El progreso es tuyo y
-        está a la vista —no en el registro de Windows, no escondido en un
-        <code>AppData</code>.
+        ChordWeaver no tiene instalador. Todo está en una carpeta, y tu
+        progreso se guarda en siete archivos <code>.json</code> al lado del
+        programa, no en el registro de Windows ni en <code>AppData</code>.
+        Para actualizar, copiás esos archivos y la carpeta
+        <code>output/</code> a la versión nueva.
       </p>
       <p class="notes-meta">
-        <a class="btn btn-primary btn-small" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1.1-ALPHA-windows.zip">
-          <span data-i18n="notes.download">Descargar 1.1.1 ALPHA</span>
+        <a class="btn btn-primary btn-small" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.2-ALPHA-windows.zip">
+          <span data-i18n="notes.download">Descargar 1.2 ALPHA</span>
         </a>
         <a class="ghost" href="index.html" data-i18n="notes.back">← Volver al inicio</a>
       </p>
@@ -72,74 +72,86 @@
     <section class="upd-block">
       <h2 class="upd-title" data-i18n="upd.steps.title">Los cinco pasos</h2>
       <ol class="steps">
-        <li data-i18n="upd.s1">Bajá el <code>.zip</code> nuevo y descomprimilo <strong>al lado</strong> de la carpeta que ya tenías, no encima.</li>
-        <li data-i18n="upd.s2">Cerrá ChordWeaver si está abierto: los archivos de progreso se escriben al salir.</li>
-        <li data-i18n="upd.s3">Copiá de la carpeta vieja a la nueva los seis <code>.json</code> y la carpeta <code>output/</code>, y aceptá reemplazar.</li>
-        <li data-i18n="upd.s4">Abrí <code>ChordWeaver.exe</code> en la carpeta nueva. Están los logros, el libro por donde ibas, el sendero y las últimas diez producciones.</li>
-        <li data-i18n="upd.s5">Recién cuando compruebes que está todo, borrá la carpeta vieja.</li>
+        <li data-i18n="upd.s1">Descargá el <code>.zip</code> nuevo y descomprimilo en una carpeta nueva, <strong>al lado</strong> de la que ya tenías y no encima.</li>
+        <li data-i18n="upd.s2">Cerrá ChordWeaver si está abierto, así no guarda nada mientras copiás.</li>
+        <li data-i18n="upd.s3">Copiá los siete <code>.json</code> y la carpeta <code>output/</code> de la carpeta vieja a la nueva. Si te pregunta, elegí reemplazar.</li>
+        <li data-i18n="upd.s4">Abrí <code>ChordWeaver.exe</code> en la carpeta nueva y fijate que estén los logros, el libro, el sendero, la escuelita y las últimas diez producciones.</li>
+        <li data-i18n="upd.s5">Cuando confirmes que está todo, borrá la carpeta vieja.</li>
       </ol>
     </section>
 
     <section class="upd-block">
       <h2 class="upd-title" data-i18n="upd.files.title">Qué guarda cada archivo</h2>
       <p class="prose" data-i18n="upd.files.lede">
-        Los siete están sueltos al lado de <code>ChordWeaver.exe</code>, y se
-        pueden abrir con cualquier editor de texto. Ninguno viene adentro del
-        <code>.zip</code>: los escribe el programa la primera vez que lo abrís.
+        Los siete <code>.json</code> están al lado de
+        <code>ChordWeaver.exe</code> y se abren con cualquier editor de texto.
+        El <code>.zip</code> no trae ninguno. El programa los crea cuando
+        tiene algo para guardar.
       </p>
       <div class="files">
         <dl class="files-list">
           <div><dt><code>achievements.json</code></dt><dd data-i18n="upd.f.ach">Los logros, las estrellas y los títulos ganados.</dd></div>
-          <div><dt><code>history.json</code></dt><dd data-i18n="upd.f.history">Las últimas diez producciones, con su audio reproducible.</dd></div>
-          <div><dt><code>story.json</code></dt><dd data-i18n="upd.f.story">Por dónde va el sendero, y lo que ya contestaste.</dd></div>
-          <div><dt><code>visitors.json</code></dt><dd data-i18n="upd.f.visitors">Quién te visitó y qué encuentros ya viste.</dd></div>
-          <div><dt><code>eggs.json</code></dt><dd data-i18n="upd.f.eggs">Lo que encontraste sin que nadie te lo dijera.</dd></div>
-          <div><dt><code>settings.json</code></dt><dd data-i18n="upd.f.settings">Género, voces, pesos, idioma, tamaño de letra y todo lo demás.</dd></div>
-          <div><dt><code>output/</code></dt><dd data-i18n="upd.f.output">Los MusicXML, los MIDI y los WAV que exportaste.</dd></div>
+          <div><dt><code>history.json</code></dt><dd data-i18n="upd.f.history">Las últimas diez producciones, listas para volver a escucharlas.</dd></div>
+          <div><dt><code>story.json</code></dt><dd data-i18n="upd.f.story">Por dónde va el sendero y qué contestaste.</dd></div>
+          <div><dt><code>visitors.json</code></dt><dd data-i18n="upd.f.visitors">Qué visitas recibiste y qué encuentros ya viste.</dd></div>
+          <div><dt><code>eggs.json</code></dt><dd data-i18n="upd.f.eggs">Los secretos que ya encontraste.</dd></div>
+          <div><dt><code>school.json</code></dt><dd data-i18n="upd.f.school">Los ejercicios aprobados de la escuelita y si ya viste la graduación. Es nuevo en la 1.2.</dd></div>
+          <div><dt><code>settings.json</code></dt><dd data-i18n="upd.f.settings">El idioma, el timbre, el tamaño de letra, los parámetros de la búsqueda y qué guías ya viste.</dd></div>
+          <div><dt><code>output/</code></dt><dd data-i18n="upd.f.output">Las partituras en MusicXML y MIDI que exportaste a la carpeta que propone el programa.</dd></div>
         </dl>
         <p class="files-foot" data-i18n="upd.files.foot">
-          Copiar los seis juntos siempre funciona: una preferencia que la
-          versión nueva todavía no conocía se ignora, y una que se agregó
-          arranca en su valor de fábrica. Ningún archivo de la vieja le hace
-          falta a la nueva para arrancar, así que si te olvidás uno lo podés
-          copiar después.
+          Los archivos de una versión anterior sirven en la nueva. Una
+          preferencia que ya no existe se ignora, y una nueva arranca con su
+          valor de fábrica. La versión nueva abre aunque falte alguno, así que
+          si te olvidaste uno lo podés copiar después, con el programa
+          cerrado. Si al lado del programa ves un <code>chordweaver.log</code>,
+          no hace falta pasarlo. Es un registro técnico y la versión nueva
+          arma el suyo.
         </p>
       </div>
     </section>
 
     <section class="upd-block">
-      <h2 class="upd-title" data-i18n="upd.notice.title">Y desde la 1.1 no hace falta que estés mirando</h2>
+      <h2 class="upd-title" data-i18n="upd.notice.title">El aviso de versión nueva</h2>
       <div class="notice">
         <p data-i18n="upd.notice.body">
-          Al abrirse, el programa pregunta si salió una versión más nueva. Si
-          la hay, te lo dice <strong>antes</strong> de entrar, con un cartel de
-          dos botones: <em>Actualizar</em> abre esta página y cierra el
-          programa, y <em>Ahora no</em> te deja seguir donde estabas. Se
-          pregunta una sola vez por arranque, no se descarga nada solo, y si no
-          hay internet no pasa nada: el programa se abre igual, sin avisos y
-          sin esperas.
+          Desde la 1.1, el programa consulta al abrirse si hay una versión más
+          nueva. Si la hay, muestra un cartel con dos botones antes de abrir
+          la ventana principal. <em>Actualizar</em> abre la página de
+          ChordWeaver en el navegador y no abre el programa, para que puedas
+          reemplazar la carpeta. <em>Ahora no</em> cierra el cartel y el
+          programa se abre como siempre. Consulta una vez por arranque y no
+          descarga nada. Sin conexión, el programa abre igual y sin aviso.
         </p>
       </div>
     </section>
 
     <section class="upd-block">
-      <h2 class="upd-title" data-i18n="upd.faq.title">Si algo salió distinto</h2>
+      <h2 class="upd-title" data-i18n="upd.faq.title">Si algo no salió bien</h2>
       <dl class="faq">
         <div>
           <dt data-i18n="upd.q1">Lo descomprimí encima de la carpeta vieja.</dt>
-          <dd data-i18n="upd.a1">No pasó nada. El <code>.zip</code> no trae ningún <code>.json</code> adentro, así que no hay con qué pisar tu progreso: lo único que se reemplazó fue el programa. Abrilo y fijate que estén los logros.</dd>
+          <dd data-i18n="upd.a1">No hay problema. El <code>.zip</code> no trae ningún <code>.json</code>, así que tu progreso queda como estaba y sólo se reemplaza el programa. Abrilo y fijate que estén los logros.</dd>
         </div>
         <div>
           <dt data-i18n="upd.q2">Cambié de computadora.</dt>
-          <dd data-i18n="upd.a2">Copiá la carpeta entera y listo. No hay nada instalado del otro lado: ni registro, ni servicios, ni licencia atada a la máquina.</dd>
+          <dd data-i18n="upd.a2">Copiá la carpeta entera a la computadora nueva. No hay nada instalado fuera de ella.</dd>
         </div>
         <div>
           <dt data-i18n="upd.q3">Abrí la versión nueva y no está mi progreso.</dt>
-          <dd data-i18n="upd.a3">Cerrala sin tocar nada, comprobá que los <code>.json</code> hayan quedado <strong>al lado</strong> del <code>.exe</code> y no dentro de una subcarpeta, y volvé a abrirla. El programa no borra un archivo que no puede leer: lo deja donde está y arranca de cero, así que todavía está todo.</dd>
+          <dd data-i18n="upd.a3">Cerrá el programa y revisá que los <code>.json</code> estén <strong>al lado</strong> del <code>.exe</code> y no dentro de una subcarpeta. Si el programa no encuentra un archivo, arranca de cero y crea uno nuevo, pero no toca el que quedó en otro lado. Mové los tuyos al lugar correcto, elegí reemplazar y volvé a abrirlo.</dd>
         </div>
         <div>
           <dt data-i18n="upd.q4">El programa no me avisó de la versión nueva.</dt>
-          <dd data-i18n="upd.a4">El aviso necesita internet, y sólo lo trae la 1.1 en adelante: de la 1.0.1 hay que enterarse acá. Si tenés dudas, la lista de versiones está en <a href="notas.html">las notas del parche</a>.</dd>
+          <dd data-i18n="upd.a4">El aviso necesita conexión a internet y existe desde la 1.1. Si tenés la 1.0.1, las versiones nuevas se anuncian acá. La lista completa está en <a href="notas.html">las notas del parche</a>.</dd>
+        </div>
+        <div>
+          <dt data-i18n="upd.q5">Toqué «Ahora no» en el aviso y el programa no abrió.</dt>
+          <dd data-i18n="upd.a5">Era un error de la 1.1 y la 1.1.1, y la 1.2 lo corrige. Cerrá la ventana que haya quedado abierta y actualizá con los cinco pasos de arriba.</dd>
+        </div>
+        <div>
+          <dt data-i18n="upd.q6">Uso como timbre un WAV que está en la carpeta vieja.</dt>
+          <dd data-i18n="upd.a6">La configuración guarda la ubicación del archivo. Antes de borrar la carpeta vieja, mové el WAV a otro lugar y volvé a elegirlo en la configuración. Si el archivo ya no está, el programa suena con el timbre de siempre y la configuración te dice por qué.</dd>
         </div>
       </dl>
     </section>
@@ -171,6 +183,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=95b227cd"></script>
+<script src="assets/js/main.js?v=3ce06784"></script>
 </body>
 </html>

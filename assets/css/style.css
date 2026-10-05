@@ -764,3 +764,26 @@ h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01
 /* Al pie de la descarga ahora hay dos enlaces y no uno: uno abajo del
    otro, o en un teléfono el segundo se parte por la mitad. */
 .dl-notes { display: grid; gap: 8px; justify-items: center; }
+
+
+/* ───────────────────────  EL TELEFONO, AL FINAL  ──────────────────── */
+
+/* Va al final y no en el bloque de arriba porque varias reglas se fueron
+   agregando después de ese bloque y le ganaban por orden: `.modes.two-up`
+   dejaba las dos herramientas lado a lado en un teléfono y la segunda
+   tarjeta empujaba la página entera fuera de la pantalla. Lo que achica
+   para el teléfono tiene que ser lo último que se lee. */
+@media (max-width: 700px) {
+  .modes.two-up { grid-template-columns: 1fr; }
+  .nav-inner { gap: 12px; }
+  .nav-side { gap: 8px; }
+  .brand { font-size: 1rem; gap: 9px; }
+  /* Un hijo de grilla no se achica por debajo de su contenido salvo que se
+     lo diga: sin esto el gráfico de voces, que mide 620px de mínimo, le
+     contagiaba ese ancho a su tarjeta en vez de desplazarse adentro. */
+  .two > *, .modes > *, .genres > *, .grid > *, .gallery > * { min-width: 0; }
+}
+@media (max-width: 380px) {
+  .lang-opt { padding: 3px 8px; }
+  .nav-side .ghost { padding: 7px 7px; }
+}

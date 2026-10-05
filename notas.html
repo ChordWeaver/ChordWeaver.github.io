@@ -5,7 +5,7 @@
 <script>document.documentElement.className += " js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ChordWeaver — Notas del parche</title>
-<meta name="description" content="El registro de versiones de ChordWeaver, de la más nueva a la más vieja: qué función entró en cada una, qué se mejoró y qué se corrigió.">
+<meta name="description" content="El registro de versiones de ChordWeaver, de la más nueva a la más vieja, con lo que se agregó, se mejoró y se corrigió en cada una.">
 <meta name="robots" content="index,follow">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231B1D22'/><path d='M7 21V11M13 21V11M19 21V11M25 21V11' stroke='%235B8FD6' stroke-width='2.4' stroke-linecap='round'/><path d='M7 16h18' stroke='%23B07FD6' stroke-width='2.4' stroke-linecap='round'/></svg>">
@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=6666e3af">
+<link rel="stylesheet" href="assets/css/style.css?v=90bc4f6d">
 </head>
 <body data-title="notes.title">
 
@@ -55,13 +55,12 @@
       <p class="kicker" data-i18n="notes.kicker">Notas del parche</p>
       <h1 class="notes-title" data-i18n="notes.h1">Todo lo que <em>cambió</em></h1>
       <p class="notes-lede" data-i18n="notes.lede">
-        Una versión abajo de la otra, de la más nueva a la más vieja. Lo que
-        está en la de arriba es lo que vas a encontrar si bajás el programa
-        hoy.
+        De la versión más nueva a la más vieja, con lo que se agregó, se
+        mejoró y se corrigió en cada una.
       </p>
       <p class="notes-meta">
-        <a class="btn btn-primary btn-small" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.1.1-ALPHA-windows.zip">
-          <span data-i18n="notes.download">Descargar 1.1.1 ALPHA</span>
+        <a class="btn btn-primary btn-small" href="https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.2-ALPHA-windows.zip">
+          <span data-i18n="notes.download">Descargar 1.2 ALPHA</span>
         </a>
         <a class="ghost" href="index.html" data-i18n="notes.back">← Volver al inicio</a>
       </p>
@@ -72,47 +71,97 @@
 
       <article class="release">
         <header class="release-head">
-          <h2 class="release-title">ChordWeaver <em>1.1</em><span class="release-tag now">la que se baja hoy</span></h2>
+          <h2 class="release-title">ChordWeaver <em>1.2 ALPHA</em><span class="release-tag now">la que se baja hoy</span></h2>
           <p class="release-sub">
-            Dos herramientas que no componen nada —el experimentador de
-            armónicos y el analizador—, dieciocho apartados más en el libro, y
-            una entidad que parece tener algo para decir.
+            La escuelita, un Armonizador que acepta notas fuera de la escala,
+            los resultados escritos en partitura y el programa entero en
+            inglés. El analizador lee mucho mejor que antes.
           </p>
         </header>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g1">Nuevas funciones</h2>
         <ul class="notes-list">
-          <li><strong>Experimentador de armónicos:</strong> laboratorio que permite crear un timbre personalizado al alterar la serie armónica de una nota, con presets pre-configurados y exportador formato wav.</li>
-          <li><strong>Analizador (beta):</strong> permite importar o componer una partitura y que el sistema analice armónica y contrapuntísticamente la pieza, detectando desde 5tas paralelas hasta cadencias y tonalidades.</li>
-          <li><strong>Nuevos capítulos del libro:</strong> contenido sobre leyendas, física, armonización y más.</li>
-          <li><strong>Nuevos logros:</strong> logros para fomentar encuentros con ciertos personajes.</li>
-          <li><strong>La historia se alarga:</strong> <em>la entidad misteriosa parece querer contarnos algo.</em></li>
-          <li><strong>Un nuevo encuentro:</strong> <em>un personaje ha roto la cuarta pared…</em></li>
-          <li><strong>Detección de updates:</strong> ahora la app detectará si una nueva actualización se encuentra disponible.</li>
+          <li><strong>Escuelita.</strong> Una herramienta nueva para aprender armonía escribiendo. Tiene cinco unidades (movimientos de las voces, armonías, cadencias, estilos y serie armónica) y 33 ejercicios. Vos escribís y el analizador corrige. Al final hay una graduación con su escena y el logro «Nace una leyenda».</li>
+          <li><strong>Armonizador cromático.</strong> La melodía puede tener notas fuera de la escala, que se pintan de naranja. Si una sube un semitono a la siguiente, lleva la dominante de esa nota (V/x), y en barroco y jazz a veces su séptimo grado (vii°/x). En jazz, la que baja un semitono lleva la sustitución tritonal. Si la melodía termina en la relativa menor, se armoniza en menor.</li>
+          <li><strong>Resultados en partitura.</strong> Las soluciones se ven escritas en un sistema de dos pentagramas, con la tabla de notas a un click.</li>
+          <li><strong>Pentagramas con fuente musical.</strong> Las figuras, las claves y los accidentes se dibujan con Bravura, la fuente de referencia del estándar SMuFL.</li>
+          <li><strong>Analizador mucho más preciso.</strong> Comparado con análisis de referencia de ocho corales de Bach, pasó de leer bien el 53 % de los acordes a leer bien el 87 %, y acierta la tonalidad de las once piezas comparables. Lee anacrusas y compases partidos por una repetición. Con más de cuatro voces se queda en cada momento con el bajo, la voz aguda y las dos del medio que más aportan, así que una partitura de piano se analiza bien. El contrapunto se juzga según el estilo elegido (en jazz y gregoriano las paralelas no son falta), y dos voces que se mueven en tiempos distintos no cuentan como paralelas.</li>
+          <li><strong>Timbres de reproducción.</strong> Hay varios para elegir en la configuración, uno de ellos de chiste, y se puede usar como timbre el WAV que se guarda desde el experimentador.</li>
+          <li><strong>Atajos de voces.</strong> Registros listos para canto, para piano y para cuarteto de cuerdas.</li>
+          <li><strong>Inglés completo.</strong> Se elige la primera vez que se abre el programa y después se cambia desde la configuración.</li>
+          <li><strong>Pantalla inicial nueva.</strong> Cada modo muestra qué ponés vos y qué escribe el programa, y las tres herramientas tienen el mismo peso que los modos.</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g5">Mejoras importantes</h2>
         <ul class="notes-list">
-          <li><strong>Armonizador mejorado:</strong> ahora permite desmarcar notas marcadas por el programa. Se puede hacer con click derecho.</li>
-          <li><strong>Mejor modulación:</strong> se mejoró fuertemente la calidad y consistencia de la modulación del generador.</li>
-          <li><strong>Mejores notas de paso:</strong> las notas de paso ahora respetan tonalidad y tienen estilos melódicos fuertemente mejorados.</li>
-          <li><strong>Calidad de vida:</strong> múltiples cambios con respecto a la disponibilidad de botones para evitar saltearse por error cinemáticas o eventos.</li>
-          <li><strong>Libro mejorado:</strong> al anotar nuevo conocimiento, abajo al medio aparecerá un cartel indicándolo. Los capítulos con conocimiento nuevo sin leer ahora aparecerán en azul. También se añadió un libro arriba a la derecha para fomentar usarlo durante una actividad en lugar de tener que regresar al menú.</li>
-          <li><strong>Tutorial en los 3 modos principales:</strong> ahora los tres modos principales cuentan con un tutorial que explica cómo usarlos.</li>
-          <li><strong>Botón de reset:</strong> ahora el generador permitirá reestablecer la configuración original del género.</li>
+          <li><strong>Arranque.</strong> El programa descargado se abría sin los personajes ni las imágenes, y en algunas carpetas ni arrancaba. Pasaba en carpetas con una ruta de más de 260 caracteres.</li>
+          <li><strong>Cambio de pantalla.</strong> Cambiar de pantalla y volver al inicio ya no se traba ni se dibuja por partes.</li>
+          <li><strong>Exportación.</strong> Las notas se escriben bien, con bemoles donde van y figuras que suman bien en el compás.</li>
+          <li><strong>Cierres del Armonizador.</strong> A tres voces ya no cierra en primera ni en segunda inversión, y ya no parte la nota final en dos acordes (eso dejaba V-IV-I).</li>
+          <li><strong>Ciclo de Vivaldi.</strong> Quedó dentro de la tonalidad (Am, Dm, G, C, F, Bdim, E, Am), con el bajo cayendo por quintas.</li>
+          <li><strong>Aviso de versión nueva.</strong> Rechazar la actualización cerraba el programa y dejaba una segunda ventana abierta.</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g6">Mejoras menores</h2>
         <ul class="notes-list plain">
-          <li>Se corrigió un error donde el modo barroco no podía modular a un modo paralelo.</li>
-          <li>Se corrigió un error donde el armonizador no permitía marcar ciertas notas.</li>
-          <li>Se corrigió un error donde el organizador no te advertía de notas adicionales excedentes si se habían colocado con el piano.</li>
-          <li>Se corrigió un error donde la barra de notas de paso actuaba literalmente al revés.</li>
+          <li>El tutorial se acomoda cuando se maximiza la ventana.</li>
+          <li>Los avisos de logros se muestran de a dos, y los demás esperan su turno.</li>
+          <li>El iv del modo prestado en Fa se escribe Bbm y no A#m.</li>
+          <li>Varios arreglos en cómo escribe las notas el analizador.</li>
+          <li>Se sacó una barra de desplazamiento que aparecía sin hacer falta.</li>
+        </ul>
+      </section>
+
+      </article>
+
+      <article class="release">
+        <header class="release-head">
+          <h2 class="release-title">ChordWeaver <em>1.1</em></h2>
+          <p class="release-sub">
+            Dos herramientas que no componen (el experimentador de armónicos y
+            el analizador), dieciocho apartados más en el libro y una entidad
+            que parece tener algo para decir.
+          </p>
+        </header>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g1">Nuevas funciones</h2>
+        <ul class="notes-list">
+          <li><strong>Experimentador de armónicos.</strong> Permite armar un timbre propio modificando la serie armónica de una nota. Trae recetas predefinidas y exporta a WAV.</li>
+          <li><strong>Analizador (beta).</strong> Importás o escribís una partitura y el programa analiza su armonía y su contrapunto, desde las quintas paralelas hasta las cadencias y la tonalidad.</li>
+          <li><strong>Capítulos nuevos en el libro.</strong> Leyendas, física, armonización y más.</li>
+          <li><strong>Logros nuevos.</strong> Algunos premian los encuentros con ciertos personajes.</li>
+          <li><strong>La historia sigue.</strong> <em>La entidad misteriosa parece querer contarnos algo.</em></li>
+          <li><strong>Un encuentro nuevo.</strong> <em>Un personaje rompió la cuarta pared…</em></li>
+          <li><strong>Aviso de actualizaciones.</strong> El programa detecta si hay una versión nueva disponible.</li>
+        </ul>
+      </section>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g5">Mejoras importantes</h2>
+        <ul class="notes-list">
+          <li><strong>Armonizador.</strong> Ahora se pueden desmarcar, con click derecho, las notas que marcó el programa.</li>
+          <li><strong>Modulación.</strong> Las modulaciones del generador son mejores y más consistentes.</li>
+          <li><strong>Notas de paso.</strong> Respetan la tonalidad y tienen mejores giros melódicos.</li>
+          <li><strong>Calidad de vida.</strong> Varios botones se habilitan sólo cuando corresponde, para que no se salteen cinemáticas o eventos por error.</li>
+          <li><strong>Libro.</strong> Cuando se anota algo nuevo, aparece un aviso abajo al centro. Los capítulos con contenido sin leer se ven en azul. Arriba a la derecha hay un botón del libro para consultarlo sin volver al menú.</li>
+          <li><strong>Tutorial en los tres modos principales.</strong> Cada uno tiene un tutorial que explica cómo usarlo.</li>
+          <li><strong>Botón de reinicio.</strong> El generador permite volver a la configuración original del género.</li>
+        </ul>
+      </section>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g6">Mejoras menores</h2>
+        <ul class="notes-list plain">
+          <li>Se corrigió que el modo barroco no pudiera modular a un modo paralelo.</li>
+          <li>Se corrigió que el armonizador no dejara marcar ciertas notas.</li>
+          <li>Se corrigió que el organizador no avisara de notas sobrantes cuando se habían cargado con el piano.</li>
+          <li>Se corrigió la barra de notas de paso, que funcionaba al revés.</li>
           <li>Se mejoró el cartel de donaciones.</li>
         </ul>
       </section>
@@ -123,97 +172,96 @@
         <header class="release-head">
           <h2 class="release-title">ChordWeaver <em>1.0.1</em></h2>
           <p class="release-sub">
-            La versión con la que el programa se publicó como código abierto. Es
-            también la más grande que tuvo: entraron tres cosas que antes no
-            existían —el armonizador, el libro de teoría y todo lo que pasa
-            cuando el programa deja de ser sólo una herramienta— y se reescribió
-            la interfaz entera.
+            La versión con la que el programa se publicó como código abierto, y
+            la más grande hasta ese momento. Agregó el armonizador, el libro de
+            teoría y el modo historia con sus encuentros, y rehízo la interfaz
+            entera.
           </p>
         </header>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g1">Nuevas funciones</h2>
         <ul class="notes-list">
-          <li><strong>Armonizador:</strong> permite escribir una melodía y armonizarla automáticamente o en función de lo que el usuario decida.</li>
-          <li><strong>Modo historia:</strong> <em>un personaje siniestro te está observando; no sabés qué quiere, pero sí que eventualmente lo vas a encontrar…</em></li>
-          <li><strong>Encuentros:</strong> al completar ciertas acciones comunes, ciertos personajes interactuarán con vos.</li>
-          <li><strong>Logros:</strong> se añadió un sistema completo de logros, diseñado para guiarte por la app, llevarte a aprender cosas nuevas y probar tus habilidades en la música.</li>
-          <li><strong>Libro de teoría:</strong> un libro que se autocompleta al descubrir cosas, y que guiará tu estudio sobre armonía, contrapunto y los misterios de la música.</li>
-          <li><strong>Espíritu vagante:</strong> se añadió el espíritu de una leyenda del pasado, cuya historia no se ha descubierto aún. <em>Su aparición es inminente.</em></li>
-          <li><strong>Glow up:</strong> se rediseñó por completo la interfaz, con mejoras visuales y de uso enormes. Ahora todos los modos tienen su propio color y la app se cambia en función del mismo.</li>
-          <li><strong>Easter eggs:</strong> se añadieron acciones ocultas en la app. Al completar todos los logros se revela un camino para completarlos.</li>
-          <li><strong>Revisitar el pasado:</strong> se añadió un sistema para rehacer encuentros. Ahora el usuario podrá reiniciar la historia desde los logros (arriba a la derecha) y podrá repetir ciertos encuentros desde la configuración.</li>
-          <li><strong>Tutorial:</strong> se añadió un tutorial para la primera vez que se accede a la app. Se puede omitir y repetir desde la configuración.</li>
-          <li><strong>Cadencias legendarias:</strong> se añadieron tres cadencias de status legendario, junto a su propio color especial.</li>
-          <li><strong>Títulos:</strong> se añadieron títulos ganables por el usuario. Ahora completando ciertas actividades se podrán obtener títulos resplandecientes para felicitar el trabajo logrado.</li>
-          <li><strong>Optimización para PCs de bajos recursos:</strong> en la configuración se añadió un botón que recalibra el algoritmo para PCs donde el programa tarda mucho en dar soluciones.</li>
-          <li><strong>Donación:</strong> se añadió un botón para poder donar al creador.</li>
+          <li><strong>Armonizador.</strong> Escribís una melodía y el programa la armoniza, solo o siguiendo lo que vos decidas.</li>
+          <li><strong>Modo historia.</strong> <em>Un personaje siniestro te observa. No sabés qué quiere, pero tarde o temprano lo vas a encontrar…</em></li>
+          <li><strong>Encuentros.</strong> Al hacer ciertas acciones comunes, algunos personajes aparecen a hablar con vos.</li>
+          <li><strong>Logros.</strong> Un sistema de logros que te guía por el programa y te propone aprender cosas nuevas y poner a prueba lo que sabés.</li>
+          <li><strong>Libro de teoría.</strong> Se completa a medida que descubrís cosas y acompaña el estudio de la armonía y el contrapunto.</li>
+          <li><strong>Espíritu errante.</strong> Se agregó el espíritu de una leyenda del pasado, cuya historia todavía no se descubrió. <em>Su aparición es inminente.</em></li>
+          <li><strong>Interfaz nueva.</strong> Se rediseñó toda la interfaz. Cada modo tiene su color y el programa se tiñe con él.</li>
+          <li><strong>Easter eggs.</strong> Hay acciones ocultas en el programa. Completar todos los logros revela cómo encontrarlas.</li>
+          <li><strong>Revisitar el pasado.</strong> La historia se puede reiniciar desde los logros (arriba a la derecha), y algunos encuentros se pueden repetir desde la configuración.</li>
+          <li><strong>Tutorial.</strong> Un recorrido guiado la primera vez que se abre el programa. Se puede omitir y repetir desde la configuración.</li>
+          <li><strong>Cadencias legendarias.</strong> Tres cadencias de categoría legendaria, con su propio color.</li>
+          <li><strong>Títulos.</strong> Completar ciertas actividades otorga títulos que reconocen el trabajo hecho.</li>
+          <li><strong>Modo para computadoras con pocos recursos.</strong> Un botón en la configuración recalibra el algoritmo para las máquinas donde tarda mucho en dar soluciones.</li>
+          <li><strong>Donaciones.</strong> Un botón para hacerle una donación al creador.</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g2">Cambios importantes</h2>
         <ul class="notes-list">
-          <li><strong>Coral rediseñado:</strong> se renombró el género clásico al barroco. El modo coral ahora se puede activar mediante un botón en la penúltima pantalla.</li>
-          <li><strong>Más rápido que nunca:</strong> se optimizó drásticamente la generación de soluciones y la navegación.</li>
-          <li><strong>Generador mejorado:</strong> se mejoró drásticamente la armonía y sobre todo el contrapunto del generador, además de mejorar los voicings en acordes dominantes y de reposo.</li>
-          <li><strong>Gregoriano rediseñado:</strong> se rediseñó el modo gregoriano. Ahora utiliza la vox principalis y organalis, fiel a como se escribía en la época. El contrapunto ahora es consecuentemente mucho más fiel.</li>
-          <li><strong>Historial mejorado:</strong> se rediseñó por completo el historial. Ahora muestra mejor la fecha, permite reproducción instantánea y muestra correctamente el modo utilizado.</li>
-          <li><strong>Reproductor mejorado:</strong> se mejoró el reproductor. Ahora podrá hacer sonar las notas de paso.</li>
+          <li><strong>Coral rediseñado.</strong> El género clásico pasó a llamarse barroco, y el modo coral se activa con un botón en la penúltima pantalla.</li>
+          <li><strong>Más rápido.</strong> Generar soluciones y moverse entre pantallas es mucho más rápido.</li>
+          <li><strong>Generador mejorado.</strong> Mejoraron la armonía y, sobre todo, el contrapunto del generador, y también los voicings de los acordes de dominante y de reposo.</li>
+          <li><strong>Gregoriano rediseñado.</strong> Ahora usa la vox principalis y la vox organalis, como se escribía en la época, y el contrapunto es mucho más fiel al estilo.</li>
+          <li><strong>Historial rediseñado.</strong> Muestra mejor la fecha, reproduce al instante y muestra bien qué modo se usó.</li>
+          <li><strong>Reproductor mejorado.</strong> Ahora suenan las notas de paso.</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g3">Cambios relevantes</h2>
         <ul class="notes-list plain">
-          <li>Se mejoraron los mensajes de error y se mejoró el rango de posibles soluciones.</li>
-          <li>Se compilaron archivos principales a Cython y se añadió al capítulo de ingeniería del libro.</li>
-          <li>Se mejoraron los pesos default y sus rangos en el generador. Ahora tienen más influencia, sobre todo en el modo de jazz.</li>
-          <li>Se mejoraron los voicings especiales y los voicings de 6 voces.</li>
-          <li>Se rediseñó la pantalla de generación y se mejoró la información que brinda sobre las soluciones.</li>
-          <li>Se arreglaron múltiples crasheos, timeouts y esperas larguísimas para conseguir una solución cuando se utilizan 6 voces con modulación e intercambios modales.</li>
-          <li>Se mejoró la lectura de los intercambios modales: ahora estarán en naranja.</li>
-          <li>Se ajustó la frecuencia de interdominantes en el jazz.</li>
-          <li>Se rediseñó el generador a nivel motor: ahora es más rápido, preciso y genera más y mejores soluciones.</li>
-          <li>Se mejoró la lectura automática y la toma de decisiones autónoma del organizador.</li>
+          <li>Mejoraron los mensajes de error y el rango de soluciones posibles.</li>
+          <li>Los archivos principales se compilan con Cython, y el capítulo de ingeniería del libro lo explica.</li>
+          <li>Se ajustaron los pesos de fábrica del generador y sus rangos. Ahora influyen más, sobre todo en jazz.</li>
+          <li>Mejoraron los voicings especiales y los de seis voces.</li>
+          <li>Se rediseñó la pantalla de generación, que ahora da más información sobre las soluciones.</li>
+          <li>Se corrigieron cuelgues, timeouts y esperas muy largas al usar seis voces con modulación e intercambios modales.</li>
+          <li>Los intercambios modales se distinguen mejor porque ahora aparecen en naranja.</li>
+          <li>Se ajustó la frecuencia de las interdominantes en jazz.</li>
+          <li>Se rehízo el motor del generador. Es más rápido y más preciso, y encuentra más y mejores soluciones.</li>
+          <li>Mejoró la lectura automática del organizador y las decisiones que toma por su cuenta.</li>
           <li>Se mejoraron las descripciones y la tipografía de todo el programa.</li>
-          <li>Se corrigió que las soluciones generadas no se guarden o se multipliquen accidentalmente en el historial.</li>
-          <li>Se rehizo el sistema de sonidos para permitir estructuras más complejas.</li>
-          <li>Se formó un estándar para animaciones 3D en la aplicación, empleado por el modo historia y los encuentros.</li>
-          <li>Se corrigieron ciertas incoherencias armónicas en el generador.</li>
-          <li>Se eliminó la posibilidad de que una 9na u 11na inviertan el acorde al aparecer en el bajo.</li>
-          <li>Se limitó el máximo de compases a 32, debido a que más que eso es matemáticamente imposible de brindar una solución algorítmicamente válida. Cambiar el algoritmo empeoraría cualquier solución menor a 32 compases y el riesgo no vale para nada la recompensa. El motor queda habilitado para intentarlo: el cambio sólo afecta la interfaz de usuario.</li>
-          <li>Se corrigió un error donde el historial adulteraba las soluciones generadas.</li>
-          <li>Se mejoró el sistema de generación de soluciones a múltiples compases. Ahora no elimina soluciones inválidas, sino que les da nuevas chances de corregirse solas.</li>
-          <li>Se añadió una carpeta de assets más un sistema para poder modificar parámetros sobre las imágenes según se necesite.</li>
-          <li>Se generó un context global para que otros desarrolladores puedan utilizar Claude Code más eficientemente. Primer paso para lanzar el producto como Open Source.</li>
-          <li>Se añadió un capítulo especial en el libro de teoría sobre la ingeniería detrás de la aplicación, de rápida lectura (y muy friki).</li>
+          <li>Se corrigió que las soluciones generadas no se guardaran en el historial o se guardaran repetidas.</li>
+          <li>Se rehízo el sistema de sonido para permitir estructuras más complejas.</li>
+          <li>Se definió un estándar para las animaciones 3D, que usan el modo historia y los encuentros.</li>
+          <li>Se corrigieron algunas incoherencias armónicas del generador.</li>
+          <li>Una novena o una oncena ya no invierten el acorde cuando quedan en el bajo.</li>
+          <li>La interfaz se limitó a 32 compases. Con más, la búsqueda no llega a soluciones válidas, y adaptar el algoritmo empeoraría los resultados de las piezas más cortas. El límite es sólo de la interfaz y el motor puede intentarlo igual.</li>
+          <li>Se corrigió que el historial alterara las soluciones generadas.</li>
+          <li>Mejoró la generación de piezas de muchos compases. Las soluciones inválidas tienen nuevas oportunidades de corregirse en vez de descartarse.</li>
+          <li>Se agregó una carpeta de assets y un sistema para ajustar parámetros de las imágenes.</li>
+          <li>Se escribió un contexto global para que otros desarrolladores trabajen con Claude Code de forma más eficiente. Fue el primer paso para publicar el código.</li>
+          <li>Se agregó al libro un capítulo corto sobre la ingeniería del programa (muy friki).</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g4">Cambios menores</h2>
         <ul class="notes-list plain">
-          <li>Se cambió la frecuencia de muestreo a 44100 Hz para más calidad y mejores sonidos.</li>
-          <li>Se añadió ecualización a nivel de motor.</li>
-          <li>Se arregló un error donde la app se trababa al generar una nueva solución mientras otra estaba en curso.</li>
-          <li>Se corrigió el voicing 6/4 del V: ahora calcula las distancias con respecto al bajo correctamente.</li>
-          <li>Se corrigió un error donde el modo de torneo del motor podía desactivarse por error del usuario.</li>
-          <li>Se corrigió un error donde al aumentar el tamaño de la letra al máximo la app quedaba inutilizable.</li>
-          <li>Se corrigieron errores básicos del motor e interacciones de audio con la parte visual.</li>
-          <li>Se corrigieron ciertos voicings con saltos exagerados.</li>
-          <li>Se aumentó la probabilidad de ciertas cadencias especiales de cada género.</li>
-          <li>Se añadió un sistema de versiones para próximas actualizaciones.</li>
-          <li>Se corrigieron errores a la hora de exportar una partitura.</li>
-          <li>Se corrigió un error donde los silencios aparecían representados con un C.</li>
-          <li>Se corrigieron ciertos errores enarmónicos.</li>
-          <li>Se corrigieron tamaños de botones que no podían aparecer en la pantalla.</li>
-          <li>Se eliminó el modo eólico porque estaba duplicado con la escala menor natural.</li>
-          <li>Se corrigió un error donde el modo coral hacía quedar sin garganta a los bajos, porque los subía 2 octavas por encima del máximo.</li>
-          <li>Se corrigió un error donde volver a valores por defecto del algoritmo lo ignoraba por completo a nivel de motor.</li>
-          <li>Se corrigió un error donde a más de 16 compases la pantalla de generación se trababa (no afectaba la solución).</li>
-          <li>Se añadieron sistemas de story, para garantizar que ciertos eventos no ocurren cuando el usuario está realizando una acción que la interrumpa.</li>
-          <li>Otros arreglos de bugs menores.</li>
+          <li>La frecuencia de muestreo pasó a 44100 Hz, con mejor calidad de sonido.</li>
+          <li>Se agregó ecualización en el motor.</li>
+          <li>Se corrigió que el programa se trabara al generar una solución mientras otra estaba en curso.</li>
+          <li>Se corrigió el voicing del 6/4 sobre el V, que ahora mide bien las distancias respecto del bajo.</li>
+          <li>Se corrigió que el modo torneo del motor se pudiera desactivar por error.</li>
+          <li>Se corrigió que el programa quedara inutilizable con el tamaño de letra al máximo.</li>
+          <li>Se corrigieron errores básicos del motor y de la interacción entre el audio y la interfaz.</li>
+          <li>Se corrigieron voicings con saltos exagerados.</li>
+          <li>Aumentó la probabilidad de algunas cadencias especiales de cada género.</li>
+          <li>Se agregó un sistema de versiones para las próximas actualizaciones.</li>
+          <li>Se corrigieron errores al exportar partituras.</li>
+          <li>Se corrigió que los silencios aparecieran como un Do.</li>
+          <li>Se corrigieron algunos errores enarmónicos.</li>
+          <li>Se corrigieron botones que no entraban en la pantalla.</li>
+          <li>Se quitó el modo eólico, que duplicaba la escala menor natural.</li>
+          <li>Se corrigió que el modo coral dejara sin garganta a los bajos subiéndolos dos octavas por encima de su máximo.</li>
+          <li>Se corrigió que volver a los valores por defecto del algoritmo no tuviera efecto en el motor.</li>
+          <li>Se corrigió que la pantalla de generación se trabara con más de 16 compases (la solución no se veía afectada).</li>
+          <li>Se agregaron controles a la historia para que ciertos eventos no aparezcan mientras estás haciendo algo que interrumpirían.</li>
+          <li>Otros errores menores corregidos.</li>
         </ul>
       </section>
 
@@ -226,47 +274,97 @@
 
       <article class="release">
         <header class="release-head">
-          <h2 class="release-title">ChordWeaver <em>1.1</em><span class="release-tag now">current download</span></h2>
+          <h2 class="release-title">ChordWeaver <em>1.2 ALPHA</em><span class="release-tag now">current download</span></h2>
           <p class="release-sub">
-            Two tools that compose nothing — the harmonics lab and the analyser
-            —, eighteen more sections in the book, and an entity that seems to
-            have something to say.
+            The Schoolhouse, a Harmonizer that accepts notes outside the
+            scale, results written out as a score, and the whole program in
+            English. The Analyzer reads far more accurately than before.
           </p>
         </header>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g1">New features</h2>
         <ul class="notes-list">
-          <li><strong>Harmonics lab:</strong> a laboratory for building a timbre of your own by altering the harmonic series of a note, with ready-made presets and a WAV exporter.</li>
-          <li><strong>Analyser (beta):</strong> import or write a score and have the program analyse the piece harmonically and contrapuntally, finding everything from parallel fifths to cadences and keys.</li>
-          <li><strong>New chapters in the book:</strong> material on legends, physics, harmonising and more.</li>
-          <li><strong>New achievements:</strong> achievements that encourage encounters with certain characters.</li>
-          <li><strong>The story goes on:</strong> <em>the mysterious entity seems to want to tell us something.</em></li>
-          <li><strong>A new encounter:</strong> <em>a character has broken the fourth wall…</em></li>
-          <li><strong>Update detection:</strong> the app now detects whether a new update is available.</li>
+          <li><strong>Schoolhouse.</strong> A new tool for learning harmony by writing. It has five units (voice motion, harmony, cadences, styles and the harmonic series) and 33 exercises. You write and the Analyzer marks it. At the end there’s a graduation with its own scene and the “A Legend Is Born” achievement.</li>
+          <li><strong>Chromatic Harmonizer.</strong> The melody can include notes outside the scale, shown in orange. A note that rises a semitone to the next one gets that note’s dominant (V/x), and in baroque and jazz sometimes its leading-tone chord (vii°/x). In jazz, a note that falls a semitone gets the tritone substitution. If the melody ends on the relative minor, it’s harmonized in minor.</li>
+          <li><strong>Results as a score.</strong> Solutions are written out on a grand staff, with the note table one click away.</li>
+          <li><strong>A real music font on the staves.</strong> Notes, clefs and accidentals are drawn with Bravura, the reference font of the SMuFL standard.</li>
+          <li><strong>A much more accurate Analyzer.</strong> Against reference analyses of eight Bach chorales, it went from reading 53% of the chords correctly to 87%, and it gets the key right in all eleven comparable pieces. It reads pickups and bars split across a repeat. With more than four voices it keeps, at each moment, the bass, the top voice and the two inner voices that add the most, so a piano score analyzes properly. Counterpoint is judged by the chosen style (parallels aren’t errors in jazz or Gregorian), and two voices moving at different times no longer count as parallels.</li>
+          <li><strong>Playback timbres.</strong> Several to choose from in the settings, one of them a joke, plus the option to play through the WAV you save from the harmonics workbench.</li>
+          <li><strong>Voice presets.</strong> Ready-made ranges for choir, piano and string quartet.</li>
+          <li><strong>Full English.</strong> You choose it the first time the program opens, and can change it later in the settings.</li>
+          <li><strong>New home screen.</strong> Each mode shows what you put in and what the program writes, and the three tools carry the same weight as the modes.</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g5">Major improvements</h2>
         <ul class="notes-list">
-          <li><strong>Better harmoniser:</strong> you can now unmark notes the program marked, with a right click.</li>
-          <li><strong>Better modulation:</strong> the quality and the consistency of the generator's modulation were strongly improved.</li>
-          <li><strong>Better passing notes:</strong> passing notes now respect the key, and their melodic shapes were strongly improved.</li>
-          <li><strong>Quality of life:</strong> several changes to when buttons are available, so a cutscene or an event cannot be skipped by mistake.</li>
-          <li><strong>Better book:</strong> when new knowledge gets written down, a notice appears at the bottom centre. Chapters holding unread knowledge now show in blue. A book was also added at the top right, to encourage reading it during an activity instead of going back to the menu.</li>
-          <li><strong>A tutorial in the three main modes:</strong> all three main modes now have a tutorial explaining how to use them.</li>
-          <li><strong>Reset button:</strong> the generator can now restore the genre's original settings.</li>
+          <li><strong>Start-up.</strong> The downloaded program opened without its characters or images, and in some folders it didn’t start at all. It happened in folders with a path longer than 260 characters.</li>
+          <li><strong>Screen changes.</strong> Switching screens and going back home no longer stalls or draws in pieces.</li>
+          <li><strong>Export.</strong> Notes are spelled correctly, with flats where they belong and note values that add up in each bar.</li>
+          <li><strong>Harmonizer endings.</strong> In three voices it no longer ends in first or second inversion, and it no longer splits the final note into two chords (which left V-IV-I).</li>
+          <li><strong>Vivaldi cycle.</strong> It now stays in the key (Am, Dm, G, C, F, Bdim, E, Am), with the bass falling by fifths.</li>
+          <li><strong>Update notice.</strong> Turning down the update closed the program and left a second window open.</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g6">Minor improvements</h2>
         <ul class="notes-list plain">
-          <li>Fixed baroque mode being unable to modulate to a parallel mode.</li>
-          <li>Fixed the harmoniser refusing to mark certain notes.</li>
-          <li>Fixed the organiser not warning about surplus extra notes when they had been entered with the piano.</li>
-          <li>Fixed the passing-notes slider working literally backwards.</li>
+          <li>The tutorial adjusts when the window is maximized.</li>
+          <li>Achievement notices show two at a time, and the rest wait their turn.</li>
+          <li>The borrowed iv in F is spelled Bbm, not A#m.</li>
+          <li>Several fixes to how the Analyzer spells notes.</li>
+          <li>Removed a scrollbar that showed up when it wasn’t needed.</li>
+        </ul>
+      </section>
+
+      </article>
+
+      <article class="release">
+        <header class="release-head">
+          <h2 class="release-title">ChordWeaver <em>1.1</em></h2>
+          <p class="release-sub">
+            Two tools that don’t compose (the harmonics workbench and the
+            analyzer), eighteen new sections in the book, and an entity that
+            seems to have something to say.
+          </p>
+        </header>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g1">New features</h2>
+        <ul class="notes-list">
+          <li><strong>Harmonics workbench.</strong> Build your own timbre by changing the harmonic series of a note. Includes presets and WAV export.</li>
+          <li><strong>Analyzer (beta).</strong> Import or write a score and the program analyzes its harmony and counterpoint, from parallel fifths to cadences and key.</li>
+          <li><strong>New book chapters.</strong> Legends, physics, harmonizing and more.</li>
+          <li><strong>New achievements.</strong> Some reward encounters with certain characters.</li>
+          <li><strong>The story continues.</strong> <em>The mysterious entity seems to want to tell us something.</em></li>
+          <li><strong>A new encounter.</strong> <em>A character has broken the fourth wall…</em></li>
+          <li><strong>Update notice.</strong> The program detects when a new version is available.</li>
+        </ul>
+      </section>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g5">Major improvements</h2>
+        <ul class="notes-list">
+          <li><strong>Harmonizer.</strong> You can now right-click to unmark notes the program marked.</li>
+          <li><strong>Modulation.</strong> The Generator’s modulations are better and more consistent.</li>
+          <li><strong>Passing notes.</strong> They now respect the key and have better melodic shapes.</li>
+          <li><strong>Quality of life.</strong> Several buttons are only enabled when it makes sense, so cutscenes and events can’t be skipped by accident.</li>
+          <li><strong>Book.</strong> When something new is written down, a notice appears at the bottom center. Chapters with unread content show in blue. A book button at the top right lets you check it without going back to the menu.</li>
+          <li><strong>Tutorials in the three main modes.</strong> Each one has a tutorial that explains how to use it.</li>
+          <li><strong>Reset button.</strong> The Generator can restore the genre’s original settings.</li>
+        </ul>
+      </section>
+
+      <section class="notes-group">
+        <h2 data-i18n="notes.g6">Minor improvements</h2>
+        <ul class="notes-list plain">
+          <li>Fixed baroque being unable to modulate to a parallel mode.</li>
+          <li>Fixed the Harmonizer not letting you mark certain notes.</li>
+          <li>Fixed the Organizer not warning about extra notes entered with the piano.</li>
+          <li>Fixed the passing-notes slider working backwards.</li>
           <li>Improved the donations notice.</li>
         </ul>
       </section>
@@ -277,96 +375,95 @@
         <header class="release-head">
           <h2 class="release-title">ChordWeaver <em>1.0.1</em></h2>
           <p class="release-sub">
-            The version the program was open-sourced with. It is also the
-            largest it ever had: three things that did not exist before went in
-            — the harmoniser, the theory book, and everything that happens once
-            the program stops being only a tool — and the entire interface was
-            rewritten.
+            The version the program was released as open source with, and the
+            largest update up to that point. It added the Harmonizer, the theory
+            book and story mode with its encounters, and rebuilt the whole
+            interface.
           </p>
         </header>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g1">New features</h2>
         <ul class="notes-list">
-          <li><strong>Harmoniser:</strong> lets you write a melody and harmonise it automatically, or according to whatever you decide.</li>
-          <li><strong>Story mode:</strong> <em>a sinister figure is watching you. You don't know what it wants, only that sooner or later you are going to meet it…</em></li>
-          <li><strong>Encounters:</strong> complete certain ordinary actions and certain characters will come and talk to you.</li>
-          <li><strong>Achievements:</strong> a complete achievement system, designed to guide you through the app, lead you into learning new things and test your musical skill.</li>
-          <li><strong>Theory book:</strong> a book that fills itself in as you discover things, and that guides your study of harmony, counterpoint and the mysteries of music.</li>
-          <li><strong>Wandering spirit:</strong> the spirit of a legend of the past has been added, and its story has not been uncovered yet. <em>Its appearance is imminent.</em></li>
-          <li><strong>Glow up:</strong> the interface has been completely redesigned, with enormous visual and usability improvements. Every mode now has its own colour, and the app changes along with it.</li>
-          <li><strong>Easter eggs:</strong> hidden actions have been added to the app. Completing every achievement reveals a path to completing them.</li>
-          <li><strong>Revisiting the past:</strong> a system for replaying encounters. You can now restart the story from the achievements screen (top right), and repeat certain encounters from the settings.</li>
-          <li><strong>Tutorial:</strong> a tutorial for the first time you open the app. It can be skipped, and replayed from the settings.</li>
-          <li><strong>Legendary cadences:</strong> three cadences of legendary status, with a special colour of their own.</li>
-          <li><strong>Titles:</strong> titles you can earn. Completing certain activities now awards shining titles that celebrate the work you did.</li>
-          <li><strong>Optimisation for low-end PCs:</strong> a button in the settings recalibrates the algorithm for machines where the program takes a long time to produce solutions.</li>
-          <li><strong>Donations:</strong> a button to donate to the creator.</li>
+          <li><strong>Harmonizer.</strong> Write a melody and the program harmonizes it, on its own or following your choices.</li>
+          <li><strong>Story mode.</strong> <em>A sinister figure is watching you. You don’t know what it wants, but sooner or later you’ll meet it…</em></li>
+          <li><strong>Encounters.</strong> Certain everyday actions make some characters come and talk to you.</li>
+          <li><strong>Achievements.</strong> An achievement system that guides you through the program, nudges you to learn new things and tests what you know.</li>
+          <li><strong>Theory book.</strong> It fills in as you discover things and supports your study of harmony and counterpoint.</li>
+          <li><strong>Wandering spirit.</strong> The spirit of a legend from the past, whose story hasn’t been uncovered yet. <em>Its appearance is imminent.</em></li>
+          <li><strong>New interface.</strong> The whole interface was redesigned. Each mode has its own color, and the program takes on that color.</li>
+          <li><strong>Easter eggs.</strong> There are hidden actions in the program. Completing every achievement reveals how to find them.</li>
+          <li><strong>Revisiting the past.</strong> The story can be restarted from the achievements screen (top right), and some encounters can be replayed from the settings.</li>
+          <li><strong>Tutorial.</strong> A guided tour the first time you open the program. It can be skipped and replayed from the settings.</li>
+          <li><strong>Legendary cadences.</strong> Three cadences with legendary status and a color of their own.</li>
+          <li><strong>Titles.</strong> Completing certain activities earns titles that recognize the work you’ve done.</li>
+          <li><strong>Low-end PC mode.</strong> A button in the settings recalibrates the algorithm for computers where it takes too long to find solutions.</li>
+          <li><strong>Donations.</strong> A button to donate to the creator.</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g2">Major changes</h2>
         <ul class="notes-list">
-          <li><strong>Chorale redesigned:</strong> the classical genre was renamed to baroque. Chorale mode is now switched on with a button on the second-to-last screen.</li>
-          <li><strong>Faster than ever:</strong> both solution generation and navigation were drastically optimised.</li>
-          <li><strong>Better generator:</strong> the harmony and above all the counterpoint of the generator were drastically improved, along with the voicings of dominant and resting chords.</li>
-          <li><strong>Gregorian redesigned:</strong> gregorian mode was rebuilt. It now uses the vox principalis and organalis, faithful to how it was written at the time, and the counterpoint is consequently far more faithful.</li>
-          <li><strong>Better history:</strong> the history was completely redesigned. It shows the date better, allows instant playback, and correctly shows which mode was used.</li>
-          <li><strong>Better playback:</strong> the player was improved. It can now sound the passing notes.</li>
+          <li><strong>Chorale redesigned.</strong> The classical genre was renamed baroque, and chorale mode is switched on with a button on the second-to-last screen.</li>
+          <li><strong>Faster.</strong> Generating solutions and moving between screens are much faster.</li>
+          <li><strong>Better Generator.</strong> The Generator’s harmony and, above all, its counterpoint improved, along with the voicings of dominant and resting chords.</li>
+          <li><strong>Gregorian redesigned.</strong> It now uses the vox principalis and vox organalis, the way the music was written at the time, and its counterpoint is much more faithful to the style.</li>
+          <li><strong>History redesigned.</strong> It shows dates more clearly, plays back instantly and shows the right mode.</li>
+          <li><strong>Better playback.</strong> Passing notes are now played.</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g3">Notable changes</h2>
         <ul class="notes-list plain">
-          <li>Error messages were improved, and so was the range of possible solutions.</li>
-          <li>The main files were compiled with Cython, and this was added to the engineering chapter of the book.</li>
-          <li>The default weights and their ranges in the generator were improved. They now carry more influence, especially in jazz.</li>
-          <li>Special voicings and six-voice voicings were improved.</li>
-          <li>The generation screen was redesigned, and the information it gives about the solutions was improved.</li>
-          <li>Fixed several crashes, timeouts and very long waits when reaching a solution with six voices plus modulation and modal interchange.</li>
-          <li>Modal interchange is easier to read: borrowed chords now appear in orange.</li>
-          <li>The frequency of secondary dominants in jazz was adjusted.</li>
-          <li>The generator was redesigned at the engine level: it is now faster, more precise, and produces more and better solutions.</li>
-          <li>The organiser's automatic reading and autonomous decision-making were improved.</li>
-          <li>Descriptions and typography were improved throughout the program.</li>
-          <li>Fixed generated solutions not being saved, or being accidentally duplicated, in the history.</li>
-          <li>The sound system was rebuilt to allow more complex structures.</li>
-          <li>A standard for 3D animation in the application was established, used by story mode and the encounters.</li>
-          <li>Certain harmonic inconsistencies in the generator were fixed.</li>
-          <li>A ninth or an eleventh can no longer invert the chord by turning up in the bass.</li>
-          <li>The maximum number of bars was limited to 32, because beyond that it is mathematically impossible to give an algorithmically valid solution. Changing the algorithm would make every solution under 32 bars worse, and the risk is not remotely worth the reward. The engine is still allowed to try: the change only affects the user interface.</li>
-          <li>Fixed a bug where the history altered the generated solutions.</li>
-          <li>The system for generating solutions across many bars was improved. It no longer discards invalid solutions; it gives them fresh chances to correct themselves.</li>
-          <li>Added an assets folder plus a system for adjusting parameters on the images as needed.</li>
-          <li>A global context was written so other developers can use Claude Code more efficiently. First step towards releasing the product as open source.</li>
-          <li>Added a special chapter to the theory book about the engineering behind the application — a quick read, and very nerdy.</li>
+          <li>Improved error messages and the range of possible solutions.</li>
+          <li>The main files are compiled with Cython, which the engineering chapter of the book explains.</li>
+          <li>Adjusted the Generator’s default weights and their ranges. They now have more influence, especially in jazz.</li>
+          <li>Improved special voicings and six-voice voicings.</li>
+          <li>Redesigned the generation screen, which now gives more information about the solutions.</li>
+          <li>Fixed crashes, timeouts and very long waits with six voices plus modulation and modal interchange.</li>
+          <li>Borrowed chords now appear in orange, which makes modal interchange easier to spot.</li>
+          <li>Adjusted how often secondary dominants appear in jazz.</li>
+          <li>Rebuilt the Generator’s engine. It is faster and more precise, and finds more and better solutions.</li>
+          <li>Improved the Organizer’s automatic reading and the decisions it makes on its own.</li>
+          <li>Improved descriptions and typography throughout the program.</li>
+          <li>Fixed generated solutions not being saved to the history, or being saved twice.</li>
+          <li>Rebuilt the sound system to allow more complex structures.</li>
+          <li>Set a standard for 3D animations, used by story mode and the encounters.</li>
+          <li>Fixed some harmonic inconsistencies in the Generator.</li>
+          <li>A ninth or eleventh in the bass no longer inverts the chord.</li>
+          <li>The interface is limited to 32 bars. Beyond that the search doesn’t reach valid solutions, and adapting the algorithm would make results worse for shorter pieces. The limit only applies to the interface, and the engine can still try.</li>
+          <li>Fixed the history altering generated solutions.</li>
+          <li>Improved generation across many bars. Invalid solutions get new chances to fix themselves instead of being discarded.</li>
+          <li>Added an assets folder and a way to adjust image parameters.</li>
+          <li>Wrote a global context so other developers can work more efficiently with Claude Code. It was the first step toward releasing the code.</li>
+          <li>Added a short chapter to the theory book on the engineering behind the program (very nerdy).</li>
         </ul>
       </section>
 
       <section class="notes-group">
         <h2 data-i18n="notes.g4">Minor changes</h2>
         <ul class="notes-list plain">
-          <li>The sample rate was changed to 44100 Hz for more quality and better sound.</li>
-          <li>Equalisation was added at the engine level.</li>
-          <li>Fixed the app freezing when generating a new solution while another was still running.</li>
-          <li>Fixed the cadential 6/4 on V: it now measures the distances against the bass correctly.</li>
-          <li>Fixed the engine's tournament mode being switchable off by user error.</li>
-          <li>Fixed the app becoming unusable when the font size was raised to the maximum.</li>
-          <li>Fixed basic engine errors and audio interactions with the visual side.</li>
-          <li>Fixed certain voicings with exaggerated leaps.</li>
-          <li>Raised the probability of certain special cadences in each genre.</li>
+          <li>Raised the sample rate to 44100 Hz for better sound quality.</li>
+          <li>Added equalization to the engine.</li>
+          <li>Fixed the program freezing when generating a solution while another was still running.</li>
+          <li>Fixed the 6/4 voicing on V, which now measures distances from the bass correctly.</li>
+          <li>Fixed the engine’s tournament mode being switched off by mistake.</li>
+          <li>Fixed the program becoming unusable at the largest font size.</li>
+          <li>Fixed basic engine errors and interactions between the audio and the interface.</li>
+          <li>Fixed some voicings with exaggerated leaps.</li>
+          <li>Raised the odds of certain special cadences in each genre.</li>
           <li>Added a versioning system for future updates.</li>
           <li>Fixed errors when exporting a score.</li>
-          <li>Fixed rests being drawn as a C.</li>
-          <li>Fixed certain enharmonic errors.</li>
-          <li>Fixed button sizes that could not fit on the screen.</li>
-          <li>Removed aeolian mode, which duplicated the natural minor scale.</li>
-          <li>Fixed chorale mode leaving the basses without a throat, by pushing them two octaves above their maximum.</li>
-          <li>Fixed restoring the algorithm's defaults being completely ignored at the engine level.</li>
-          <li>Fixed the generation screen freezing beyond 16 bars (it did not affect the solution).</li>
-          <li>Added story systems that guarantee certain events do not fire while the user is in the middle of something they would interrupt.</li>
+          <li>Fixed rests showing up as a C.</li>
+          <li>Fixed some enharmonic spelling errors.</li>
+          <li>Fixed buttons that didn’t fit on the screen.</li>
+          <li>Removed the Aeolian mode, which duplicated the natural minor scale.</li>
+          <li>Fixed chorale mode leaving the basses voiceless by pushing them two octaves above their top note.</li>
+          <li>Fixed “restore defaults” having no effect on the engine.</li>
+          <li>Fixed the generation screen freezing beyond 16 bars (the solution itself was not affected).</li>
+          <li>Added story safeguards so certain events don’t fire while you’re in the middle of something they would interrupt.</li>
           <li>Other minor bug fixes.</li>
         </ul>
       </section>
@@ -402,6 +499,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=95b227cd"></script>
+<script src="assets/js/main.js?v=3ce06784"></script>
 </body>
 </html>

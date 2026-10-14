@@ -1,11 +1,11 @@
 {
-  "version": "1.3",
+  "version": "1.3.1",
   "released": "2026-10-14",
   "page": "https://chordweaver.github.io/",
   "notes": "https://chordweaver.github.io/notas.html",
-  "download": "https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.3-windows.zip",
+  "download": "https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.3.1-windows.zip",
   "headline": {
-    "es": "La escuelita suma lectura, ritmo y oído, y un modo profesional desactiva las visitas y el modo historia.",
-    "en": "The Schoolhouse adds reading, rhythm and ear training, and a professional mode turns off the visits and Story Mode."
+    "es": "La escuelita se puede recorrer en cualquier orden y el analizador responde más rápido.",
+    "en": "The Schoolhouse can be taken in any order and the Analyzer responds faster."
   }
 }

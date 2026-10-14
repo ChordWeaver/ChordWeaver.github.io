@@ -1,11 +1,11 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "released": "2026-10-14",
   "page": "https://chordweaver.github.io/",
   "notes": "https://chordweaver.github.io/notas.html",
-  "download": "https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.3.1-windows.zip",
+  "download": "https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.3.2-windows.zip",
   "headline": {
-    "es": "La escuelita se puede recorrer en cualquier orden y el analizador responde más rápido.",
-    "en": "The Schoolhouse can be taken in any order and the Analyzer responds faster."
+    "es": "Cada opción del resultado se abre en el analizador con un botón.",
+    "en": "Every option in the result opens in the Analyzer with one button."
   }
 }

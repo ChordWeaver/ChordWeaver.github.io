@@ -244,7 +244,7 @@
       'alt.tonalidad': 'La pantalla de tonalidad del Generador, con el acorde inicial y el final, las notas de paso y los intercambios modales',
       'alt.melodia': 'El pentagrama del Armonizador con una melodía en Do mayor. Las tres notas con sostenido salen de la escala y están en naranja. Las que van a llevar acorde tienen un halo dorado',
       'alt.libro': 'El libro de teoría abierto en «Los cuatro movimientos», del capítulo sobre cómo se mueven las voces, con ejemplos en pentagrama',
-      'alt.partitura': 'Un resultado del Armonizador en partitura. La melodía va arriba, el cifrado encima de cada acorde y los grados debajo, entre ellos V/V, vii°/vi y V/ii',
+      'alt.partitura': 'Un resultado del Armonizador en partitura. La melodía va arriba, el cifrado encima de cada acorde y los grados debajo, entre ellos vii°/V, vii°/ii y vii°/vi',
       'alt.chart': 'Gráfico de las cuatro voces moviéndose entre ocho acordes',
       'alt.laboratorio': 'El experimentador de armónicos, con las doce barras de la serie y los controles de vibrato',
       'alt.analizador': 'El analizador con el coral BWV 281 de Bach importado. Arriba la partitura con el cifrado, en el medio la tonalidad y dos cadencias auténticas, y abajo los acordes, el contrapunto y los adornos',
@@ -488,7 +488,7 @@
       'alt.tonalidad': 'The Generator’s key screen, with the first and last chords, passing notes and modal interchange',
       'alt.melodia': 'The Harmonizer staff with a melody in C major. The three notes with a sharp are outside the scale and show in orange. The ones that will get a chord have a gold halo',
       'alt.libro': 'The theory book open at “The four motions”, in the chapter on how the voices move, with examples on the staff',
-      'alt.partitura': 'A Harmonizer result as a score. The melody is on top, the chord symbols above each chord and the scale degrees below, including V/V, vii°/vi and V/ii',
+      'alt.partitura': 'A Harmonizer result as a score. The melody is on top, the chord symbols above each chord and the scale degrees below, including V/V, V/ii and V/vi',
       'alt.chart': 'Chart of four voices moving across eight chords',
       'alt.laboratorio': 'The harmonics workbench, with the twelve bars of the series and the vibrato controls',
       'alt.analizador': 'The Analyzer with Bach’s chorale BWV 281 imported. The score with chord symbols at the top, the key and two authentic cadences in the middle, and the chords, counterpoint and ornaments below',
@@ -506,6 +506,11 @@
     if (saved === 'es' || saved === 'en') { return saved; }
     var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'es';
     return nav.toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+  }
+
+  function shotFor(path, code) {
+    var plain = path.replace('assets/img/en/', 'assets/img/');
+    return code === 'en' ? plain.replace('assets/img/', 'assets/img/en/') : plain;
   }
 
   function apply(next) {
@@ -532,6 +537,18 @@
     Array.prototype.forEach.call(document.querySelectorAll('[data-i18n-aria]'), function (el) {
       var v = dict[el.getAttribute('data-i18n-aria')];
       if (v != null) { el.setAttribute('aria-label', v); }
+    });
+
+    // Las capturas muestran el programa en el idioma de la página. Las de
+    // castellano están en assets/img/ y las de inglés, con los mismos
+    // nombres, en assets/img/en/. Se cambian la imagen y lo que abre la
+    // galería al ampliarla.
+    Array.prototype.forEach.call(document.querySelectorAll('img[src*="assets/img/"]'), function (img) {
+      var src = img.getAttribute('src'), want = shotFor(src, next);
+      if (want !== src) { img.setAttribute('src', want); }
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-full*="assets/img/"]'), function (el) {
+      el.setAttribute('data-full', shotFor(el.getAttribute('data-full'), next));
     });
 
     // Bloques enteros escritos en el HTML, uno por idioma. Las notas del

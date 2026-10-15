@@ -1,11 +1,11 @@
 {
-  "version": "1.3.2",
+  "version": "1.3.3",
   "released": "2026-10-14",
   "page": "https://chordweaver.github.io/",
   "notes": "https://chordweaver.github.io/notas.html",
-  "download": "https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.3.2-windows.zip",
+  "download": "https://github.com/ChordWeaver/chordweaver/releases/latest/download/ChordWeaver-1.3.3-windows.zip",
   "headline": {
-    "es": "Cada opción del resultado se abre en el analizador con un botón.",
-    "en": "Every option in the result opens in the Analyzer with one button."
+    "es": "El Armonizador mide las quintas y octavas paralelas contra lo que suena en cada cambio de acorde.",
+    "en": "The Harmonizer measures parallel fifths and octaves against what sounds at each change of chord."
   }
 }

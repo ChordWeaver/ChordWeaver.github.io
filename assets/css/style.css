@@ -95,10 +95,10 @@ code {
   transition: box-shadow .18s linear;
 }
 
-.nav-links { display: flex; gap: 26px; margin-left: auto; }
+.nav-links { display: flex; gap: 22px; margin-left: auto; }
 .nav-links a {
   color: var(--text-dim); text-decoration: none; font-size: .93rem; font-weight: 500;
-  position: relative; padding: 4px 0;
+  position: relative; padding: 4px 0; white-space: nowrap;
   transition: color .2s var(--ease);
 }
 .nav-links a::after {
@@ -481,6 +481,12 @@ h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01
 @media (max-width: 960px) {
   .modes, .genres, .grid, .audit-nums { grid-template-columns: 1fr 1fr; }
   .two { grid-template-columns: 1fr; gap: 34px; }
+}
+/* Los seis enlaces de la portada, el logotipo, el idioma y los dos íconos
+   ocupan unos 1100px en castellano, que es el idioma más largo. Por debajo
+   de eso los enlaces se partían en dos renglones y la barra se salía de la
+   pantalla: ahí se esconden. */
+@media (max-width: 1179px) {
   .nav-links { display: none; }
 }
 @media (max-width: 700px) {
@@ -591,10 +597,11 @@ h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01
 
 /* Con el Discord al lado del de GitHub, la barra pasó a tener dos botones, y
    en un teléfono el segundo le come el lugar al logotipo. Abajo de 700px se
-   quedan sólo los dos íconos; el nombre no se borra, se esconde, así el lector
+   quedan sólo los dos íconos, y también cuando se ven los enlaces de las
+   secciones: con los nombres no entran en el ancho de la página; el nombre no se borra, se esconde, así el lector
    de pantalla lo sigue leyendo —y lo lee en el idioma en el que está la
    página, cosa que un `aria-label` escrito a mano no haría. */
-@media (max-width: 700px) {
+@media (max-width: 700px), (min-width: 1180px) {
   .nav-side .ghost { position: relative; padding: 7px 9px; gap: 0; }
   .nav-side .ghost span {
     position: absolute; width: 1px; height: 1px; overflow: hidden;
